@@ -1,0 +1,117 @@
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1ec2ff, #00d4b4); /* azul-celeste degradado */
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+nav .logo:hover {
+  transform: scale(1.05);
+}
+
+/* Enlaces */
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s;
+}
+
+nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: #00fff7;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s;
+}
+
+nav .nav-links a:hover::after {
+  width: 100%;
+}
+
+nav .nav-links a:hover {
+  color: #e0f7fa;
+  transform: translateY(-2px);
+}
+
+/* Menu móvil */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-btn div {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Animación menú activo */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 65px;
+  right: 10%;
+  background: linear-gradient(180deg, #1ec2ff, #00d4b4);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  animation: slideDown 0.5s ease;
+}
+
+/* Animación desplegado */
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Hover del menu-btn */
+.menu-btn:hover div {
+  background-color: #00fff7;
+}

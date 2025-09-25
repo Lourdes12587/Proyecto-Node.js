@@ -1,0 +1,54 @@
+/* General */
+body {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Títulos */
+h1, h2 {
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+.highlight {
+  color: #ffeb3b; /* resalta el nombre de la carrera */
+}
+
+/* Card */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Tabla centrada */
+.table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.table thead {
+  background: #0072ff;
+  color: #fff;
+}
+.table tbody tr:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .card {
+    padding: 15px;
+  }
+  .table {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,153 @@
+/* BODY Y CONTENEDOR */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f8ff;
+    color: #343a40;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* TITULOS */
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+table thead tr {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table th, table td {
+    padding: 12px 10px;
+    text-align: center;
+}
+
+table tbody tr {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+table tbody tr:hover {
+    background-color: #e0f2ff;
+    transform: scale(1.02);
+}
+
+/* BOTONES */
+.btn-outline-warning, .btn-outline-danger {
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* FORMULARIO DE GANADORES */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    table, table tbody, table tr, table td, table th {
+        display: block;
+        width: 100%;
+    }
+    table thead { display: none; }
+
+    table tbody tr {
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    form {
+        width: 90%;
+        margin: 30px auto;
+    }
+}

@@ -1,0 +1,51 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/header') %>
+
+    <% if(participante){ %>
+    <div class="container mt-4 w-25">
+        <div class="card border-secundary">
+            <div class="card-header">EDITAR PERFILES DE PARTICIPANTES</div>
+                <div class="card-body">
+                    <form action="/updateAdmin" method="post">
+                        <input type="text" name="id" id="id" value="<%= participante.id%>"/>
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre: </label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= participante.nombre%>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido: </label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" value="<%= participante.apellido%>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="dni" class="form-label">DNI: </label>
+                            <input type="text" class="form-control" id="dni" name="dni" value="<%= participante.dni%>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="calle" class="form-label">Calle: </label>
+                            <input type="text" class="form-control" id="calle" name="calle" value="<%= participante.calle%>" />
+                        </div>
+                         <div class="mb-3">
+                            <label for="numero" class="form-label">Numero: </label>
+                            <input type="text" class="form-control" id="numero" name="numero" value="<%= participante.numero%>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="poblacion" class="form-label">Poblacion: </label>
+                            <input type="text" class="form-control" id="poblacion" name="poblacion" value="<%= participante.poblacion%>" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="codigo_postal" class="form-label">Codigo Postal: </label>
+                            <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" value="<%= participante.codigo_postal%>" />
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a href="/participante" class="btn btn-danger">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% } else { %>
+            <h1> Participante no encontrado</h1>
+        <% } %>
+           

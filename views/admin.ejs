@@ -1,0 +1,67 @@
+<%- include('partials/head') %>
+
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/resources/css/admin.css">
+
+  <%- include('partials/header') %>
+
+  <div class="container">
+    <h2 class="mt-4">Participantes Inscriptos:</h2>
+    <table class="table table-bordered table-striped text-center mt-4">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">N|Dorsal:</th>
+          <th scope="col">Nombre:</th>
+          <th scope="col">Apellido:</th>
+          <th scope="col">DNI:</th>
+          <th scope="col">Telefono:</th>
+          <th scope="col">Calle:</th>
+          <th scope="col">N°:</th>
+          <th scope="col">Poblacion:</th>
+          <th scope="col">CP°:</th>
+       
+            <th scope="col">Acciones</th>
+        
+        </tr>
+      </thead>
+
+      <tbody>
+        <% participantes.forEach(participante => { %>
+          <tr>
+            <td><%= participante.id %></td>
+            <td><%= participante.nombre %></td>
+            <td><%= participante.apellido %></td>
+            <td><%= participante.dni %></td>
+            <td><%= participante.telefono %></td>
+            <td><%= participante.calle %></td>
+            <td><%= participante.numero %></td>
+            <td><%= participante.poblacion %></td>
+            <td><%= participante.codigo_postal %></td>
+          
+              <td>
+                <a href="/editadmin/<%= participante.id %>" class="btn btn-outline-warning me-2">
+                  <i class="bx bxs-edit"></i>
+                </a>
+                <a href="/delete/<%= participante.id %>" class="btn btn-outline-danger">
+                  <i class="bx bxs-trash"></i>
+                </a>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <h2>REGISTRAR GANADORES</h2>
+    <form action="/ganadores" method="post">
+      <label>1º Clasificado (Dorsal):</label>
+      <input type="number" name="primero" required>
+      <br>
+      <label>2º Clasificado (Dorsal):</label>
+      <input type="number" name="segundo" required>
+      <br>
+      <label>3º Clasificado (Dorsal):</label>
+      <input type="number" name="tercero" required>
+      <br>
+      <button type="submit">Guardar Ganadores</button>
+    </form>
+  </div>
+
+  <%- include('partials/footer') %>

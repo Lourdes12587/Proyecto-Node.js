@@ -1,0 +1,34 @@
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Happy Runner</div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="/">Inicio</a>
+      <a href="/info">Informacion</a>
+        <% if (!user) { %>
+      <a href="/login">Login</a>
+      <a href="/inscripcion">Inscripcion</a>
+      <a href="/loginadmin">Login (Admin)</a>
+      <% } else if (rol === 'participante') { %>
+      <a href="/perfil">Mi Perfil</a>
+      <a href="/inscripcion">Inscripcion</a>
+       <a href="/logout">Cerrar session</a>
+      <% } else if (rol === 'admin') { %>
+      <a href="/register">Registro (Admin)</a>
+      <a href="/admin">Panel de Administrador</a>
+      <a href="/logout">Cerrar session</a>
+      <% } %>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>

@@ -1,0 +1,107 @@
+<%- include('partials/head') %>
+
+  <%- include('partials/header') %>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+<link rel="stylesheet" href="/resources/css/inscripcion.css">
+
+<% if ((typeof inscripcion !== 'undefined' && inscripcion) || typeof validaciones !== 'undefined') { %>
+  <div class="inscripcion-container">
+    <h2>Formulario de Inscripcion</h2>
+    <form action="/inscripcion" method="POST">
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Ingrese su nombre"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.nombre %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" 
+        placeholder="Ingrese su apellido"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.apellido %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" 
+        placeholder="Ingrese su DNI"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.dni %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Telefono:</label>
+        <input type="text" name="telefono"
+        placeholder="Ingrese su telefono" 
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.telefono %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="calle">Calle:</label>
+        <input type="text" name="calle"
+        placeholder="Ingrese su calle"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.calle %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="numero">N°:</label>
+        <input type="text" name="numero"
+        placeholder="N°"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.numero %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="poblacion">Poblacion:</label>
+        <input type="text" name="poblacion"
+        placeholder="Ingrese su poblacion" 
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.poblacion %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="codigo_postal">Codigo Postal N°:</label>
+        <input type="text" name="codigo_postal"
+        placeholder="Ingrese su codigo postal" 
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.codigo_postal %> <% } %>">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" 
+        placeholder="Ingrese su contraseña"
+        value="<% if (typeof valores !=='undefined') { %> <%= valores.password %> <% } %>">
+      </div>
+
+      <button type="submit" class="btn-registrarse">INSCRIBIRSE</button>
+
+      <% if (typeof validaciones != 'undefined') { %>
+        <% validaciones.forEach(validacion => { %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong><%= validacion.msg %></strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> 
+        <% }); %>
+      <% } %>
+
+    </form>
+  </div>
+<% } %>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <% if (typeof alert != 'undefined') { %>
+      <script>
+        Swal.fire({
+          title: '<%= alertTitle %>',
+          text: '<%= alertMessage %>',
+          icon: '<%= alertIcon %>',
+          showConfirmButton: <%= showConfirmButton %>,
+          timer: <%= timer %>
+        }).then (()=> {
+            window.location ='/<%= ruta%>'
+        })
+        </script>
+      <% } %>
+
+      <%- include('partials/footer') %>

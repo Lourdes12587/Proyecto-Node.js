@@ -1,0 +1,248 @@
+/* ------------------ RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+/* ------------------ BODY ------------------ */
+body {
+  background-color: #e6f2f1;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ------------------ NAVBAR ------------------ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1e90ff, #00c6ff);
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #00bfff;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav .nav-links a:hover {
+  color: #f0f8ff;
+}
+
+/* Menu móvil */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-btn div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e90ff;
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ------------------ BANNER ------------------ */
+header .banner {
+  background: url('/resources/img/bunner.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 123, 167, 0.5);
+}
+
+.banner-text {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease forwards;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+.btn-banner {
+  display: inline-block;
+  background-color: #00bfff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #1e90ff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(30,120,214,0.4);
+}
+
+/* ------------------ EVENT INFO ------------------ */
+.event-info {
+  padding: 50px 10%;
+  text-align: center;
+  background-color: #fff;
+  border-top: 5px solid #00bfff;
+  border-radius: 15px;
+  margin: 30px auto;
+}
+
+.event-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1e90ff;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.detail h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #00c6ff;
+}
+
+.detail p {
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detail p:hover {
+  color: #1e90ff;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* ------------------ GALLERY ------------------ */
+.gallery {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e90ff;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 300px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,191,255,0.5);
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  .event-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-container img {
+    width: 70%;
+  }
+
+  header .banner {
+    height: 50vh;
+  }
+
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .banner {
+    height: 40vh;
+  }
+
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn-banner {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animación banner */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

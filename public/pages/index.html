@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/resources/css/inicio.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <title>HAPPY RUNNER</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">NUNboating</div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="http://localhost:4000/">INSCRIPCION</a>
+      <a href="http://localhost:4000/inscripcion">INSCRIPCION</a>
+      <a href="http://localhost:4000/info">INFORMACION</a>
+      <a href="http://localhost:4000/Login">Login</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
+  <header>
+    <div class="banner">
+      <div class="banner-text">
+        <h1>Carrera Running 2025</h1>
+        <p>¡Desafía tus límites y vive la experiencia!</p>
+        <a href="/inscripcion" class="btn-banner">Inscripcion</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INFORMACIÓN DEL EVENTO -->
+  <section id="info" class="event-info">
+    <h2>Información del Evento</h2>
+    <div class="event-details">
+      <div class="detail">
+        <h3>📅 Fecha</h3>
+        <p>Domingo, 21 de Septiembre 2025</p>
+      </div>
+      <div class="detail">
+        <h3>🕒 Hora</h3>
+        <p>8:00 AM</p>
+      </div>
+      <div class="detail">
+        <h3>📍 Lugar</h3>
+        <p>Parque Central de la Ciudad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery">
+    <h2>Momentos de la Carrera</h2>
+    <div class="gallery-container">
+      <img src="img/run1.jpg" alt="Corredores en acción">
+      <img src="img/run2.jpg" alt="Salida de la carrera">
+      <img src="img/run3.jpg" alt="Llegada a la meta">
+    </div>
+  </section>
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>🏃 Happy Running</h2>
+        <p>Conectando a los deportistas con más oportunidades.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Happy Running | Todos los derechos reservados</p>
+      </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
