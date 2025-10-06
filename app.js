@@ -14,14 +14,14 @@ app.use(
     })
 );
 
+app.listen(3000, () => { 
+    console.log("Servidor corriendo en http://localhost:3000");
+});
+
 app.use((req, res, next) => {
   res.locals.user = req.session.user || null;
   res.locals.rol = req.session.rol || null;
   next();
-});
-
-app.listen(3000, () => { 
-    console.log("Servidor corriendo en http://localhost:3000");
 });
 
 app.use("/resources", express.static(__dirname + "/public")); 

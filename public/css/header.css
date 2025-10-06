@@ -1,25 +1,30 @@
-/* NAVBAR */
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #1ec2ff, #00d4b4); /* azul-celeste degradado */
+  background: linear-gradient(90deg, #1ec2ff, #00d4b4);
   padding: 15px 10%;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-radius: 0 0 15px 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
-/* Logo */
+
 nav .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
   transition: transform 0.3s;
 }
 
@@ -27,21 +32,26 @@ nav .logo:hover {
   transform: scale(1.05);
 }
 
-/* Enlaces */
+
 nav .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
   position: relative;
   padding: 5px 0;
-  transition: all 0.3s;
 }
+
 
 nav .nav-links a::after {
   content: '';
@@ -51,7 +61,8 @@ nav .nav-links a::after {
   background: #00fff7;
   left: 0;
   bottom: -3px;
-  transition: width 0.3s;
+  border-radius: 3px;
+  transition: width 0.3s ease;
 }
 
 nav .nav-links a:hover::after {
@@ -63,11 +74,24 @@ nav .nav-links a:hover {
   transform: translateY(-2px);
 }
 
-/* Menu móvil */
+
+nav .nav-links a i {
+  font-size: 1.9rem; /* 🔹 más grandes */
+  color: #e0f7fa;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav .nav-links a:hover i {
+  color: #00fff7;
+  transform: scale(1.25);
+}
+
+
 .menu-btn {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 2000;
 }
 
 .menu-btn div {
@@ -76,31 +100,41 @@ nav .nav-links a:hover {
   background-color: #fff;
   margin: 4px 0;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
-/* Animación menú activo */
+.menu-btn:hover div {
+  background-color: #00fff7;
+}
+
+
 .nav-links.active {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 65px;
-  right: 10%;
-  background: linear-gradient(180deg, #1ec2ff, #00d4b4);
-  padding: 15px;
-  border-radius: 10px;
-  gap: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-  animation: slideDown 0.5s ease;
+  top: 70px;
+  right: 8%;
+  background: rgba(30, 194, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 12px;
+  gap: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.4s ease;
 }
 
-/* Animación desplegado */
 @keyframes slideDown {
-  0% { opacity: 0; transform: translateY(-20px);}
-  100% { opacity: 1; transform: translateY(0);}
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .menu-btn {
     display: flex;
@@ -109,9 +143,20 @@ nav .nav-links a:hover {
   .nav-links {
     display: none;
   }
-}
 
-/* Hover del menu-btn */
-.menu-btn:hover div {
-  background-color: #00fff7;
+  nav {
+    padding: 15px 8%;
+  }
+
+  nav .logo {
+    font-size: 1.7rem;
+  }
+
+  nav .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  nav .nav-links a i {
+    font-size: 2rem; 
+  }
 }

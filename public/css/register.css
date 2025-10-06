@@ -1,101 +1,103 @@
-/* Contenedor principal */
-.inscripcion-container {
-  max-width: 450px;
-  margin: 60px auto;
-  background: #fff;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  text-align: center;
-  animation: fadeIn 0.8s ease-in-out;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
 }
 
-/* Animación */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+
+.inscripcion-container {
+  background-color: #fff;
+  max-width: 600px;
+  width: 90%;
+  margin: 100px auto 50px auto; 
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease;
 }
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
 
 .inscripcion-container h2 {
-  color: #0072ff;
-  margin-bottom: 25px;
-  font-weight: bold;
-  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e3f66;
+  letter-spacing: 1px;
 }
 
-/* Formularios */
+
 .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
 }
 
 .form-group label {
+  margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #333;
-  display: block;
-  margin-bottom: 8px;
+  color: #1e3f66;
 }
 
 .form-group input {
-  width: 100%;
-  padding: 12px 15px;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #ccc;
   border-radius: 10px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: all 0.3s;
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus {
-  border-color: #0072ff;
-  box-shadow: 0 0 8px rgba(0,114,255,0.4);
+  border-color: #4a90e2;
+  box-shadow: 0 0 10px rgba(74,144,226,0.3);
+  outline: none;
 }
 
-/* Botón */
+
 .btn-registrarse {
   width: 100%;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  background: linear-gradient(90deg, #4a90e2, #1e78d6);
   color: #fff;
-  font-size: 1.1rem;
-  padding: 12px;
+  padding: 0.85rem;
   border: none;
   border-radius: 12px;
-  cursor: pointer;
+  font-size: 1rem;
   font-weight: bold;
-  transition: all 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-registrarse:hover {
+  background: linear-gradient(90deg, #1e78d6, #4a90e2);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 18px rgba(0,114,255,0.4);
+  box-shadow: 0 8px 20px rgba(30,120,214,0.4);
 }
 
-/* Mensajes de error */
+
 .alert {
-  margin-top: 15px;
-  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .inscripcion-container {
-    max-width: 90%;
-    padding: 25px;
-  }
-
-  .inscripcion-container h2 {
-    font-size: 1.4rem;
+    margin: 120px 20px 50px 20px;
+    padding: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .inscripcion-container {
-    margin: 30px auto;
-    padding: 20px;
+  .inscripcion-container h2 {
+    font-size: 1.5rem;
   }
 
-  .btn-registrarse {
-    font-size: 1rem;
-    padding: 10px;
+  .form-group input, .btn-registrarse {
+    font-size: 0.95rem;
   }
 }

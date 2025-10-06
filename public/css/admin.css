@@ -1,6 +1,6 @@
-/* BODY Y CONTENEDOR */
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat';
     background: #f0f8ff;
     color: #343a40;
 }
@@ -11,14 +11,14 @@ body {
     padding: 20px;
 }
 
-/* TITULOS */
+
 h2 {
     color: #007bff;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* TABLA */
+
 table {
     width: 100%;
     border-collapse: separate;
@@ -50,7 +50,7 @@ table tbody tr:hover {
     transform: scale(1.02);
 }
 
-/* BOTONES */
+
 .btn-outline-warning, .btn-outline-danger {
     transition: all 0.3s ease;
     font-weight: bold;
@@ -68,7 +68,7 @@ table tbody tr:hover {
     transform: scale(1.1);
 }
 
-/* FORMULARIO DE GANADORES */
+
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -117,7 +117,7 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
     table, table tbody, table tr, table td, table th {
         display: block;

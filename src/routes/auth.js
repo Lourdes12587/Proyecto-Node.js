@@ -160,8 +160,13 @@ router.post('/auth', async (req, res) => {
 
               //req.session.user = { id: participante.id, nombre: participante.nombre };
               //req.session.rol = "participante";
-              req.session.participanteId = results[0].id;
-              req.session.loggedin = true;
+
+            req.session.loggedin = true;
+            req.session.user = { id: results[0].id, nombre: results[0].nombre, dni: results[0].dni };
+            req.session.rol = 'participante';
+
+              //req.session.participanteId = results[0].id;
+              //req.session.loggedin = true;
 
               //res.redirect('/participante'); 
               //req.session.loggedin = true;

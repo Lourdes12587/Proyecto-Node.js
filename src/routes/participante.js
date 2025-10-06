@@ -9,16 +9,18 @@ const db = require("../../config/db");
 //const verifyToken = (require ("../middlewares/verifyToken"));
 
 function isLoggedIn(req, res, next) {
-  if (req.session.loggedin) return next();
+  if (req.session.loggedin  && req.session.user) return next();
   res.redirect('/login');
 }
 
  //miperfil
 router.get("/perfil", isLoggedIn, (req, res) => {
-  const id = req.user.id;
-  if (!id) return res.redirect("/login");
 
-  db.query("SELECT * FROM participantes WHERE id = ?", [id], (error, results) => {
+  const user = req.session.user;
+  //const id = req.user.id;
+  //if (!id) return res.redirect("/login");
+
+  db.query("SELECT * FROM participantes WHERE id = ?", [user.id], (error, results) => {
     if (error) throw error;
     res.render("perfil", { user: results[0] });
   });
