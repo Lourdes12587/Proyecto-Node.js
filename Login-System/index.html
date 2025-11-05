@@ -1,0 +1,2103 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Database-Layer/">
+      
+      
+        <link rel="next" href="../Role-Based-Access-Control/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Login System - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#login-system" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Login System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login System Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#participant-login-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participant Login Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Participant Login Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-login-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Login Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Admin Login Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller-implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-template_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-validation-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential Validation Sequence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#password-security-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Security Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-variable-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Variable Assignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Variable Assignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#participant-session-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participant Session Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin-session-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Session Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-feedback-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Feedback System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Feedback System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controller-alert-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Alert Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-table-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Table Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Table Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#participantes-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Participantes Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizadores-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizadores Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Errors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-view-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login View Styling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Points
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="login-system">Login System<a class="headerlink" href="#login-system" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js">controllers/authcontroller.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs">views/login.ejs</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs">views/loginadmin.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document details the dual login mechanisms implemented in the HAPPY RUNNER 42K application. The system provides separate authentication pathways for participants (runners) and administrators (event organizers), each with distinct credential formats and access patterns. Participant authentication uses DNI (national identity number) as the username, while administrator authentication uses a standard username-based approach.</p>
+<p>For information about how authenticated sessions are managed after login, see <a href="/Lourdes12587/Proyecto-Node.js/3.3-session-management">Session Management</a>. For details on how roles are enforced throughout the application, see <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">Role-Based Access Control</a>.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L91">controllers/authcontroller.js L1-L91</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L1-L58">views/login.ejs L1-L58</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L1-L55">views/loginadmin.ejs L1-L55</a></p>
+<hr />
+<h2 id="login-system-architecture">Login System Architecture<a class="headerlink" href="#login-system-architecture" title="Permanent link">&para;</a></h2>
+<p>The application implements two independent login endpoints, each backed by separate database tables and credential formats:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Participant Login</th>
+<th>Admin Login</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route</strong></td>
+<td><code>/auth</code></td>
+<td><code>/authadmin</code></td>
+</tr>
+<tr>
+<td><strong>View Template</strong></td>
+<td><code>login.ejs</code></td>
+<td><code>loginadmin.ejs</code></td>
+</tr>
+<tr>
+<td><strong>Controller Function</strong></td>
+<td><code>authcontroller.loginParticipante</code></td>
+<td><code>authcontroller.loginAdmin</code></td>
+</tr>
+<tr>
+<td><strong>Database Table</strong></td>
+<td><code>participantes</code></td>
+<td><code>organizadores</code></td>
+</tr>
+<tr>
+<td><strong>Username Field</strong></td>
+<td><code>dni</code> (numeric ID)</td>
+<td><code>user</code> (string username)</td>
+</tr>
+<tr>
+<td><strong>Password Storage</strong></td>
+<td>bcrypt hash in <code>password</code> column</td>
+<td>bcrypt hash in <code>password</code> column</td>
+</tr>
+<tr>
+<td><strong>Session Role</strong></td>
+<td><code>"participante"</code></td>
+<td><code>"admin"</code></td>
+</tr>
+<tr>
+<td><strong>Success Redirect</strong></td>
+<td><code>/perfil</code></td>
+<td><code>/admin</code></td>
+</tr>
+<tr>
+<td><strong>Failure Redirect</strong></td>
+<td><code>/login</code> (re-render)</td>
+<td><code>/loginadmin</code> (re-render)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L91">controllers/authcontroller.js L1-L91</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L8-L8">views/login.ejs L8</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L8-L8">views/loginadmin.ejs L8</a></p>
+<hr />
+<h2 id="authentication-flow-diagram">Authentication Flow Diagram<a class="headerlink" href="#authentication-flow-diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+AdminForm["loginadmin.ejs&lt;br&gt;Form: /authadmin"]
+AdminPost["POST /authadmin"]
+LoginAdminFunc["authcontroller.loginAdmin()"]
+AdminDB["organizadores table&lt;br&gt;SELECT * WHERE user = ?"]
+AdminBcrypt["bcrypt.compare()&lt;br&gt;password vs results[0].password"]
+AdminSession["Session Variables:&lt;br&gt;loggedin=true&lt;br&gt;user=results[0].user&lt;br&gt;rol='admin'"]
+AdminSuccess["Redirect to /admin"]
+ParticipantForm["login.ejs&lt;br&gt;Form: /auth"]
+ParticipantPost["POST /auth"]
+LoginPartFunc["authcontroller.loginParticipante()"]
+ParticipantDB["participantes table&lt;br&gt;SELECT * WHERE dni = ?"]
+ParticipantBcrypt["bcrypt.compare()&lt;br&gt;password vs results[0].password"]
+ParticipantSession["Session Variables:&lt;br&gt;loggedin=true&lt;br&gt;dni=results[0].dni&lt;br&gt;rol='participante'"]
+ParticipantSuccess["Redirect to /perfil"]
+
+subgraph subGraph1 ["Admin Login"]
+    AdminForm
+    AdminPost
+    LoginAdminFunc
+    AdminDB
+    AdminBcrypt
+    AdminSession
+    AdminSuccess
+    AdminForm --&gt; AdminPost
+    AdminPost --&gt; LoginAdminFunc
+    LoginAdminFunc --&gt; AdminDB
+    AdminDB --&gt; AdminBcrypt
+    AdminBcrypt --&gt; AdminSession
+    AdminSession --&gt; AdminSuccess
+    AdminBcrypt --&gt; AdminForm
+end
+
+subgraph subGraph0 ["Participant Login"]
+    ParticipantForm
+    ParticipantPost
+    LoginPartFunc
+    ParticipantDB
+    ParticipantBcrypt
+    ParticipantSession
+    ParticipantSuccess
+    ParticipantForm --&gt; ParticipantPost
+    ParticipantPost --&gt; LoginPartFunc
+    LoginPartFunc --&gt; ParticipantDB
+    ParticipantDB --&gt; ParticipantBcrypt
+    ParticipantBcrypt --&gt; ParticipantSession
+    ParticipantSession --&gt; ParticipantSuccess
+    ParticipantBcrypt --&gt; ParticipantForm
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L91">controllers/authcontroller.js L1-L91</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L8-L8">views/login.ejs L8</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L8-L8">views/loginadmin.ejs L8</a></p>
+<hr />
+<h2 id="participant-login-flow">Participant Login Flow<a class="headerlink" href="#participant-login-flow" title="Permanent link">&para;</a></h2>
+<h3 id="controller-implementation">Controller Implementation<a class="headerlink" href="#controller-implementation" title="Permanent link">&para;</a></h3>
+<p>The <code>loginParticipante</code> function in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L45">controllers/authcontroller.js L1-L45</a></p>
+<p>handles participant authentication. The process follows these steps:</p>
+<ol>
+<li><strong>Input Validation</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L4-L12">controllers/authcontroller.js L4-L12</a> * Extracts <code>dni</code> and <code>password</code> from <code>req.body</code> * Returns error if either field is missing * Renders <code>login.ejs</code> with SweetAlert2 error parameters</li>
+<li><strong>Database Query</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L14-L14">controllers/authcontroller.js L14</a> * Queries <code>participantes</code> table: <code>SELECT * FROM participantes WHERE dni = ?</code> * Uses parameterized query to prevent SQL injection</li>
+<li><strong>Credential Verification</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L17-L28">controllers/authcontroller.js L17-L28</a> * Checks if query returned results (<code>results.length === 0</code>) * Uses <code>bcrypt.compare(password, results[0].password)</code> for password validation * Both checks must pass for successful authentication</li>
+<li><strong>Session Initialization</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L31-L33">controllers/authcontroller.js L31-L33</a> * Sets <code>req.session.loggedin = true</code> * Stores <code>req.session.dni = results[0].dni</code> * Assigns <code>req.session.rol = "participante"</code></li>
+<li><strong>Success Response</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L35-L43">controllers/authcontroller.js L35-L43</a> * Renders <code>login.ejs</code> with success alert parameters * Sets <code>ruta: "perfil"</code> to redirect to profile page * Uses 1500ms timer for automatic redirect</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L45">controllers/authcontroller.js L1-L45</a></p>
+<h3 id="view-template">View Template<a class="headerlink" href="#view-template" title="Permanent link">&para;</a></h3>
+<p>The participant login interface is defined in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L1-L58">views/login.ejs L1-L58</a></p>
+<p>Key elements include:</p>
+<ul>
+<li><strong>Form Configuration</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L8-L8">views/login.ejs L8</a> * Form submits to <code>/auth</code> via POST method * Input field <code>dni</code> for participant identification * Password input field</li>
+<li><strong>Field Labels</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L10-L11">views/login.ejs L10-L11</a> * Label text: "Ingrese su usuario:" (Enter your username) * Placeholder: "Ingrese su DNI" (Enter your DNI)</li>
+<li><strong>SweetAlert2 Integration</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L24-L54">views/login.ejs L24-L54</a> * Conditional rendering based on <code>alert</code> variable existence * Displays <code>alertTitle</code>, <code>alertMessage</code>, and <code>alertIcon</code> * Auto-redirects on success using <code>window.location = '/&lt;%= ruta %&gt;'</code></li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L1-L58">views/login.ejs L1-L58</a></p>
+<hr />
+<h2 id="admin-login-flow">Admin Login Flow<a class="headerlink" href="#admin-login-flow" title="Permanent link">&para;</a></h2>
+<h3 id="controller-implementation_1">Controller Implementation<a class="headerlink" href="#controller-implementation_1" title="Permanent link">&para;</a></h3>
+<p>The <code>loginAdmin</code> function in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L47-L91">controllers/authcontroller.js L47-L91</a></p>
+<p>mirrors the participant login structure with different credentials:</p>
+<ol>
+<li><strong>Input Validation</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L50-L58">controllers/authcontroller.js L50-L58</a> * Extracts <code>user</code> and <code>password</code> from <code>req.body</code> * Validates both fields are present</li>
+<li><strong>Database Query</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L60-L60">controllers/authcontroller.js L60</a> * Queries <code>organizadores</code> table: <code>SELECT * FROM organizadores WHERE user = ?</code> * Uses string-based username lookup instead of numeric DNI</li>
+<li><strong>Credential Verification</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L63-L74">controllers/authcontroller.js L63-L74</a> * Identical bcrypt comparison: <code>bcrypt.compare(password, results[0].password)</code> * Returns error with <code>loginadmin</code> route on failure</li>
+<li><strong>Session Initialization</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L77-L79">controllers/authcontroller.js L77-L79</a> * Sets <code>req.session.loggedin = true</code> * Stores <code>req.session.user = results[0].user</code> * Assigns <code>req.session.rol = "admin"</code> (critical for role-based access)</li>
+<li><strong>Success Response</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L81-L89">controllers/authcontroller.js L81-L89</a> * Renders <code>loginadmin.ejs</code> with success parameters * Sets <code>ruta: "admin"</code> to redirect to admin panel * Message: "Login de administrador correcto"</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L47-L91">controllers/authcontroller.js L47-L91</a></p>
+<h3 id="view-template_1">View Template<a class="headerlink" href="#view-template_1" title="Permanent link">&para;</a></h3>
+<p>The admin login interface is defined in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L1-L55">views/loginadmin.ejs L1-L55</a></p>
+<p>Notable differences from participant login:</p>
+<ul>
+<li><strong>Form Configuration</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L8-L8">views/loginadmin.ejs L8</a> * Form submits to <code>/authadmin</code> via POST * Input field <code>user</code> instead of <code>dni</code></li>
+<li><strong>Interface Labeling</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L9-L10">views/loginadmin.ejs L9-L10</a> * Header: "ADMINISTRADORES" * Label: "Ingrese su usuario:" (Enter your username) * Generic username placeholder, not DNI-specific</li>
+<li><strong>SweetAlert2 Configuration</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L22-L50">views/loginadmin.ejs L22-L50</a> * Identical alert styling to participant login * Same branded color scheme and animation</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L1-L55">views/loginadmin.ejs L1-L55</a></p>
+<hr />
+<h2 id="credential-validation-sequence">Credential Validation Sequence<a class="headerlink" href="#credential-validation-sequence" title="Permanent link">&para;</a></h2>
+<p>The following sequence diagram illustrates the detailed validation flow for both login types:</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant User
+  participant login.ejs or
+  participant loginadmin.ejs
+  participant authcontroller
+  participant MySQL Database
+  participant bcrypt library
+  participant req.session
+
+  User-&gt;&gt;login.ejs or: "Submit credentials"
+  login.ejs or-&gt;&gt;authcontroller: "POST /auth or /authadmin
+  authcontroller-&gt;&gt;authcontroller: {dni/user, password}"
+  loop ["Password mismatch"]
+    authcontroller-&gt;&gt;login.ejs or: "Validate fields present"
+    login.ejs or-&gt;&gt;User: "Render with alert
+    authcontroller-&gt;&gt;MySQL Database: Error: Debe ingresar..."
+    MySQL Database--&gt;&gt;authcontroller: "Show error modal"
+    authcontroller-&gt;&gt;login.ejs or: "SELECT * FROM table
+    login.ejs or-&gt;&gt;User: WHERE dni/user = ?"
+    authcontroller-&gt;&gt;bcrypt library: "results[]"
+    bcrypt library--&gt;&gt;authcontroller: "Render with alert
+    authcontroller-&gt;&gt;login.ejs or: Error: Credenciales inválidas"
+    login.ejs or-&gt;&gt;User: "Show error modal"
+    authcontroller-&gt;&gt;req.session: "bcrypt.compare(password,
+    req.session--&gt;&gt;authcontroller: results[0].password)"
+    authcontroller-&gt;&gt;login.ejs or: "boolean result"
+    login.ejs or-&gt;&gt;User: "Render with alert
+  end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L91">controllers/authcontroller.js L1-L91</a></p>
+<hr />
+<h2 id="password-security-implementation">Password Security Implementation<a class="headerlink" href="#password-security-implementation" title="Permanent link">&para;</a></h2>
+<p>Both login functions use bcrypt for secure password comparison:</p>
+<div class="highlight"><pre><span></span><code>// From authcontroller.js
+!(await bcrypt.compare(password, results[0].password))
+</code></pre></div>
+<p>This implementation:</p>
+<ul>
+<li>Never compares plaintext passwords directly</li>
+<li>Uses asynchronous bcrypt comparison with <code>await</code></li>
+<li>Compares user-submitted password against hashed value from database</li>
+<li>Returns boolean indicating match status</li>
+<li>Negation operator (<code>!</code>) treats mismatch as authentication failure</li>
+</ul>
+<p>The bcrypt comparison occurs at:</p>
+<ul>
+<li>Participant login: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L19-L19">controllers/authcontroller.js L19</a></li>
+<li>Admin login: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L65-L65">controllers/authcontroller.js L65</a></li>
+</ul>
+<p>Both implementations use identical logic, ensuring consistent security across user types.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L19-L19">controllers/authcontroller.js L19</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L65-L65">controllers/authcontroller.js L65</a></p>
+<hr />
+<h2 id="session-variable-assignment">Session Variable Assignment<a class="headerlink" href="#session-variable-assignment" title="Permanent link">&para;</a></h2>
+<p>Upon successful authentication, the system initializes session variables that persist throughout the user's session. The variables differ based on login type:</p>
+<h3 id="participant-session-variables">Participant Session Variables<a class="headerlink" href="#participant-session-variables" title="Permanent link">&para;</a></h3>
+<p>Set in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L31-L33">controllers/authcontroller.js L31-L33</a></p>
+<p>:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>req.session.loggedin</code></td>
+<td><code>true</code></td>
+<td>Indicates authenticated state</td>
+</tr>
+<tr>
+<td><code>req.session.dni</code></td>
+<td><code>results[0].dni</code></td>
+<td>Participant identifier for queries</td>
+</tr>
+<tr>
+<td><code>req.session.rol</code></td>
+<td><code>"participante"</code></td>
+<td>Role flag for middleware authorization</td>
+</tr>
+</tbody>
+</table>
+<h3 id="admin-session-variables">Admin Session Variables<a class="headerlink" href="#admin-session-variables" title="Permanent link">&para;</a></h3>
+<p>Set in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L77-L79">controllers/authcontroller.js L77-L79</a></p>
+<p>:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>req.session.loggedin</code></td>
+<td><code>true</code></td>
+<td>Indicates authenticated state</td>
+</tr>
+<tr>
+<td><code>req.session.user</code></td>
+<td><code>results[0].user</code></td>
+<td>Admin username for display</td>
+</tr>
+<tr>
+<td><code>req.session.rol</code></td>
+<td><code>"admin"</code></td>
+<td>Role flag for <code>verifyAdmin</code> middleware</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>rol</code> value is critical for the authorization system. Middleware functions check this value to enforce role-based access control (see <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">Role-Based Access Control</a>).</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L31-L33">controllers/authcontroller.js L31-L33</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L77-L79">controllers/authcontroller.js L77-L79</a></p>
+<hr />
+<h2 id="user-feedback-system">User Feedback System<a class="headerlink" href="#user-feedback-system" title="Permanent link">&para;</a></h2>
+<p>Both login views use SweetAlert2 for displaying authentication results. The alert system is conditionally rendered when the <code>alert</code> variable exists in the view context.</p>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<p>The SweetAlert2 configuration in both templates <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L26-L50">views/login.ejs L26-L50</a></p>
+<p>and <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L23-L47">views/loginadmin.ejs L23-L47</a></p>
+<p>includes:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Value Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Alert heading</td>
+<td><code>&lt;%= alertTitle %&gt;</code> from controller</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>Message body</td>
+<td><code>&lt;%= alertMessage %&gt;</code> from controller</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>Icon type</td>
+<td><code>&lt;%= alertIcon %&gt;</code> ("error" or "success")</td>
+</tr>
+<tr>
+<td><code>timer</code></td>
+<td>Auto-close delay</td>
+<td><code>&lt;%= timer %&gt;</code> (1500ms on success)</td>
+</tr>
+<tr>
+<td><code>showConfirmButton</code></td>
+<td>Show OK button</td>
+<td><code>&lt;%= showConfirmButton %&gt;</code> (false on success)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="controller-alert-parameters">Controller Alert Parameters<a class="headerlink" href="#controller-alert-parameters" title="Permanent link">&para;</a></h3>
+<p>Error responses <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L5-L11">controllers/authcontroller.js L5-L11</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L21-L27">controllers/authcontroller.js L21-L27</a></p>
+<p>:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">{</span>
+<span class="nt">    alert</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">,</span>
+<span class="nt">    alertTitle</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Error&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    alertMessage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Credenciales</span><span class="nv"> </span><span class="s">inválidas&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">// or &quot;Debe ingresar DNI y contraseña&quot;</span>
+<span class="w">    </span><span class="nv">alertIcon</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;error&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    ruta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;login&quot;</span><span class="w"> </span><span class="nv">// or &quot;loginadmin&quot;</span>
+<span class="p p-Indicator">}</span>
+</code></pre></div>
+<p>Success responses <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L35-L43">controllers/authcontroller.js L35-L43</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L81-L89">controllers/authcontroller.js L81-L89</a></p>
+<p>:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">{</span>
+<span class="nt">    alert</span><span class="p">:</span><span class="w"> </span><span class="nv">true</span><span class="p p-Indicator">,</span>
+<span class="nt">    alertTitle</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Éxito&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    alertMessage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Login</span><span class="nv"> </span><span class="s">correcto&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">// or &quot;Login de administrador correcto&quot;</span>
+<span class="w">    </span><span class="nv">alertIcon</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;success&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    showConfirmButton</span><span class="p">:</span><span class="w"> </span><span class="nv">false</span><span class="p p-Indicator">,</span>
+<span class="nt">    timer</span><span class="p">:</span><span class="w"> </span><span class="nv">1500</span><span class="p p-Indicator">,</span>
+<span class="nt">    ruta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;perfil&quot;</span><span class="w"> </span><span class="nv">// or &quot;admin&quot;</span>
+<span class="p p-Indicator">}</span>
+</code></pre></div>
+<p>The <code>ruta</code> parameter determines the redirect destination: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L51-L51">views/login.ejs L51</a></p>
+<p>executes <code>window.location = '/&lt;%= ruta %&gt;'</code> after the alert.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L24-L54">views/login.ejs L24-L54</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L22-L50">views/loginadmin.ejs L22-L50</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L5-L43">controllers/authcontroller.js L5-L43</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L50-L89">controllers/authcontroller.js L50-L89</a></p>
+<hr />
+<h2 id="database-table-structure">Database Table Structure<a class="headerlink" href="#database-table-structure" title="Permanent link">&para;</a></h2>
+<p>The login system queries two separate tables for authentication:</p>
+<h3 id="participantes-table">Participantes Table<a class="headerlink" href="#participantes-table" title="Permanent link">&para;</a></h3>
+<p>Queried by <code>loginParticipante</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L14-L14">controllers/authcontroller.js L14</a></p>
+<p>:</p>
+<ul>
+<li><strong>Lookup Column:</strong> <code>dni</code> (participant's national ID number)</li>
+<li><strong>Password Column:</strong> <code>password</code> (bcrypt hash)</li>
+<li><strong>Additional Columns:</strong> <code>nombre</code>, <code>apellido</code>, <code>telefono</code>, <code>direccion</code>, <code>foto</code></li>
+</ul>
+<h3 id="organizadores-table">Organizadores Table<a class="headerlink" href="#organizadores-table" title="Permanent link">&para;</a></h3>
+<p>Queried by <code>loginAdmin</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L60-L60">controllers/authcontroller.js L60</a></p>
+<p>:</p>
+<ul>
+<li><strong>Lookup Column:</strong> <code>user</code> (admin username)</li>
+<li><strong>Password Column:</strong> <code>password</code> (bcrypt hash)</li>
+<li><strong>Additional Columns:</strong> Implementation-specific organizer data</li>
+</ul>
+<p>Both queries use parameterized SQL to prevent injection attacks:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">participantes</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">dni</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">organizadores</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L14-L14">controllers/authcontroller.js L14</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L60-L60">controllers/authcontroller.js L60</a></p>
+<hr />
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>The authentication system implements consistent error handling across both login types:</p>
+<h3 id="validation-errors">Validation Errors<a class="headerlink" href="#validation-errors" title="Permanent link">&para;</a></h3>
+<p>Missing field errors <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L4-L12">controllers/authcontroller.js L4-L12</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L50-L58">controllers/authcontroller.js L50-L58</a></p>
+<p>:</p>
+<ul>
+<li><strong>Condition:</strong> <code>!dni || !password</code> or <code>!user || !password</code></li>
+<li><strong>Message:</strong> "Debe ingresar DNI y contraseña" / "Debe ingresar Usuario y contraseña"</li>
+<li><strong>Behavior:</strong> Re-renders login form with error alert, does not set session</li>
+</ul>
+<h3 id="authentication-errors">Authentication Errors<a class="headerlink" href="#authentication-errors" title="Permanent link">&para;</a></h3>
+<p>Invalid credential errors <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L17-L28">controllers/authcontroller.js L17-L28</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L63-L74">controllers/authcontroller.js L63-L74</a></p>
+<p>:</p>
+<ul>
+<li><strong>Condition:</strong> <code>results.length === 0</code> OR bcrypt comparison fails</li>
+<li><strong>Message:</strong> "Credenciales inválidas" (consistent message for both scenarios)</li>
+<li><strong>Security:</strong> Does not distinguish between non-existent user and wrong password</li>
+<li><strong>Behavior:</strong> Re-renders login form, preserves form state</li>
+</ul>
+<h3 id="database-errors">Database Errors<a class="headerlink" href="#database-errors" title="Permanent link">&para;</a></h3>
+<p>SQL errors <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L15-L15">controllers/authcontroller.js L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L61-L61">controllers/authcontroller.js L61</a></p>
+<p>:</p>
+<ul>
+<li><strong>Handling:</strong> <code>if (err) throw err;</code></li>
+<li><strong>Behavior:</strong> Throws unhandled exception, likely resulting in 500 error</li>
+<li><strong>Note:</strong> Production systems should implement more robust error handling</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L1-L91">controllers/authcontroller.js L1-L91</a></p>
+<hr />
+<h2 id="login-view-styling">Login View Styling<a class="headerlink" href="#login-view-styling" title="Permanent link">&para;</a></h2>
+<p>Both login templates share the same CSS file <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L5-L5">views/login.ejs L5</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L5-L5">views/loginadmin.ejs L5</a></p>
+<p>:</p>
+<div class="highlight"><pre><span></span><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/resources/css/login.css&quot;&gt;
+</code></pre></div>
+<p>This provides consistent visual presentation across both authentication interfaces. The templates also include shared partials:</p>
+<ul>
+<li><code>partials/head</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L1-L1">views/login.ejs L1</a>  - Bootstrap, Font Awesome, global dependencies</li>
+<li><code>partials/header</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L3-L3">views/login.ejs L3</a>  - Navigation bar (role-aware)</li>
+<li><code>partials/footer</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L57-L57">views/login.ejs L57</a>  - Footer content</li>
+</ul>
+<p>The SweetAlert2 modal styling <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L30-L49">views/login.ejs L30-L49</a></p>
+<p>uses application brand colors:</p>
+<ul>
+<li>Background: Linear gradient from <code>#2f6690ff</code> to <code>#3a7ca5ff</code></li>
+<li>Text color: <code>#ffffff</code></li>
+<li>Icon color: <code>#81c3d7ff</code></li>
+<li>Confirm button: <code>#16425bff</code></li>
+<li>Backdrop: Semi-transparent with runner animation GIF</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/login.ejs#L1-L58">views/login.ejs L1-L58</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/loginadmin.ejs#L1-L55">views/loginadmin.ejs L1-L55</a></p>
+<hr />
+<h2 id="integration-points">Integration Points<a class="headerlink" href="#integration-points" title="Permanent link">&para;</a></h2>
+<p>The login system integrates with several other application components:</p>
+<ol>
+<li><strong>Session Management</strong> <a href="/Lourdes12587/Proyecto-Node.js/3.3-session-management">Session Management</a> * Sets session variables consumed by <code>cookie-session</code> middleware * Session data persists for 24 hours (configured in application server)</li>
+<li><strong>Authorization Middleware</strong> <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">Role-Based Access Control</a> * <code>verifyToken</code> checks <code>req.session.loggedin</code> status * <code>verifyAdmin</code> validates <code>req.session.rol === "admin"</code></li>
+<li><strong>Header Navigation</strong> <a href="/Lourdes12587/Proyecto-Node.js/4.3-shared-components">Shared Components</a> * <code>partials/header.ejs</code> displays different menu items based on <code>rol</code> value * Reads from <code>res.locals.rol</code> (populated from session)</li>
+<li><strong>Protected Routes</strong> * Participant routes require <code>verifyToken</code> middleware * Admin routes require <code>verifyAdmin</code> middleware * Successful login enables access to role-appropriate interfaces</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L31-L33">controllers/authcontroller.js L31-L33</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/authcontroller.js#L77-L79">controllers/authcontroller.js L77-L79</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

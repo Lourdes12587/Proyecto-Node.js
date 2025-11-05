@@ -1,0 +1,1788 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Data Management - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-management" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js">config/db.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js">controllers/updateParticipante.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js">middlewares/multer.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js">middlewares/verifyAdmin.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js">middlewares/verifyToken.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css">public/css/edit.css</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document covers the data management subsystems of the HAPPY RUNNER 42K application, including database connection configuration, CRUD operations for participant records, and the file upload system for participant and winner photographs. Data management encompasses structured data persistence in MySQL and unstructured file storage on the filesystem.</p>
+<p>For authentication and session management aspects, see <a href="/Lourdes12587/Proyecto-Node.js/3-authentication-and-authorization">Authentication &amp; Authorization</a>. For the middleware layer that guards data access, see <a href="/Lourdes12587/Proyecto-Node.js/2.2-middleware-layer">Middleware Layer</a>. For specific user interface interactions with data, see <a href="/Lourdes12587/Proyecto-Node.js/4-user-interfaces">User Interfaces</a>.</p>
+<hr />
+<h2 id="data-management-architecture">Data Management Architecture<a class="headerlink" href="#data-management-architecture" title="Permanent link">&para;</a></h2>
+<p>The application employs a dual-layer data management strategy: structured relational data in MySQL and unstructured binary data (photos) in the filesystem. All database operations flow through a centralized connection module, while file uploads are handled by dedicated multer middleware.</p>
+<pre class="mermaid"><code>flowchart TD
+
+Routes["Route Handlers&lt;br&gt;(routers/*)"]
+Controllers["Controllers&lt;br&gt;(controllers/updateParticipante.js)"]
+DBModule["Database Connection&lt;br&gt;(config/db.js)&lt;br&gt;conexion"]
+MulterMiddleware["File Upload Middleware&lt;br&gt;(middlewares/multer.js)&lt;br&gt;storage, upload"]
+MySQL["MySQL Database&lt;br&gt;Tables: participantes,&lt;br&gt;organizadores, ganadores"]
+FileSystem["File System&lt;br&gt;public/uploads/participantes/"]
+QueryInterface["db.query(sql, params, callback)"]
+UploadInterface["upload.single('foto')"]
+
+Routes --&gt; MulterMiddleware
+Controllers --&gt; DBModule
+MulterMiddleware --&gt; FileSystem
+DBModule --&gt; MySQL
+DBModule --&gt; QueryInterface
+MulterMiddleware --&gt; UploadInterface
+
+subgraph subGraph2 ["Storage Layer"]
+    MySQL
+    FileSystem
+end
+
+subgraph subGraph1 ["Data Access Layer"]
+    DBModule
+    MulterMiddleware
+end
+
+subgraph subGraph0 ["Application Layer"]
+    Routes
+    Controllers
+    Routes --&gt; Controllers
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L1-L18">config/db.js L1-L18</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L1-L19">controllers/updateParticipante.js L1-L19</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<hr />
+<h2 id="database-connection-configuration">Database Connection Configuration<a class="headerlink" href="#database-connection-configuration" title="Permanent link">&para;</a></h2>
+<p>The application establishes a single MySQL connection using the <code>mysql2</code> library, configured through environment variables for security and deployment flexibility.</p>
+<h3 id="connection-module-structure">Connection Module Structure<a class="headerlink" href="#connection-module-structure" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L1-L18">config/db.js L1-L18</a></p>
+<p>module exports a <code>conexion</code> object that represents the MySQL connection pool:</p>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Environment Variable</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td><code>DB_HOST</code></td>
+<td>Database server hostname</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td><code>DB_USER</code></td>
+<td>Database authentication username</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td><code>DB_PASS</code></td>
+<td>Database authentication password</td>
+</tr>
+<tr>
+<td><code>database</code></td>
+<td><code>DB_NAME</code></td>
+<td>Target database name</td>
+</tr>
+</tbody>
+</table>
+<p>The connection is initialized immediately upon module load <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L10-L16">config/db.js L10-L16</a></p>
+<p>logging success or error to the console. This eager initialization ensures database connectivity is verified at application startup rather than on first query.</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Application Startup
+  participant config/db.js
+  participant MySQL Server
+
+  Application Startup-&gt;&gt;config/db.js: "require('config/db.js')"
+  config/db.js-&gt;&gt;config/db.js: "mysql.createConnection({
+  config/db.js-&gt;&gt;MySQL Server: host, user, password, database})"
+  loop [Connection Successful]
+    MySQL Server--&gt;&gt;config/db.js: "conexion.connect()"
+    config/db.js-&gt;&gt;config/db.js: "Connection established"
+    MySQL Server--&gt;&gt;config/db.js: "console.log('Conectado a la base de datos')"
+    config/db.js-&gt;&gt;config/db.js: "Error"
+  end
+  config/db.js--&gt;&gt;Application Startup: "console.log(error)"</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L1-L18">config/db.js L1-L18</a></p>
+<hr />
+<h2 id="database-schema-and-tables">Database Schema and Tables<a class="headerlink" href="#database-schema-and-tables" title="Permanent link">&para;</a></h2>
+<p>The application uses three primary tables to manage event data:</p>
+<h3 id="participantes-table">participantes Table<a class="headerlink" href="#participantes-table" title="Permanent link">&para;</a></h3>
+<p>Stores registration data for marathon participants. Fields include:</p>
+<ul>
+<li><code>id</code> (primary key)</li>
+<li><code>nombre</code> (first name)</li>
+<li><code>apellido</code> (last name)</li>
+<li><code>dni</code> (national identification number, used for authentication)</li>
+<li><code>telefono</code> (phone number)</li>
+<li><code>calle</code>, <code>numero</code>, <code>poblacion</code>, <code>codigo_postal</code> (address components)</li>
+<li><code>foto</code> (filename of uploaded participant photo)</li>
+</ul>
+<h3 id="organizadores-table">organizadores Table<a class="headerlink" href="#organizadores-table" title="Permanent link">&para;</a></h3>
+<p>Stores administrator/organizer accounts with hashed passwords. Used for admin authentication via username-based login.</p>
+<h3 id="ganadores-table">ganadores Table<a class="headerlink" href="#ganadores-table" title="Permanent link">&para;</a></h3>
+<p>Links winner positions (1st, 2nd, 3rd place) to participant records:</p>
+<ul>
+<li><code>position</code> (winner placement)</li>
+<li><code>participant_id</code> (foreign key to participantes table)</li>
+<li><code>foto</code> (optional winner-specific photo)</li>
+</ul>
+<p><strong>Sources:</strong> High-level diagrams (Diagram 3: Data Management and User Journeys)</p>
+<hr />
+<h2 id="crud-operations-participant-data">CRUD Operations: Participant Data<a class="headerlink" href="#crud-operations-participant-data" title="Permanent link">&para;</a></h2>
+<p>The application performs Create, Read, Update, and Delete operations on participant records through various route handlers and controllers.</p>
+<h3 id="update-operation-flow">Update Operation Flow<a class="headerlink" href="#update-operation-flow" title="Permanent link">&para;</a></h3>
+<p>The <code>updateParticipante</code> controller handles participant profile modifications:</p>
+<pre class="mermaid"><code>flowchart TD
+
+EditForm["edit.ejs&lt;br&gt;Profile Edit Form"]
+PostRoute["/update POST route&lt;br&gt;(routers/participante.js)"]
+UpdateCtrl["updateParticipante.update()&lt;br&gt;(controllers/updateParticipante.js)"]
+UpdateQuery["UPDATE participantes SET&lt;br&gt;nombre=?, apellido=?, dni=?,&lt;br&gt;telefono=?, calle=?, numero=?,&lt;br&gt;poblacion=?, codigo_postal=?&lt;br&gt;WHERE id=?"]
+ParticipantesTable["participantes table"]
+
+EditForm --&gt; PostRoute
+PostRoute --&gt; UpdateCtrl
+UpdateCtrl --&gt; UpdateQuery
+ParticipantesTable --&gt; UpdateCtrl
+UpdateCtrl --&gt; EditForm
+
+subgraph Database ["Database"]
+    UpdateQuery
+    ParticipantesTable
+    UpdateQuery --&gt; ParticipantesTable
+end
+
+subgraph Controller ["Controller"]
+    UpdateCtrl
+end
+
+subgraph subGraph1 ["Route Handler"]
+    PostRoute
+end
+
+subgraph subGraph0 ["User Interface"]
+    EditForm
+end</code></pre>
+<p>The update controller extracts parameters from the request body and constructs a parameterized SQL query <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L7-L9">controllers/updateParticipante.js L7-L9</a></p>
+<p>Parameterized queries prevent SQL injection by separating SQL structure from user-supplied data.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L1-L19">controllers/updateParticipante.js L1-L19</a></p>
+<hr />
+<h2 id="query-pattern-and-error-handling">Query Pattern and Error Handling<a class="headerlink" href="#query-pattern-and-error-handling" title="Permanent link">&para;</a></h2>
+<p>All database operations follow a consistent callback-based pattern using the <code>conexion.query()</code> method:</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Controller Function
+  participant db.query()
+  participant MySQL Database
+  participant Express Response
+
+  Controller Function-&gt;&gt;db.query(): "query(sql, params, callback)"
+  db.query()-&gt;&gt;MySQL Database: "Execute SQL with parameters"
+  loop [Query Successful]
+    MySQL Database--&gt;&gt;db.query(): "result object"
+    db.query()-&gt;&gt;Controller Function: "callback(null, result)"
+    Controller Function-&gt;&gt;Controller Function: "console.log('success message')"
+    Controller Function-&gt;&gt;Express Response: "res.redirect() or res.render()"
+    MySQL Database--&gt;&gt;db.query(): "error object"
+    db.query()-&gt;&gt;Controller Function: "callback(err, null)"
+    Controller Function-&gt;&gt;Controller Function: "console.error('Error message', err)"
+    Controller Function-&gt;&gt;Express Response: "res.redirect(error page)"
+  end</code></pre>
+<p>The update controller demonstrates this pattern <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L10-L17">controllers/updateParticipante.js L10-L17</a></p>
+<p>:</p>
+<ul>
+<li>On error: logs to console and redirects to <code>/perfil</code></li>
+<li>On success: logs confirmation and redirects to <code>/perfil</code></li>
+</ul>
+<p>This approach provides basic error recovery but does not expose detailed error messages to users, maintaining security while ensuring the application remains operational.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L10-L17">controllers/updateParticipante.js L10-L17</a></p>
+<hr />
+<h2 id="file-upload-system">File Upload System<a class="headerlink" href="#file-upload-system" title="Permanent link">&para;</a></h2>
+<p>The application uses <code>multer</code> middleware to handle multipart form data containing file uploads. This system is critical for participant registration and winner photo management.</p>
+<h3 id="multer-configuration">Multer Configuration<a class="headerlink" href="#multer-configuration" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p>module configures <code>multer.diskStorage</code> with two key functions:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Purpose</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>destination</code></td>
+<td>Specifies storage directory</td>
+<td>Returns <code>'public/uploads/participantes'</code></td>
+</tr>
+<tr>
+<td><code>filename</code></td>
+<td>Generates unique filenames</td>
+<td>Returns <code>'participante-' + Date.now() + ext</code></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+
+FormData["Multipart Form Data&lt;br&gt;Content-Type: multipart/form-data&lt;br&gt;Field: 'foto'"]
+MulterStorage["multer.diskStorage&lt;br&gt;(middlewares/multer.js)"]
+DestinationFn["destination(req, file, cb)&lt;br&gt;→ 'public/uploads/participantes'"]
+FilenameFn["filename(req, file, cb)&lt;br&gt;→ 'participante-' + Date.now() + ext"]
+UploadDir["public/uploads/participantes/"]
+SavedFile["participante-1701234567890.jpg"]
+ReqFile["req.file&lt;br&gt;{filename, path, mimetype, size}"]
+
+FormData --&gt; MulterStorage
+DestinationFn --&gt; UploadDir
+FilenameFn --&gt; SavedFile
+SavedFile --&gt; ReqFile
+
+subgraph subGraph3 ["Request Object"]
+    ReqFile
+end
+
+subgraph subGraph2 ["File System"]
+    UploadDir
+    SavedFile
+end
+
+subgraph subGraph1 ["Multer Middleware"]
+    MulterStorage
+    DestinationFn
+    FilenameFn
+    MulterStorage --&gt; DestinationFn
+    MulterStorage --&gt; FilenameFn
+end
+
+subgraph subGraph0 ["Client Request"]
+    FormData
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<h3 id="file-naming-strategy">File Naming Strategy<a class="headerlink" href="#file-naming-strategy" title="Permanent link">&para;</a></h3>
+<p>The filename generation function <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L9-L12">middlewares/multer.js L9-L12</a></p>
+<p>employs timestamp-based naming to ensure uniqueness:</p>
+<ol>
+<li>Extract original file extension using <code>path.extname(file.originalname)</code></li>
+<li>Construct filename: <code>participante-{timestamp}{extension}</code></li>
+<li>Example: <code>participante-1701234567890.jpg</code></li>
+</ol>
+<p>This strategy prevents filename collisions even if multiple users upload files simultaneously, as <code>Date.now()</code> returns milliseconds since epoch. The prefix <code>participante-</code> provides namespace separation if the directory later stores other file types.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L9-L12">middlewares/multer.js L9-L12</a></p>
+<hr />
+<h2 id="file-upload-integration">File Upload Integration<a class="headerlink" href="#file-upload-integration" title="Permanent link">&para;</a></h2>
+<p>The <code>upload</code> object exported from the multer configuration is used as route middleware to process file uploads before request handlers execute:</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Browser
+  participant Route Handler
+  participant upload.single('foto')
+  participant File System
+  participant Route Controller
+  participant Database
+
+  Browser-&gt;&gt;Route Handler: "POST /inscripcion
+  Route Handler-&gt;&gt;upload.single('foto'): multipart/form-data"
+  upload.single('foto')-&gt;&gt;upload.single('foto'): "Process middleware"
+  upload.single('foto')-&gt;&gt;File System: "Parse multipart data"
+  File System--&gt;&gt;upload.single('foto'): "Save to public/uploads/participantes/
+  upload.single('foto')-&gt;&gt;upload.single('foto'): participante-{timestamp}.ext"
+  upload.single('foto')-&gt;&gt;Route Controller: "File saved successfully"
+  Route Controller-&gt;&gt;Route Controller: "Populate req.file"
+  Route Controller-&gt;&gt;Database: "next()"
+  Database--&gt;&gt;Route Controller: "Access req.file.filename"
+  Route Controller-&gt;&gt;Browser: "INSERT INTO participantes</code></pre>
+<p>The middleware populates <code>req.file</code> with metadata including:</p>
+<ul>
+<li><code>filename</code>: Generated filename (e.g., <code>participante-1701234567890.jpg</code>)</li>
+<li><code>path</code>: Full filesystem path</li>
+<li><code>mimetype</code>: MIME type of uploaded file</li>
+<li><code>size</code>: File size in bytes</li>
+</ul>
+<p>Controllers then reference <code>req.file.filename</code> when inserting database records, creating a link between the participant record and their stored photo.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<hr />
+<h2 id="data-validation-and-security">Data Validation and Security<a class="headerlink" href="#data-validation-and-security" title="Permanent link">&para;</a></h2>
+<h3 id="input-validation">Input Validation<a class="headerlink" href="#input-validation" title="Permanent link">&para;</a></h3>
+<p>The application relies on HTML5 form validation attributes in EJS templates (e.g., <code>required</code>, <code>pattern</code>, <code>type="email"</code>) for client-side validation. Server-side validation is implicit through SQL schema constraints and parameterized queries.</p>
+<h3 id="sql-injection-prevention">SQL Injection Prevention<a class="headerlink" href="#sql-injection-prevention" title="Permanent link">&para;</a></h3>
+<p>All database queries use parameterized statements with the <code>?</code> placeholder syntax <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L8-L9">controllers/updateParticipante.js L8-L9</a></p>
+<p>The <code>mysql2</code> library automatically escapes parameters before query execution, preventing SQL injection attacks even if user input contains malicious SQL syntax.</p>
+<p>Example from updateParticipante controller:</p>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">participantes</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nombre</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">apellido</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="n">dni</span><span class="o">=?</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="o">=?</span>
+</code></pre></div>
+<p>Parameters array: <code>[nombre, apellido, dni, telefono, calle, numero, poblacion, codigo_postal, id]</code></p>
+<h3 id="file-upload-security">File Upload Security<a class="headerlink" href="#file-upload-security" title="Permanent link">&para;</a></h3>
+<p>The multer configuration <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L5-L13">middlewares/multer.js L5-L13</a></p>
+<p>does not explicitly filter file types or limit file sizes. This presents potential security considerations:</p>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Current State</th>
+<th>Mitigation Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File type validation</td>
+<td>Not implemented</td>
+<td>Could add <code>fileFilter</code> function to multer config</td>
+</tr>
+<tr>
+<td>File size limits</td>
+<td>Not implemented</td>
+<td>Could add <code>limits: { fileSize: n }</code> to multer config</td>
+</tr>
+<tr>
+<td>Malicious file names</td>
+<td>Handled</td>
+<td>Filename is completely replaced with timestamp pattern</td>
+</tr>
+</tbody>
+</table>
+<p>The timestamp-based naming strategy eliminates filename-related attacks (e.g., directory traversal via <code>../../etc/passwd</code>) by discarding the original filename entirely.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L7-L9">controllers/updateParticipante.js L7-L9</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L5-L13">middlewares/multer.js L5-L13</a></p>
+<hr />
+<h2 id="data-flow-complete-registration-cycle">Data Flow: Complete Registration Cycle<a class="headerlink" href="#data-flow-complete-registration-cycle" title="Permanent link">&para;</a></h2>
+<p>The following diagram illustrates how participant data and photos flow through the system during registration:</p>
+<pre class="mermaid"><code>flowchart TD
+
+RegistrationForm["inscripcion.ejs&lt;br&gt;Registration Form&lt;br&gt;nombre, apellido, dni, telefono,&lt;br&gt;direccion fields, foto upload"]
+InscripcionRoute["POST /inscripcion route"]
+MulterMW["upload.single('foto')&lt;br&gt;middlewares/multer.js"]
+InsertCtrl["Route controller"]
+FileSystemWrite["Write File&lt;br&gt;public/uploads/participantes/&lt;br&gt;participante-{timestamp}.ext"]
+DBInsert["INSERT INTO participantes&lt;br&gt;(nombre, apellido, dni,&lt;br&gt;telefono, calle, numero,&lt;br&gt;poblacion, codigo_postal, foto)"]
+PhotoFile["Stored Photo&lt;br&gt;public/uploads/participantes/"]
+DBRecord["participantes Table Record&lt;br&gt;foto column references filename"]
+
+RegistrationForm --&gt; InscripcionRoute
+MulterMW --&gt; FileSystemWrite
+FileSystemWrite --&gt; PhotoFile
+InsertCtrl --&gt; DBInsert
+DBInsert --&gt; DBRecord
+
+subgraph Persistence ["Persistence"]
+    PhotoFile
+    DBRecord
+    DBRecord --&gt; PhotoFile
+end
+
+subgraph Storage ["Storage"]
+    FileSystemWrite
+    DBInsert
+end
+
+subgraph subGraph1 ["Server Processing"]
+    InscripcionRoute
+    MulterMW
+    InsertCtrl
+    InscripcionRoute --&gt; MulterMW
+    MulterMW --&gt; InsertCtrl
+end
+
+subgraph Client ["Client"]
+    RegistrationForm
+end</code></pre>
+<p>The participant record's <code>foto</code> column stores only the filename (e.g., <code>participante-1701234567890.jpg</code>), not the full path. When rendering profile pages, templates construct the full URL as <code>/uploads/participantes/{filename}</code>, which Express serves via static file middleware.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p>High-level diagrams (Diagram 3)</p>
+<hr />
+<h2 id="data-integrity-and-referential-relationships">Data Integrity and Referential Relationships<a class="headerlink" href="#data-integrity-and-referential-relationships" title="Permanent link">&para;</a></h2>
+<h3 id="winner-participant-relationship">Winner-Participant Relationship<a class="headerlink" href="#winner-participant-relationship" title="Permanent link">&para;</a></h3>
+<p>The <code>ganadores</code> table maintains referential integrity with the <code>participantes</code> table through the <code>participant_id</code> foreign key:</p>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="n">ui-sans-serif</span><span class="p">,</span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">system-ui</span><span class="p">,</span><span class="n">Segoe</span><span class="w"> </span><span class="n">UI</span><span class="p">,</span><span class="n">Helvetica</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="k">fill</span><span class="p">:</span><span class="mh">#333</span><span class="p">;}@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">edge-animation-frame</span><span class="p">{</span><span class="nt">from</span><span class="p">{</span><span class="k">stroke-dashoffset</span><span class="p">:</span><span class="mi">0</span><span class="p">;}}@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">dash</span><span class="p">{</span><span class="nt">to</span><span class="p">{</span><span class="k">stroke-dashoffset</span><span class="p">:</span><span class="mi">0</span><span class="p">;}}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-animation-slow</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="cp">!important</span><span class="p">;</span><span class="k">stroke-dashoffset</span><span class="p">:</span><span class="mi">900</span><span class="p">;</span><span class="k">animation</span><span class="p">:</span><span class="n">dash</span><span class="w"> </span><span class="mi">50</span><span class="kt">s</span><span class="w"> </span><span class="kc">linear</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span><span class="k">stroke-linecap</span><span class="p">:</span><span class="kc">round</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-animation-fast</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="cp">!important</span><span class="p">;</span><span class="k">stroke-dashoffset</span><span class="p">:</span><span class="mi">900</span><span class="p">;</span><span class="k">animation</span><span class="p">:</span><span class="n">dash</span><span class="w"> </span><span class="mi">20</span><span class="kt">s</span><span class="w"> </span><span class="kc">linear</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span><span class="k">stroke-linecap</span><span class="p">:</span><span class="kc">round</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">error-icon</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">error-text</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#222222</span><span class="p">;</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#222222</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-thickness-normal</span><span class="p">{</span><span class="k">stroke-width</span><span class="p">:</span><span class="mi">1</span><span class="kt">px</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-thickness-thick</span><span class="p">{</span><span class="k">stroke-width</span><span class="p">:</span><span class="mf">3.5</span><span class="kt">px</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-pattern-solid</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">0</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-thickness-invisible</span><span class="p">{</span><span class="k">stroke-width</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span><span class="k">fill</span><span class="p">:</span><span class="kc">none</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-pattern-dashed</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">3</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-pattern-dotted</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">2</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">marker</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#999</span><span class="p">;</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#999</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">marker</span><span class="p">.</span><span class="nc">cross</span><span class="p">{</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#999</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="nt">svg</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="n">ui-sans-serif</span><span class="p">,</span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">system-ui</span><span class="p">,</span><span class="n">Segoe</span><span class="w"> </span><span class="n">UI</span><span class="p">,</span><span class="n">Helvetica</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mi">16</span><span class="kt">px</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="nt">p</span><span class="p">{</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">entityBox</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#ffffff</span><span class="p">;</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">relationshipLabelBox</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;</span><span class="k">opacity</span><span class="p">:</span><span class="mf">0.7</span><span class="p">;</span><span class="k">background-color</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">relationshipLabelBox</span><span class="w"> </span><span class="nt">rect</span><span class="p">{</span><span class="k">opacity</span><span class="p">:</span><span class="mf">0.5</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">labelBkg</span><span class="p">{</span><span class="k">background-color</span><span class="p">:</span><span class="nb">rgba</span><span class="p">(</span><span class="mi">221</span><span class="p">,</span><span class="w"> </span><span class="mi">221</span><span class="p">,</span><span class="w"> </span><span class="mi">221</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edgeLabel</span><span class="w"> </span><span class="p">.</span><span class="nc">label</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mi">14</span><span class="kt">px</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">label</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="n">ui-sans-serif</span><span class="p">,</span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">system-ui</span><span class="p">,</span><span class="n">Segoe</span><span class="w"> </span><span class="n">UI</span><span class="p">,</span><span class="n">Helvetica</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#333</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">edge-pattern-dashed</span><span class="p">{</span><span class="k">stroke-dasharray</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">node</span><span class="w"> </span><span class="nt">rect</span><span class="o">,</span><span class="p">#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">node</span><span class="w"> </span><span class="nt">circle</span><span class="o">,</span><span class="p">#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">node</span><span class="w"> </span><span class="nt">ellipse</span><span class="o">,</span><span class="p">#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">node</span><span class="w"> </span><span class="nt">polygon</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="mh">#ffffff</span><span class="p">;</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#dddddd</span><span class="p">;</span><span class="k">stroke-width</span><span class="p">:</span><span class="mi">1</span><span class="kt">px</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">relationshipLine</span><span class="p">{</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#999</span><span class="p">;</span><span class="k">stroke-width</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span><span class="k">fill</span><span class="p">:</span><span class="kc">none</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">.</span><span class="nc">marker</span><span class="p">{</span><span class="k">fill</span><span class="p">:</span><span class="kc">none</span><span class="cp">!important</span><span class="p">;</span><span class="k">stroke</span><span class="p">:</span><span class="mh">#999</span><span class="cp">!important</span><span class="p">;</span><span class="k">stroke-width</span><span class="p">:</span><span class="mi">1</span><span class="p">;}#</span><span class="nn">mermaid-q356j1dc0tf</span><span class="w"> </span><span class="p">:</span><span class="nd">root</span><span class="p">{</span><span class="nv">--mermaid-font-family</span><span class="p">:</span><span class="s2">&quot;trebuchet ms&quot;</span><span class="p">,</span><span class="n">verdana</span><span class="p">,</span><span class="n">arial</span><span class="p">,</span><span class="kc">sans-serif</span><span class="p">;}</span><span class="nt">winner_ofparticipantesintidPKvarcharnombrevarcharapellidovarchardniUKvarchartelefonovarcharcallevarcharnumerovarcharpoblacionvarcharcodigo_postalvarcharfotoganadoresintidPKintpositionintparticipant_idFKvarcharfotoorganizadoresintidPKvarcharusernameUKvarcharpassword</span>
+</code></pre></div>
+<p>This design ensures:</p>
+<ul>
+<li>Winners must be existing participants (foreign key constraint)</li>
+<li>Participant data (name, DNI) is maintained in one location</li>
+<li>Winner-specific photos can differ from registration photos</li>
+<li>A participant can win multiple positions (though business logic may prevent this)</li>
+</ul>
+<p><strong>Sources:</strong> High-level diagrams (Diagram 3: Data Management and User Journeys)</p>
+<hr />
+<h2 id="database-connection-lifecycle">Database Connection Lifecycle<a class="headerlink" href="#database-connection-lifecycle" title="Permanent link">&para;</a></h2>
+<p>The MySQL connection established by <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L1-L18">config/db.js L1-L18</a></p>
+<p>remains open for the application's entire lifecycle. The <code>mysql2</code> library maintains this connection and automatically handles reconnection if network interruptions occur.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; ModuleLoad : "require('config/db.js')"
+    ModuleLoad --&gt; Connecting : "mysql.createConnection()"
+    Connecting --&gt; Connected : "conexion.connect() success"
+    Connecting --&gt; Failed : "conexion.connect() error"
+    Failed --&gt; [*] : "console.log(error)"
+    Connected --&gt; AwaitingQueries : "Exported as 'conexion'"
+    AwaitingQueries --&gt; ExecutingQuery : "db.query(sql, params, callback)"
+    ExecutingQuery --&gt; AwaitingQueries : "db.query(sql, params, callback)"
+    AwaitingQueries --&gt; [*] : "Application shutdown"</code></pre>
+<p>No explicit connection pooling is configured. For production deployments handling concurrent users, migrating to <code>mysql2.createPool()</code> would provide better resource management and automatic connection recycling.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L1-L18">config/db.js L1-L18</a></p>
+<hr />
+<h2 id="error-handling-patterns">Error Handling Patterns<a class="headerlink" href="#error-handling-patterns" title="Permanent link">&para;</a></h2>
+<p>Database operations throughout the application follow a consistent error handling pattern:</p>
+<table>
+<thead>
+<tr>
+<th>Error Scenario</th>
+<th>Detection Method</th>
+<th>Recovery Action</th>
+<th>User Feedback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Query execution failure</td>
+<td><code>err</code> parameter in callback</td>
+<td>Log error to console</td>
+<td>Redirect to safe page (e.g., <code>/perfil</code>)</td>
+</tr>
+<tr>
+<td>Connection failure</td>
+<td><code>error</code> in connect callback</td>
+<td>Log at startup</td>
+<td>Application may not start correctly</td>
+</tr>
+<tr>
+<td>File upload failure</td>
+<td>Multer error handling</td>
+<td>(Not explicitly handled)</td>
+<td>Default Express error handler</td>
+</tr>
+</tbody>
+</table>
+<p>The updateParticipante controller demonstrates typical error handling <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L11-L13">controllers/updateParticipante.js L11-L13</a></p>
+<p>:</p>
+<div class="highlight"><pre><span></span><code>if (err) {
+  console.error(&quot;Error al actualizar:&quot;, err);
+  return res.redirect(&quot;/perfil&quot;);
+}
+</code></pre></div>
+<p>This approach prioritizes application stability over detailed user error messages, preventing information leakage while ensuring users are not left on broken pages.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/controllers/updateParticipante.js#L10-L17">controllers/updateParticipante.js L10-L17</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/config/db.js#L10-L16">config/db.js L10-L16</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

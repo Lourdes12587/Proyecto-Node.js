@@ -1,0 +1,2272 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Participant-Interfaces/">
+      
+      
+        <link rel="next" href="../Registration-Flow/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Landing Page - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#landing-page" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Landing Page
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-structure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Structure Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Composition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hero-banner-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hero Banner Section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hero Banner Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typography-and-content-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typography and Content Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#call-to-action-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Call-to-Action Buttons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Category Badges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-information-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Information Section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Information Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Layout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categories-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categories Section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categories Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photo-gallery-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photo Gallery Section
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Photo Gallery Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css-grid-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Grid Implementation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-race-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Race Map
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive Race Map">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-integration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaflet Integration Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-initialization-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Initialization Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-popup-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Popup Styling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsive-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Breakpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Semantic Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion Preferences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image Optimization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="landing-page">Landing Page<a class="headerlink" href="#landing-page" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css">public/css/style.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs">views/index.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document details the landing page implementation for the HAPPY RUNNER 42K marathon management application. The landing page serves as the primary entry point for visitors, displaying event information, registration calls-to-action, photo gallery, race categories, and an interactive map of the race route. It is implemented in <code>views/index.ejs</code> and styled with <code>public/css/style.css</code>.</p>
+<p>For participant registration functionality, see <a href="/Lourdes12587/Proyecto-Node.js/4.1.2-registration-flow">4.1.2</a>. For authentication-related navigation behavior, see <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">3.2</a>. For shared layout components (header, footer), see <a href="/Lourdes12587/Proyecto-Node.js/4.3-shared-components">4.3</a>.</p>
+<h2 id="page-structure-overview">Page Structure Overview<a class="headerlink" href="#page-structure-overview" title="Permanent link">&para;</a></h2>
+<p>The landing page follows a vertical scrolling single-page layout composed of multiple sections. Each section is semantically structured using HTML5 elements and includes EJS partial inclusions for shared components.</p>
+<pre class="mermaid"><code>flowchart TD
+
+IndexEJS["index.ejs&lt;br&gt;Main Template"]
+HeadPartial["partials/head.ejs&lt;br&gt;Dependencies &amp; Meta"]
+HeaderPartial["partials/header.ejs&lt;br&gt;Navigation Bar"]
+FooterPartial["partials/footer.ejs&lt;br&gt;Site Footer"]
+HeroSection["banner&lt;br&gt;Hero Section"]
+InfoSection["#info&lt;br&gt;Event Details"]
+CategoriesSection["#categorias&lt;br&gt;Race Categories"]
+GallerySection["gallery&lt;br&gt;Photo Gallery"]
+MapSection["#recorrido&lt;br&gt;Interactive Map"]
+StyleCSS["public/css/style.css&lt;br&gt;Base Styles"]
+LeafletCSS["Leaflet CSS&lt;br&gt;External Library"]
+LeafletJS["Leaflet JS&lt;br&gt;Map Engine"]
+
+IndexEJS --&gt; HeadPartial
+IndexEJS --&gt; HeaderPartial
+IndexEJS --&gt; HeroSection
+IndexEJS --&gt; InfoSection
+IndexEJS --&gt; CategoriesSection
+IndexEJS --&gt; GallerySection
+IndexEJS --&gt; MapSection
+IndexEJS --&gt; FooterPartial
+HeadPartial --&gt; StyleCSS
+HeadPartial --&gt; LeafletCSS
+MapSection --&gt; LeafletJS</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L1-L119">views/index.ejs L1-L119</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L1-L721">public/css/style.css L1-L721</a></p>
+<h2 id="template-composition">Template Composition<a class="headerlink" href="#template-composition" title="Permanent link">&para;</a></h2>
+<p>The landing page uses EJS partial inclusion to compose the final HTML document:</p>
+<table>
+<thead>
+<tr>
+<th>Partial Include</th>
+<th>Line Reference</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>partials/head</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L1-L1">views/index.ejs L1</a></td>
+<td>Loads external dependencies (Bootstrap, Leaflet, Font Awesome, Boxicons) and establishes base meta tags</td>
+</tr>
+<tr>
+<td><code>partials/header</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L3-L3">views/index.ejs L3</a></td>
+<td>Renders role-based navigation bar with logo, menu items, and authentication links</td>
+</tr>
+<tr>
+<td><code>partials/footer</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L118-L118">views/index.ejs L118</a></td>
+<td>Displays footer with brand info, social links, newsletter signup, and legal information</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L1-L3">views/index.ejs L1-L3</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L118-L118">views/index.ejs L118</a></p>
+<h2 id="hero-banner-section">Hero Banner Section<a class="headerlink" href="#hero-banner-section" title="Permanent link">&para;</a></h2>
+<p>The hero banner occupies the top of the page and provides immediate visual impact with event branding, key details, and primary call-to-action buttons.</p>
+<h3 id="visual-structure">Visual Structure<a class="headerlink" href="#visual-structure" title="Permanent link">&para;</a></h3>
+<p>The banner is implemented using a <code>.banner</code> class container with parallax-style background image and overlay:</p>
+<pre class="mermaid"><code>flowchart TD
+
+BannerDiv[".banner&lt;br&gt;role='img'&lt;br&gt;id='heroBanner'"]
+Overlay[".banner-overlay&lt;br&gt;gradient overlay"]
+TextContainer[".banner-text.container&lt;br&gt;content wrapper"]
+HeroTitle[".hero-title&lt;br&gt;H1: 'HAPPY RUNNER 42K'"]
+Lead[".lead&lt;br&gt;Date &amp; Location"]
+Description[".banner-desc&lt;br&gt;Event summary"]
+CTAGroup[".hero-cta&lt;br&gt;role='group'"]
+Badges[".hero-badges&lt;br&gt;Category badges"]
+BtnInscripcion["a.btn-banner&lt;br&gt;href='/inscripcion'"]
+BtnRecorrido["a.btn-outline&lt;br&gt;href='#recorrido'"]
+
+BannerDiv --&gt; Overlay
+BannerDiv --&gt; TextContainer
+TextContainer --&gt; HeroTitle
+TextContainer --&gt; Lead
+TextContainer --&gt; Description
+TextContainer --&gt; CTAGroup
+TextContainer --&gt; Badges
+CTAGroup --&gt; BtnInscripcion
+CTAGroup --&gt; BtnRecorrido</code></pre>
+<p><strong>Banner Implementation Details:</strong></p>
+<ul>
+<li>Background image: <code>/resources/img/bunner.jpg</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L215-L215">public/css/style.css L215</a> )</li>
+<li>Min-height: <code>72vh</code> with cover positioning (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L211-L217">public/css/style.css L211-L217</a> )</li>
+<li>Overlay gradient: <code>rgba(6,24,36,0.72)</code> to <code>rgba(17,46,66,0.45)</code> with 2px blur (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L226-L228">public/css/style.css L226-L228</a> )</li>
+<li>Content z-index: <code>2</code> positioned above overlay (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L234-L234">public/css/style.css L234</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L5-L26">views/index.ejs L5-L26</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L208-L287">public/css/style.css L208-L287</a></p>
+<h3 id="typography-and-content-hierarchy">Typography and Content Hierarchy<a class="headerlink" href="#typography-and-content-hierarchy" title="Permanent link">&para;</a></h3>
+<p>The hero section uses a hierarchical typographic scale defined in CSS custom properties:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Class</th>
+<th>Font Size</th>
+<th>Weight</th>
+<th>Line Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Title</td>
+<td><code>.hero-title</code></td>
+<td><code>clamp(2rem, 5.2vw, 3.6rem)</code></td>
+<td>800</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L244-L249">public/css/style.css L244-L249</a></td>
+</tr>
+<tr>
+<td>Accent Span</td>
+<td><code>.accent</code></td>
+<td>Inherits</td>
+<td>Inherits</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L250-L250">public/css/style.css L250</a></td>
+</tr>
+<tr>
+<td>Lead Text</td>
+<td><code>.lead</code></td>
+<td><code>var(--fz-lg)</code> (1.25rem)</td>
+<td>700</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L253-L253">public/css/style.css L253</a></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>.banner-desc</code></td>
+<td>1rem</td>
+<td>Normal</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L254-L254">public/css/style.css L254</a></td>
+</tr>
+</tbody>
+</table>
+<p>The accent color (<code>--accent: #d2643c</code>) is applied to the "42K" text element (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L9-L9">views/index.ejs L9</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L10-L10">public/css/style.css L10</a></p>
+<p>).</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L9-L12">views/index.ejs L9-L12</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L22-L27">public/css/style.css L22-L27</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L243-L254">public/css/style.css L243-L254</a></p>
+<h3 id="call-to-action-buttons">Call-to-Action Buttons<a class="headerlink" href="#call-to-action-buttons" title="Permanent link">&para;</a></h3>
+<p>Two primary CTA buttons are rendered within the <code>.hero-cta</code> group:</p>
+<ol>
+<li><strong>Primary CTA</strong> (<code>.btn-banner</code>): Links to <code>/inscripcion</code> with gradient background (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L15-L15">views/index.ejs L15</a> ) * Gradient: <code>linear-gradient(180deg, var(--accent), #ff8a64)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L259-L259">public/css/style.css L259</a> ) * Shadow: <code>0 18px 48px rgba(255,107,53,0.12)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L264-L264">public/css/style.css L264</a> ) * Hover effect: <code>translateY(-6px) scale(1.02)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L267-L267">public/css/style.css L267</a> )</li>
+<li><strong>Secondary CTA</strong> (<code>.btn-outline</code>): Anchor link to <code>#recorrido</code> section (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L16-L16">views/index.ejs L16</a> ) * Border: <code>2px solid rgba(255,255,255,0.12)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L269-L269">public/css/style.css L269</a> ) * Weight: 700 (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L273-L273">public/css/style.css L273</a> )</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L14-L17">views/index.ejs L14-L17</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L257-L274">public/css/style.css L257-L274</a></p>
+<h3 id="category-badges">Category Badges<a class="headerlink" href="#category-badges" title="Permanent link">&para;</a></h3>
+<p>Two badge elements display race categories using the <code>.badge</code> class with glassmorphism styling:</p>
+<ul>
+<li>Background: <code>linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L293-L293">public/css/style.css L293</a> )</li>
+<li>Border: <code>1px solid rgba(255,255,255,0.04)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L296-L296">public/css/style.css L296</a> )</li>
+<li>Content: "Masculina • 42K" and "Femenina • 42K" (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L21-L22">views/index.ejs L21-L22</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L20-L23">views/index.ejs L20-L23</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L289-L297">public/css/style.css L289-L297</a></p>
+<h2 id="event-information-section">Event Information Section<a class="headerlink" href="#event-information-section" title="Permanent link">&para;</a></h2>
+<p>The <code>#info</code> section provides structured event details using an article-based card layout.</p>
+<pre class="mermaid"><code>flowchart TD
+
+InfoSection["section#info.event-info"]
+Container["div.container"]
+Heading["h2: 'Información del Evento'"]
+Intro["p.intro.small"]
+DetailsGrid["div.event-details"]
+DateCard["article.detail&lt;br&gt;Fecha: 9 sept 2025"]
+TimeCard["article.detail&lt;br&gt;Hora: 10:00 AM"]
+LocationCard["article.detail&lt;br&gt;Ubicación: Park Güell"]
+HydrationCard["article.detail&lt;br&gt;Hidratación: cada 5km"]
+
+InfoSection --&gt; Container
+Container --&gt; Heading
+Container --&gt; Intro
+Container --&gt; DetailsGrid
+DetailsGrid --&gt; DateCard
+DetailsGrid --&gt; TimeCard
+DetailsGrid --&gt; LocationCard
+DetailsGrid --&gt; HydrationCard</code></pre>
+<h3 id="grid-layout">Grid Layout<a class="headerlink" href="#grid-layout" title="Permanent link">&para;</a></h3>
+<p>The <code>.event-details</code> container uses flexbox with wrapping:</p>
+<ul>
+<li>Display: <code>flex</code> with <code>gap: 1rem</code> and <code>flex-wrap: wrap</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L314-L314">public/css/style.css L314</a> )</li>
+<li>Each <code>.detail</code> card: <code>flex: 1 1 220px</code> with responsive growth (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L351-L351">public/css/style.css L351</a> )</li>
+<li>Card styling: <code>border-radius: 12px</code> with soft shadow (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L319-L325">public/css/style.css L319-L325</a> )</li>
+</ul>
+<p><strong>Card Content Structure:</strong></p>
+<ul>
+<li>H3 for label (e.g., "Fecha", "Hora")</li>
+<li>P for value (e.g., "9 de septiembre 2025", "10:00 AM")</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L29-L53">views/index.ejs L29-L53</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L314-L314">public/css/style.css L314</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L319-L351">public/css/style.css L319-L351</a></p>
+<h2 id="categories-section">Categories Section<a class="headerlink" href="#categories-section" title="Permanent link">&para;</a></h2>
+<p>The <code>#categorias</code> section displays race categories using enhanced card components with hover effects.</p>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+CatSection["section#categorias.categories"]
+CatContainer["div.container"]
+CatHeading["h2: 'Categorías'"]
+CatGrid["div.categories-grid"]
+MasculinaCard["article.cat&lt;br&gt;H3: 'Masculina — 42K'"]
+FemeninaCard["article.cat&lt;br&gt;H3: 'Femenina — 42K'"]
+
+CatSection --&gt; CatContainer
+CatContainer --&gt; CatHeading
+CatContainer --&gt; CatGrid
+CatGrid --&gt; MasculinaCard
+CatGrid --&gt; FemeninaCard</code></pre>
+<h3 id="styling-characteristics">Styling Characteristics<a class="headerlink" href="#styling-characteristics" title="Permanent link">&para;</a></h3>
+<p>The <code>.cat</code> class provides enhanced card styling compared to basic <code>.detail</code> cards:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Line Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flex basis</td>
+<td><code>1 1 300px</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L356-L356">public/css/style.css L356</a></td>
+</tr>
+<tr>
+<td>Padding</td>
+<td><code>1.25rem</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L358-L358">public/css/style.css L358</a></td>
+</tr>
+<tr>
+<td>Background</td>
+<td><code>linear-gradient(180deg, var(--white), #fbfdff)</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L361-L361">public/css/style.css L361</a></td>
+</tr>
+<tr>
+<td>Transition</td>
+<td><code>transform .28s cubic-bezier(.2,.9,.3,1)</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L362-L362">public/css/style.css L362</a></td>
+</tr>
+<tr>
+<td>Hover transform</td>
+<td><code>translateY(-10px)</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L364-L364">public/css/style.css L364</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L55-L69">views/index.ejs L55-L69</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L354-L366">public/css/style.css L354-L366</a></p>
+<h2 id="photo-gallery-section">Photo Gallery Section<a class="headerlink" href="#photo-gallery-section" title="Permanent link">&para;</a></h2>
+<p>The gallery section implements a responsive grid layout for event photography.</p>
+<h3 id="grid-configuration">Grid Configuration<a class="headerlink" href="#grid-configuration" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+GallerySection["section.gallery"]
+GalleryContainer["div.gallery-container"]
+Fig1["figure&lt;br&gt;img: corredores-alegres..."]
+Fig2["figure&lt;br&gt;img: diferentes-personas..."]
+Fig3["figure&lt;br&gt;img: mujeres-atleticas..."]
+Caption1["figcaption: 'Corredores disfrutando...'"]
+Caption2["figcaption: 'Salida oficial.'"]
+Caption3["figcaption: 'Emoción en meta.'"]
+
+GallerySection --&gt; GalleryContainer
+GalleryContainer --&gt; Fig1
+GalleryContainer --&gt; Fig2
+GalleryContainer --&gt; Fig3
+Fig1 --&gt; Caption1
+Fig2 --&gt; Caption2
+Fig3 --&gt; Caption3</code></pre>
+<h3 id="css-grid-implementation">CSS Grid Implementation<a class="headerlink" href="#css-grid-implementation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Grid template: <code>repeat(auto-fit, minmax(240px, 1fr))</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L370-L370">public/css/style.css L370</a> )</li>
+<li>Gap: <code>1rem</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L371-L371">public/css/style.css L371</a> )</li>
+<li>Image height: <code>260px</code> with <code>object-fit: cover</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L381-L381">public/css/style.css L381</a> )</li>
+<li>Hover effects: * Figure: <code>translateY(-10px)</code> with shadow elevation (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L382-L382">public/css/style.css L382</a> ) * Image: <code>scale(1.05)</code> with brightness increase (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L383-L383">public/css/style.css L383</a> )</li>
+</ul>
+<p><strong>Image Attributes:</strong></p>
+<ul>
+<li><code>loading="lazy"</code> for performance optimization (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L75-L77">views/index.ejs L75-L77</a> )</li>
+<li>Alt text for accessibility</li>
+<li>Semantic <code>&lt;figcaption&gt;</code> for descriptions</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L71-L81">views/index.ejs L71-L81</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L367-L385">public/css/style.css L367-L385</a></p>
+<h2 id="interactive-race-map">Interactive Race Map<a class="headerlink" href="#interactive-race-map" title="Permanent link">&para;</a></h2>
+<p>The race route section integrates Leaflet.js to display an interactive map showing the marathon path from start to finish.</p>
+<h3 id="leaflet-integration-flow">Leaflet Integration Flow<a class="headerlink" href="#leaflet-integration-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Browser
+  participant index.ejs
+  participant leaflet.css (CDN)
+  participant leaflet.js (CDN)
+  participant div
+  participant Inline Script
+
+  Browser-&gt;&gt;index.ejs: Load page
+  index.ejs-&gt;&gt;leaflet.css (CDN): Link stylesheet (line 93)
+  index.ejs-&gt;&gt;leaflet.js (CDN): Load library (line 94)
+  Browser-&gt;&gt;div: Render container
+  Browser-&gt;&gt;Inline Script: Execute initialization
+  Inline Script-&gt;&gt;leaflet.js (CDN): "L.map('map').setView([41.4145, 2.1527], 14)"
+  Inline Script-&gt;&gt;leaflet.js (CDN): "L.tileLayer(...).addTo(map)"
+  Inline Script-&gt;&gt;leaflet.js (CDN): "L.polyline(racePath, {...})"
+  Inline Script-&gt;&gt;leaflet.js (CDN): "L.marker(...).bindPopup('Inicio')"
+  Inline Script-&gt;&gt;leaflet.js (CDN): "L.marker(...).bindPopup('Meta')"
+  leaflet.js (CDN)-&gt;&gt;div: Render interactive map</code></pre>
+<h3 id="map-initialization-parameters">Map Initialization Parameters<a class="headerlink" href="#map-initialization-parameters" title="Permanent link">&para;</a></h3>
+<p><strong>Map Container:</strong></p>
+<ul>
+<li>Element ID: <code>map</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L87-L87">views/index.ejs L87</a> )</li>
+<li>Initial view: <code>[41.4145, 2.1527]</code> (Park Güell coordinates) with zoom level 14 (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L97-L97">views/index.ejs L97</a> )</li>
+<li>Tile layer: OpenStreetMap with attribution (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L99-L101">views/index.ejs L99-L101</a> )</li>
+</ul>
+<p><strong>Race Path Coordinates:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">racePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">41.4145</span><span class="p">,</span><span class="w"> </span><span class="mf">2.1527</span><span class="p">],</span><span class="w"> </span><span class="c1">// Inicio</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">41.4150</span><span class="p">,</span><span class="w"> </span><span class="mf">2.1535</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">41.4155</span><span class="p">,</span><span class="w"> </span><span class="mf">2.1545</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="mf">41.4160</span><span class="p">,</span><span class="w"> </span><span class="mf">2.1555</span><span class="p">]</span><span class="w">  </span><span class="c1">// Meta</span>
+<span class="p">];</span>
+</code></pre></div>
+<p>(<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L103-L108">views/index.ejs L103-L108</a></p>
+<p>)</p>
+<p><strong>Polyline Styling:</strong></p>
+<ul>
+<li>Color: <code>red</code></li>
+<li>Weight: <code>5</code></li>
+<li>Opacity: <code>0.8</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L110-L110">views/index.ejs L110</a> )</li>
+</ul>
+<p><strong>Markers:</strong></p>
+<ul>
+<li>Start marker: <code>racePath[0]</code> with popup "Inicio" (auto-opened) (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L114-L114">views/index.ejs L114</a> )</li>
+<li>Finish marker: <code>racePath[racePath.length - 1]</code> with popup "Meta" (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L115-L115">views/index.ejs L115</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L83-L116">views/index.ejs L83-L116</a></p>
+<h3 id="map-styling">Map Styling<a class="headerlink" href="#map-styling" title="Permanent link">&para;</a></h3>
+<p>The map container receives specific styling for visual consistency:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Line Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Width</td>
+<td><code>100%</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L87-L87">views/index.ejs L87</a></td>
+</tr>
+<tr>
+<td>Height</td>
+<td><code>400px</code> (base), <code>450px</code> (wrapper)</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L87-L87">views/index.ejs L87</a> <br>  <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L423-L423">public/css/style.css L423</a></td>
+</tr>
+<tr>
+<td>Border radius</td>
+<td><code>14px</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L424-L424">public/css/style.css L424</a></td>
+</tr>
+<tr>
+<td>Border</td>
+<td><code>2px solid rgba(22,66,91,0.08)</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L426-L426">public/css/style.css L426</a></td>
+</tr>
+<tr>
+<td>Box shadow</td>
+<td><code>0 12px 40px rgba(10,40,60,0.12)</code></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L427-L427">public/css/style.css L427</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wrapper Container</strong> (<code>.map-wrapper</code>):</p>
+<ul>
+<li>Max-width: <code>1000px</code> with centered margin (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L410-L412">public/css/style.css L410-L412</a> )</li>
+<li>Background: <code>#fff</code> with elevated shadow (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L414-L415">public/css/style.css L414-L415</a> )</li>
+<li>Animation: <code>fadeIn .6s ease-out</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L417-L417">public/css/style.css L417</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L87-L87">views/index.ejs L87</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L388-L463">public/css/style.css L388-L463</a></p>
+<h3 id="custom-popup-styling">Custom Popup Styling<a class="headerlink" href="#custom-popup-styling" title="Permanent link">&para;</a></h3>
+<p>Leaflet popup elements are customized via CSS overrides:</p>
+<ul>
+<li><code>.leaflet-popup-content-wrapper</code>: White background with border radius <code>10px</code> and shadow (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L431-L437">public/css/style.css L431-L437</a> )</li>
+<li><code>.leaflet-popup-tip</code>: Matching white background (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L440-L442">public/css/style.css L440-L442</a> )</li>
+<li>Content: Font weight <code>600</code> with indigo-dye color (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L435-L435">public/css/style.css L435</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L430-L442">public/css/style.css L430-L442</a></p>
+<h2 id="css-architecture">CSS Architecture<a class="headerlink" href="#css-architecture" title="Permanent link">&para;</a></h2>
+<p>The landing page styling is built on a comprehensive design system defined in CSS custom properties.</p>
+<h3 id="design-tokens">Design Tokens<a class="headerlink" href="#design-tokens" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+RootVars[":root CSS Variables"]
+ColorPalette["Color Palette"]
+Spacing["Spacing System"]
+Typography["Typography Scale"]
+Effects["Shadow &amp; Effects"]
+LapisLazuli["--lapis-lazuli: #2f6690ff"]
+Cerulean["--cerulean: #3a7ca5ff"]
+IndigoDye["--indigo-dye: #16425bff"]
+SkyBlue["--sky-blue: #81c3d7ff"]
+Accent["--accent: #d2643c"]
+Radius["--radius: 14px"]
+Gap["--gap: 1rem"]
+MaxWidth["--max-width: 1200px"]
+FzBase["--fz-base: 18px"]
+FzLg["--fz-lg: 1.25rem"]
+Leading["--leading: 1.55"]
+ShadowSoft["--shadow-soft"]
+ShadowStrong["--shadow-strong"]
+
+RootVars --&gt; ColorPalette
+RootVars --&gt; Spacing
+RootVars --&gt; Typography
+RootVars --&gt; Effects
+ColorPalette --&gt; LapisLazuli
+ColorPalette --&gt; Cerulean
+ColorPalette --&gt; IndigoDye
+ColorPalette --&gt; SkyBlue
+ColorPalette --&gt; Accent
+Spacing --&gt; Radius
+Spacing --&gt; Gap
+Spacing --&gt; MaxWidth
+Typography --&gt; FzBase
+Typography --&gt; FzLg
+Typography --&gt; Leading
+Effects --&gt; ShadowSoft
+Effects --&gt; ShadowStrong</code></pre>
+<p><strong>Color Palette Definition:</strong>
+All primary colors are defined at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L3-L11">public/css/style.css L3-L11</a></p>
+<p>The accent color <code>#d2643c</code> provides contrast for CTAs and highlights.</p>
+<p><strong>Typography System:</strong></p>
+<ul>
+<li>Base font size increased to <code>18px</code> for improved readability (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L23-L23">public/css/style.css L23</a> )</li>
+<li>Line height: <code>1.55</code> for comfortable reading (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L26-L26">public/css/style.css L26</a> )</li>
+<li>Font family: "Montserrat" with system fallbacks (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L34-L34">public/css/style.css L34</a> )</li>
+</ul>
+<p><strong>Shadows:</strong></p>
+<ul>
+<li>Soft shadow: <code>0 12px 32px rgba(10,30,45,0.08)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L19-L19">public/css/style.css L19</a> )</li>
+<li>Strong shadow: <code>0 20px 60px rgba(10,30,45,0.14)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L20-L20">public/css/style.css L20</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L3-L27">public/css/style.css L3-L27</a></p>
+<h3 id="responsive-breakpoints">Responsive Breakpoints<a class="headerlink" href="#responsive-breakpoints" title="Permanent link">&para;</a></h3>
+<p>The stylesheet implements mobile-first responsive design with three primary breakpoints:</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Scope</th>
+<th>Key Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max-width: 980px</code></td>
+<td>Tablet</td>
+<td>Column stacking for event details and categories, reduced hero font size, map height to 420px</td>
+</tr>
+<tr>
+<td><code>max-width: 780px</code></td>
+<td>Mobile</td>
+<td>Hamburger menu activation, nav-links dropdown, adjusted padding</td>
+</tr>
+<tr>
+<td><code>max-width: 680px</code></td>
+<td>Small mobile</td>
+<td>Gallery image height reduction (260px → 200px), banner min-height to 55vh, map height to 320px</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Navigation Responsive Behavior:</strong></p>
+<ul>
+<li>Menu button (<code>.menu-btn</code>) displays below 780px (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L151-L151">public/css/style.css L151</a> )</li>
+<li>Nav links convert to dropdown positioned absolutely (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L152-L162">public/css/style.css L152-L162</a> )</li>
+<li>Active state toggled via <code>.active</code> class (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L164-L164">public/css/style.css L164</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L150-L167">public/css/style.css L150-L167</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L498-L508">public/css/style.css L498-L508</a></p>
+<h2 id="accessibility-features">Accessibility Features<a class="headerlink" href="#accessibility-features" title="Permanent link">&para;</a></h2>
+<p>The landing page implements WCAG 2.1 accessibility guidelines through semantic markup and ARIA attributes.</p>
+<h3 id="semantic-structure">Semantic Structure<a class="headerlink" href="#semantic-structure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hero banner: <code>role="img"</code> with <code>aria-label="Corredores en Barcelona"</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L6-L6">views/index.ejs L6</a> )</li>
+<li>Overlay: <code>aria-hidden="true"</code> to hide decorative element from screen readers (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L7-L7">views/index.ejs L7</a> )</li>
+<li>CTA group: <code>role="group"</code> with <code>aria-label="Llamados a la acción"</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L14-L14">views/index.ejs L14</a> )</li>
+<li>Badges: <code>aria-hidden="true"</code> as decorative content (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L20-L20">views/index.ejs L20</a> )</li>
+</ul>
+<h3 id="keyboard-navigation">Keyboard Navigation<a class="headerlink" href="#keyboard-navigation" title="Permanent link">&para;</a></h3>
+<p>Focus states are enhanced with consistent outline styling:</p>
+<div class="highlight"><pre><span></span><code>a:focus, button:focus, input:focus {
+  outline: 3px solid rgba(129,195,215,0.16);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+</code></pre></div>
+<p>(<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L495-L495">public/css/style.css L495</a></p>
+<p>)</p>
+<h3 id="motion-preferences">Motion Preferences<a class="headerlink" href="#motion-preferences" title="Permanent link">&para;</a></h3>
+<p>The stylesheet respects <code>prefers-reduced-motion</code> media query:</p>
+<div class="highlight"><pre><span></span><code>@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+</code></pre></div>
+<p>(<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L511-L513">public/css/style.css L511-L513</a></p>
+<p>)</p>
+<h3 id="image-optimization">Image Optimization<a class="headerlink" href="#image-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lazy loading: <code>loading="lazy"</code> on gallery images (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L75-L77">views/index.ejs L75-L77</a> )</li>
+<li>Alt text: Descriptive alt attributes for all images</li>
+<li>Figcaptions: Semantic captions for gallery items</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L6-L7">views/index.ejs L6-L7</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L14-L14">views/index.ejs L14</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L20-L20">views/index.ejs L20</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L75-L77">views/index.ejs L75-L77</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L495-L495">public/css/style.css L495</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L511-L513">public/css/style.css L511-L513</a></p>
+<h2 id="external-dependencies">External Dependencies<a class="headerlink" href="#external-dependencies" title="Permanent link">&para;</a></h2>
+<p>The landing page relies on external libraries loaded via CDN:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Purpose</th>
+<th>Load Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leaflet CSS</td>
+<td>Map styling</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L93-L93">views/index.ejs L93</a></td>
+</tr>
+<tr>
+<td>Leaflet JS</td>
+<td>Interactive mapping engine</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L94-L94">views/index.ejs L94</a></td>
+</tr>
+<tr>
+<td>Font Awesome</td>
+<td>Icon fonts</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L1-L1">public/css/style.css L1</a></td>
+</tr>
+<tr>
+<td>Bootstrap</td>
+<td>UI framework (via partials/head)</td>
+<td>Referenced in head partial</td>
+</tr>
+<tr>
+<td>Boxicons</td>
+<td>Additional icon set (via partials/head)</td>
+<td>Referenced in head partial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tile Provider:</strong></p>
+<ul>
+<li>OpenStreetMap tiles with attribution requirement (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L99-L101">views/index.ejs L99-L101</a> )</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L93-L94">views/index.ejs L93-L94</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/index.ejs#L99-L101">views/index.ejs L99-L101</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L1-L1">public/css/style.css L1</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

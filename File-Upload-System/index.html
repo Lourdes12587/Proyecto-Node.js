@@ -1,0 +1,2010 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Participant-Data/">
+      
+      
+        <link rel="next" href="..">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>File Upload System - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-upload-system" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File Upload System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multer-middleware-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multer Middleware Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multer Middleware Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-naming-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Naming Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destination-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destination Directory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multer-configuration-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multer Configuration Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-registration-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Registration Form
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Registration Form">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-input-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Input Field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-upload-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Upload Request Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-storage-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Storage Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multer-middleware-usage-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multer Middleware Usage Pattern
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multer Middleware Usage Pattern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reqfile-object-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      req.file Object Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implemented-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implemented Protections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-side-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-Side Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-server-side-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Server-Side Validations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-access-and-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Access and Serving
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Access and Serving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url-construction-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Construction Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-usage-in-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage in Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-authentication-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Authentication Middleware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-composition-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Composition Diagram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="file-upload-system">File Upload System<a class="headerlink" href="#file-upload-system" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js">middlewares/multer.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js">middlewares/verifyAdmin.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js">middlewares/verifyToken.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css">public/css/edit.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs">views/inscripcion.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document describes the file upload system used for handling participant profile photos during registration. The system uses the <code>multer</code> middleware library to process multipart/form-data uploads, generating unique timestamped filenames and storing images in a dedicated directory structure. For information about how participant data is stored and managed beyond file uploads, see <a href="/Lourdes12587/Proyecto-Node.js/6.1-participant-data">Participant Data</a>. For details on the registration form interface itself, see <a href="/Lourdes12587/Proyecto-Node.js/4.1.2-registration-flow">Registration Flow</a>.</p>
+<h2 id="multer-middleware-configuration">Multer Middleware Configuration<a class="headerlink" href="#multer-middleware-configuration" title="Permanent link">&para;</a></h2>
+<p>The file upload system is implemented through a dedicated multer middleware configuration located at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p>This middleware intercepts file uploads and handles storage operations before the request reaches route handlers.</p>
+<h3 id="storage-engine">Storage Engine<a class="headerlink" href="#storage-engine" title="Permanent link">&para;</a></h3>
+<p>The system uses <code>multer.diskStorage()</code> to configure a disk-based storage engine rather than keeping files in memory. This approach is suitable for the application's needs, where uploaded photos are permanently stored on the server filesystem.</p>
+<p><strong>Configuration Structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Configuration Aspect</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Storage Type</td>
+<td><code>multer.diskStorage()</code></td>
+</tr>
+<tr>
+<td>Destination Function</td>
+<td>Returns <code>'public/uploads/participantes'</code></td>
+</tr>
+<tr>
+<td>Filename Function</td>
+<td>Generates <code>'participante-' + Date.now() + ext</code></td>
+</tr>
+<tr>
+<td>Module Export</td>
+<td><code>multer({ storage })</code> instance</td>
+</tr>
+</tbody>
+</table>
+<p>The storage configuration object provides two callback functions that control where and how files are saved: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L5-L13">middlewares/multer.js L5-L13</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<h3 id="file-naming-strategy">File Naming Strategy<a class="headerlink" href="#file-naming-strategy" title="Permanent link">&para;</a></h3>
+<p>The filename generation function implements a timestamp-based naming convention to ensure uniqueness and prevent filename collisions:</p>
+<div class="highlight"><pre><span></span><code>participante-{timestamp}.{extension}
+</code></pre></div>
+<p>The function extracts the original file extension using <code>path.extname(file.originalname)</code> and combines it with the prefix <code>'participante-'</code> and the current timestamp from <code>Date.now()</code>: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L9-L12">middlewares/multer.js L9-L12</a></p>
+<p>This approach guarantees unique filenames even when multiple participants upload files simultaneously, as <code>Date.now()</code> returns milliseconds since the Unix epoch.</p>
+<p><strong>Example Generated Filenames:</strong></p>
+<ul>
+<li><code>participante-1703856234567.jpg</code></li>
+<li><code>participante-1703856234890.png</code></li>
+<li><code>participante-1703856235123.jpeg</code></li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L9-L12">middlewares/multer.js L9-L12</a></p>
+<h3 id="destination-directory">Destination Directory<a class="headerlink" href="#destination-directory" title="Permanent link">&para;</a></h3>
+<p>All participant photos are stored in <code>public/uploads/participantes/</code>: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a></p>
+<p>This directory structure serves multiple purposes:</p>
+<ol>
+<li><strong>Public Accessibility:</strong> The <code>public/</code> prefix indicates files are served statically by Express, making them accessible via HTTP URLs</li>
+<li><strong>Logical Organization:</strong> The <code>uploads/</code> subdirectory separates user-generated content from application assets</li>
+<li><strong>Entity Separation:</strong> The <code>participantes/</code> subdirectory isolates participant photos from other upload types (e.g., winner photos)</li>
+</ol>
+<p>The destination is returned via the callback function <code>cb(null, 'public/uploads/participantes')</code>, where the <code>null</code> first argument indicates no error: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L6-L8">middlewares/multer.js L6-L8</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L6-L8">middlewares/multer.js L6-L8</a></p>
+<h2 id="multer-configuration-architecture">Multer Configuration Architecture<a class="headerlink" href="#multer-configuration-architecture" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+MulterImport["require('multer')"]
+StorageConfig["multer.diskStorage({...})"]
+PathImport["require('path')"]
+FilenameFn["filename: function(req, file, cb)"]
+DestinationFn["destination: function(req, file, cb)"]
+DestPath["cb(null, 'public/uploads/participantes')"]
+ExtExtraction["path.extname(file.originalname)"]
+FilenamePattern["'participante-' + Date.now() + ext"]
+UploadInstance["multer({ storage })"]
+ModuleExport["module.exports = upload"]
+
+subgraph subGraph0 ["multer.js Configuration"]
+    MulterImport
+    StorageConfig
+    PathImport
+    FilenameFn
+    DestinationFn
+    DestPath
+    ExtExtraction
+    FilenamePattern
+    UploadInstance
+    ModuleExport
+    MulterImport --&gt; StorageConfig
+    PathImport --&gt; FilenameFn
+    StorageConfig --&gt; DestinationFn
+    StorageConfig --&gt; FilenameFn
+    DestinationFn --&gt; DestPath
+    FilenameFn --&gt; ExtExtraction
+    ExtExtraction --&gt; FilenamePattern
+    StorageConfig --&gt; UploadInstance
+    UploadInstance --&gt; ModuleExport
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<h2 id="integration-with-registration-form">Integration with Registration Form<a class="headerlink" href="#integration-with-registration-form" title="Permanent link">&para;</a></h2>
+<p>The registration form at <code>views/inscripcion.ejs</code> integrates with the multer middleware through proper form encoding and input configuration.</p>
+<h3 id="form-configuration">Form Configuration<a class="headerlink" href="#form-configuration" title="Permanent link">&para;</a></h3>
+<p>The form element specifies <code>enctype="multipart/form-data"</code> to enable file upload capability: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L22">views/inscripcion.ejs L22</a></p>
+<p>This encoding type instructs the browser to send form data as a multipart MIME message, which multer can parse.</p>
+<div class="highlight"><pre><span></span><code>&lt;form action=&quot;/inscripcion&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
+</code></pre></div>
+<p><strong>Key Form Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>action</code></td>
+<td><code>/inscripcion</code></td>
+<td>POST endpoint for form submission</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td><code>POST</code></td>
+<td>HTTP method for data transmission</td>
+</tr>
+<tr>
+<td><code>enctype</code></td>
+<td><code>multipart/form-data</code></td>
+<td>Enables file upload parsing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L22">views/inscripcion.ejs L22</a></p>
+<h3 id="file-input-field">File Input Field<a class="headerlink" href="#file-input-field" title="Permanent link">&para;</a></h3>
+<p>The file input field is positioned prominently at the top of the form with the label "Foto para dorsal/perfil": <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L24-L27">views/inscripcion.ejs L24-L27</a></p>
+<p>The field configuration enforces image file selection:</p>
+<div class="highlight"><pre><span></span><code>&lt;input type=&quot;file&quot; name=&quot;foto&quot; accept=&quot;image/*&quot; required&gt;
+</code></pre></div>
+<p><strong>Input Specifications:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>file</code></td>
+<td>Renders file picker UI</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>foto</code></td>
+<td>Field name in multipart data</td>
+</tr>
+<tr>
+<td><code>accept</code></td>
+<td><code>image/*</code></td>
+<td>Browser-level filter for image files</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td>(boolean)</td>
+<td>Prevents form submission without file</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>name="foto"</code> attribute is crucial as it determines how the route handler accesses the uploaded file through multer's <code>req.file</code> object.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L24-L27">views/inscripcion.ejs L24-L27</a></p>
+<h2 id="file-upload-request-flow">File Upload Request Flow<a class="headerlink" href="#file-upload-request-flow" title="Permanent link">&para;</a></h2>
+<p>The following diagram illustrates how file uploads are processed through the application stack, from form submission to file storage:</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Browser
+  participant app.js
+  participant /inscripcion Route
+  participant multer.single('foto')
+  participant multer.diskStorage
+  participant public/uploads/participantes/
+  participant Route Handler
+  participant MySQL DB
+
+  Browser-&gt;&gt;app.js: "POST /inscripcion
+  app.js-&gt;&gt;/inscripcion Route: Content-Type: multipart/form-data"
+  /inscripcion Route-&gt;&gt;multer.single('foto'): "Route to /inscripcion"
+  multer.single('foto')-&gt;&gt;multer.single('foto'): "Apply middleware"
+  multer.single('foto')-&gt;&gt;multer.diskStorage: "Parse multipart data"
+  multer.diskStorage--&gt;&gt;multer.single('foto'): "Call destination(req, file, cb)"
+  multer.single('foto')-&gt;&gt;multer.diskStorage: "'public/uploads/participantes'"
+  multer.diskStorage-&gt;&gt;multer.diskStorage: "Call filename(req, file, cb)"
+  multer.diskStorage--&gt;&gt;multer.single('foto'): "Generate 'participante-' + Date.now() + ext"
+  multer.single('foto')-&gt;&gt;public/uploads/participantes/: "'participante-1703856234567.jpg'"
+  public/uploads/participantes/--&gt;&gt;multer.single('foto'): "Write file to disk"
+  multer.single('foto')-&gt;&gt;multer.single('foto'): "File saved successfully"
+  multer.single('foto')-&gt;&gt;Route Handler: "Populate req.file object"
+  Route Handler-&gt;&gt;Route Handler: "next()"
+  Route Handler-&gt;&gt;MySQL DB: "Access req.file.filename"
+  MySQL DB--&gt;&gt;Route Handler: "INSERT participant with foto path"
+  Route Handler-&gt;&gt;Browser: "Success"</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L27">views/inscripcion.ejs L22-L27</a></p>
+<h2 id="file-storage-structure">File Storage Structure<a class="headerlink" href="#file-storage-structure" title="Permanent link">&para;</a></h2>
+<p>The file storage system maintains a simple, flat directory structure:</p>
+<pre class="mermaid"><code>flowchart TD
+
+UploadsDir["uploads/"]
+PublicDir["public/"]
+CSSDir["css/"]
+JSDir["js/"]
+ImagesDir["images/"]
+ParticipantesDir["participantes/"]
+File1["participante-1703856234567.jpg"]
+File2["participante-1703856234890.png"]
+File3["participante-1703856235123.jpeg"]
+FileN["..."]
+
+subgraph subGraph2 ["Application Root"]
+    PublicDir
+    PublicDir --&gt; CSSDir
+    PublicDir --&gt; JSDir
+    PublicDir --&gt; ImagesDir
+    PublicDir --&gt; UploadsDir
+
+subgraph subGraph1 ["User Uploads"]
+    UploadsDir
+    ParticipantesDir
+    File1
+    File2
+    File3
+    FileN
+    UploadsDir --&gt; ParticipantesDir
+    ParticipantesDir --&gt; File1
+    ParticipantesDir --&gt; File2
+    ParticipantesDir --&gt; File3
+    ParticipantesDir --&gt; FileN
+end
+
+subgraph subGraph0 ["Static Assets"]
+    CSSDir
+    JSDir
+    ImagesDir
+end
+end</code></pre>
+<p>This structure allows participant photos to be served via URLs like <code>/uploads/participantes/participante-1703856234567.jpg</code> due to Express's static file serving configured for the <code>public/</code> directory.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a></p>
+<h2 id="multer-middleware-usage-pattern">Multer Middleware Usage Pattern<a class="headerlink" href="#multer-middleware-usage-pattern" title="Permanent link">&para;</a></h2>
+<p>The multer middleware instance exported from <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L15-L15">middlewares/multer.js L15</a></p>
+<p>is applied to routes that handle file uploads. The typical usage pattern is:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">upload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./middlewares/multer&#39;</span><span class="p">);</span>
+
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/inscripcion&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">upload</span><span class="p">.</span><span class="nx">single</span><span class="p">(</span><span class="s1">&#39;foto&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// req.file contains uploaded file information</span>
+<span class="w">  </span><span class="c1">// req.body contains other form fields</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The <code>upload.single('foto')</code> method call configures multer to:</p>
+<ol>
+<li>Expect exactly one file with the field name <code>'foto'</code></li>
+<li>Make the file information available via <code>req.file</code></li>
+<li>Continue processing if upload succeeds, or return error if it fails</li>
+</ol>
+<h3 id="reqfile-object-structure">req.file Object Structure<a class="headerlink" href="#reqfile-object-structure" title="Permanent link">&para;</a></h3>
+<p>After successful upload, <code>req.file</code> contains:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Example Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fieldname</code></td>
+<td><code>'foto'</code></td>
+<td>Field name specified in form</td>
+</tr>
+<tr>
+<td><code>originalname</code></td>
+<td><code>'profile.jpg'</code></td>
+<td>Original filename from user's computer</td>
+</tr>
+<tr>
+<td><code>encoding</code></td>
+<td><code>'7bit'</code></td>
+<td>File encoding</td>
+</tr>
+<tr>
+<td><code>mimetype</code></td>
+<td><code>'image/jpeg'</code></td>
+<td>MIME type detected by multer</td>
+</tr>
+<tr>
+<td><code>destination</code></td>
+<td><code>'public/uploads/participantes'</code></td>
+<td>Storage directory</td>
+</tr>
+<tr>
+<td><code>filename</code></td>
+<td><code>'participante-1703856234567.jpg'</code></td>
+<td>Generated filename</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td><code>'public/uploads/participantes/participante-1703856234567.jpg'</code></td>
+<td>Full file path</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td><code>245678</code></td>
+<td>File size in bytes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<p>The current implementation includes basic security measures but has areas that could be enhanced:</p>
+<h3 id="implemented-protections">Implemented Protections<a class="headerlink" href="#implemented-protections" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>File Extension Preservation:</strong> The system preserves the original file extension: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L10-L10">middlewares/multer.js L10</a>  This allows proper file type identification but relies on client-provided data.</li>
+<li><strong>Timestamp-Based Naming:</strong> Using <code>Date.now()</code> for filenames prevents path traversal attacks since the filename is entirely server-generated: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L11-L11">middlewares/multer.js L11</a></li>
+<li><strong>Isolated Storage Directory:</strong> Participant uploads are segregated in a dedicated directory: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a>  preventing accidental mixing with application code or system files.</li>
+</ol>
+<h3 id="client-side-validation">Client-Side Validation<a class="headerlink" href="#client-side-validation" title="Permanent link">&para;</a></h3>
+<p>The registration form includes browser-level file type filtering with <code>accept="image/*"</code>: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L26-L26">views/inscripcion.ejs L26</a></p>
+<p>This provides immediate user feedback but is not a security control, as it can be bypassed by modifying the HTML or sending requests directly.</p>
+<h3 id="missing-server-side-validations">Missing Server-Side Validations<a class="headerlink" href="#missing-server-side-validations" title="Permanent link">&para;</a></h3>
+<p>The current implementation lacks several server-side security controls:</p>
+<ul>
+<li><strong>MIME Type Validation:</strong> No verification that uploaded files are actually images</li>
+<li><strong>File Size Limits:</strong> No configured limit on upload size (default multer limit applies)</li>
+<li><strong>File Content Inspection:</strong> No validation of image file headers or content</li>
+<li><strong>Malicious File Prevention:</strong> No scanning for embedded scripts or malware</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L24-L27">views/inscripcion.ejs L24-L27</a></p>
+<h2 id="file-access-and-serving">File Access and Serving<a class="headerlink" href="#file-access-and-serving" title="Permanent link">&para;</a></h2>
+<p>Uploaded participant photos are served statically through Express's static middleware. Since files are stored in <code>public/uploads/participantes/</code>, they become accessible at URLs with the path prefix <code>/uploads/participantes/</code>.</p>
+<h3 id="url-construction-pattern">URL Construction Pattern<a class="headerlink" href="#url-construction-pattern" title="Permanent link">&para;</a></h3>
+<p>To display a participant's photo:</p>
+<div class="highlight"><pre><span></span><code>/uploads/participantes/{filename}
+</code></pre></div>
+<p>Where <code>{filename}</code> is the value stored in the database's <code>foto</code> column (e.g., <code>participante-1703856234567.jpg</code>).</p>
+<h3 id="example-usage-in-views">Example Usage in Views<a class="headerlink" href="#example-usage-in-views" title="Permanent link">&para;</a></h3>
+<p>In profile and display pages, participant photos are referenced using this URL pattern:</p>
+<div class="highlight"><pre><span></span><code>&lt;img src=&quot;/uploads/participantes/&lt;%= participante.foto %&gt;&quot; alt=&quot;Participant Photo&quot;&gt;
+</code></pre></div>
+<p>The Express static file middleware automatically resolves these URLs to the physical files in the <code>public/</code> directory.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a></p>
+<h2 id="integration-with-authentication-middleware">Integration with Authentication Middleware<a class="headerlink" href="#integration-with-authentication-middleware" title="Permanent link">&para;</a></h2>
+<p>While the multer middleware itself handles file processing, routes that use it are typically protected by authentication middleware. The upload functionality intersects with authentication in two scenarios:</p>
+<ol>
+<li><strong>Participant Registration:</strong> The <code>/inscripcion</code> route using multer is public (no authentication required) since new participants need to register: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L22">views/inscripcion.ejs L22</a></li>
+<li><strong>Profile Updates:</strong> If profile editing allows photo changes, those routes would be protected by <code>verifyToken</code> middleware (see <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">Role-Based Access Control</a>) to ensure only authenticated participants can modify their data</li>
+</ol>
+<p>This separation means the multer middleware focuses solely on file processing, while authentication concerns are handled by separate middleware layers.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L22">views/inscripcion.ejs L22</a></p>
+<h2 id="middleware-composition-diagram">Middleware Composition Diagram<a class="headerlink" href="#middleware-composition-diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+InscripcionRoute["/inscripcion POST"]
+BodyParser["express.urlencoded()"]
+MulterUpload["upload.single('foto')&lt;br&gt;from multer.js"]
+RouteHandler["inscripcion handler"]
+ParseMultipart["Parse multipart/form-data"]
+SaveFile["Save to public/uploads/participantes/"]
+PopulateReqFile["Populate req.file"]
+PopulateReqBody["Populate req.body"]
+DBInsert["Insert to participantes table"]
+
+InscripcionRoute --&gt; MulterUpload
+MulterUpload --&gt; ParseMultipart
+PopulateReqFile --&gt; RouteHandler
+PopulateReqBody --&gt; RouteHandler
+RouteHandler --&gt; DBInsert
+
+subgraph subGraph2 ["Processing Steps"]
+    ParseMultipart
+    SaveFile
+    PopulateReqFile
+    PopulateReqBody
+    DBInsert
+    ParseMultipart --&gt; SaveFile
+    SaveFile --&gt; PopulateReqFile
+    ParseMultipart --&gt; PopulateReqBody
+end
+
+subgraph subGraph1 ["Middleware Chain"]
+    BodyParser
+    MulterUpload
+    RouteHandler
+end
+
+subgraph subGraph0 ["Public Routes"]
+    InscripcionRoute
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L22-L22">views/inscripcion.ejs L22</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

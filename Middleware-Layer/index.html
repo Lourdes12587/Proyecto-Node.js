@@ -1,0 +1,2045 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Application-Server/">
+      
+      
+        <link rel="next" href="../Database-Layer/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Middleware Layer - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#middleware-layer" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Middleware Layer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-stack-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Stack Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Stack Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#middleware-stack-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Stack Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Middleware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifytoken-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      verifyToken Middleware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="verifyToken Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifytoken-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      verifyToken Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifyadmin-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      verifyAdmin Middleware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="verifyAdmin Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verifyadmin-authorization-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      verifyAdmin Authorization Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-upload-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Upload Middleware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Upload Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multer-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      multer Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="multer Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filename-generation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filename Generation Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-integration-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Integration Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Middleware Integration Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-protection-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route Protection Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Route Protection Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-public-routes-no-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 1: Public Routes (No Middleware)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-general-authentication-verifytoken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 2: General Authentication (verifyToken)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-admin-only-access-verifyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 3: Admin-Only Access (verifyAdmin)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-file-upload-with-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern 4: File Upload with Authentication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-composition-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Middleware Composition Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-token-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      JWT Token Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-storage-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Storage Security
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="middleware-layer">Middleware Layer<a class="headerlink" href="#middleware-layer" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js">middlewares/multer.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js">middlewares/verifyAdmin.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js">middlewares/verifyToken.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css">public/css/edit.css</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document details the middleware layer that sits between the Express.js router and the business logic controllers. The middleware layer provides three critical cross-cutting concerns: general authentication (<code>verifyToken</code>), role-based authorization (<code>verifyAdmin</code>), and file upload processing (<code>multer</code>).</p>
+<p>For information about the overall application server configuration and route delegation, see <a href="/Lourdes12587/Proyecto-Node.js/2.1-application-server">Application Server</a>. For session management configuration that works alongside these middlewares, see <a href="/Lourdes12587/Proyecto-Node.js/3.3-session-management">Session Management</a>.</p>
+<hr />
+<h2 id="middleware-stack-architecture">Middleware Stack Architecture<a class="headerlink" href="#middleware-stack-architecture" title="Permanent link">&para;</a></h2>
+<p>The application implements three specialized middleware functions that intercept and process requests before they reach route handlers. These middlewares are located in the <code>middlewares/</code> directory and are selectively applied to routes based on protection requirements.</p>
+<h3 id="middleware-stack-diagram">Middleware Stack Diagram<a class="headerlink" href="#middleware-stack-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Request["HTTP Request"]
+CookieSession["cookie-session middleware&lt;br&gt;(app.js)"]
+ResLocals["res.locals population&lt;br&gt;(app.js)"]
+VerifyToken["verifyToken&lt;br&gt;(middlewares/verifyToken.js)"]
+VerifyAdmin["verifyAdmin&lt;br&gt;(middlewares/verifyAdmin.js)"]
+Multer["multer.diskStorage&lt;br&gt;(middlewares/multer.js)"]
+RouteHandler["Route Handler"]
+Controller["Business Logic Controller"]
+
+Request --&gt; CookieSession
+CookieSession --&gt; ResLocals
+ResLocals --&gt; VerifyToken
+ResLocals --&gt; VerifyAdmin
+ResLocals --&gt; Multer
+ResLocals --&gt; RouteHandler
+VerifyToken --&gt; RouteHandler
+VerifyAdmin --&gt; RouteHandler
+Multer --&gt; RouteHandler
+RouteHandler --&gt; Controller
+
+subgraph subGraph1 ["File Processing"]
+    Multer
+end
+
+subgraph subGraph0 ["Authentication Guards"]
+    VerifyToken
+    VerifyAdmin
+end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L1-L18">middlewares/verifyToken.js L1-L18</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L1-L17">middlewares/verifyAdmin.js L1-L17</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<hr />
+<h2 id="authentication-middleware">Authentication Middleware<a class="headerlink" href="#authentication-middleware" title="Permanent link">&para;</a></h2>
+<h3 id="verifytoken-middleware">verifyToken Middleware<a class="headerlink" href="#verifytoken-middleware" title="Permanent link">&para;</a></h3>
+<p>The <code>verifyToken</code> middleware provides general authentication for any logged-in user (participants or administrators). It validates JWT tokens stored in cookies and populates <code>req.user</code> with decoded token data.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Location</strong></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L1-L18">middlewares/verifyToken.js L1-L18</a></td>
+</tr>
+<tr>
+<td><strong>Token Source</strong></td>
+<td><code>req.cookies.token</code> extracted from HTTP cookies</td>
+</tr>
+<tr>
+<td><strong>Verification</strong></td>
+<td><code>jwt.verify(token, process.env.JWT_SECRET)</code></td>
+</tr>
+<tr>
+<td><strong>Success Action</strong></td>
+<td>Populates <code>req.user</code> with decoded token data, calls <code>next()</code></td>
+</tr>
+<tr>
+<td><strong>Failure Action</strong></td>
+<td>Redirects to <code>/loginadmin</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="verifytoken-flow">verifyToken Flow<a class="headerlink" href="#verifytoken-flow" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart TD
+
+Start["verifyToken invoked"]
+CheckToken["Token exists in&lt;br&gt;req.cookies.token?"]
+VerifyJWT["jwt.verify(token,&lt;br&gt;process.env.JWT_SECRET)"]
+DecodeSuccess["Verification&lt;br&gt;successful?"]
+PopulateUser["req.user = decoded"]
+CallNext["next()"]
+RedirectLogin["res.redirect('/loginadmin')"]
+
+Start --&gt; CheckToken
+CheckToken --&gt; RedirectLogin
+CheckToken --&gt; VerifyJWT
+VerifyJWT --&gt; DecodeSuccess
+DecodeSuccess --&gt; RedirectLogin
+DecodeSuccess --&gt; PopulateUser
+PopulateUser --&gt; CallNext</code></pre>
+<p><strong>Implementation Details:</strong></p>
+<p>The token retrieval occurs at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L4-L4">middlewares/verifyToken.js L4</a></p>
+<p>where <code>req.cookies.token</code> is accessed. If the token is missing, an immediate redirect occurs at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L6-L6">middlewares/verifyToken.js L6</a></p>
+<p>The JWT verification uses <code>process.env.JWT_SECRET</code> as the signing key at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L10-L10">middlewares/verifyToken.js L10</a></p>
+<p>with any verification errors caught at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L13-L15">middlewares/verifyToken.js L13-L15</a></p>
+<p>triggering the same redirect behavior.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L1-L18">middlewares/verifyToken.js L1-L18</a></p>
+<hr />
+<h3 id="verifyadmin-middleware">verifyAdmin Middleware<a class="headerlink" href="#verifyadmin-middleware" title="Permanent link">&para;</a></h3>
+<p>The <code>verifyAdmin</code> middleware implements role-based access control by adding an additional authorization layer beyond token verification. It ensures only users with <code>rol === "admin"</code> can access protected administrative routes.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Location</strong></td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L1-L17">middlewares/verifyAdmin.js L1-L17</a></td>
+</tr>
+<tr>
+<td><strong>Token Source</strong></td>
+<td><code>req.cookies.token</code> extracted from HTTP cookies</td>
+</tr>
+<tr>
+<td><strong>Verification</strong></td>
+<td><code>jwt.verify(token, process.env.JWT_SECRET)</code></td>
+</tr>
+<tr>
+<td><strong>Role Check</strong></td>
+<td><code>decoded.rol !== "admin"</code></td>
+</tr>
+<tr>
+<td><strong>Success Action</strong></td>
+<td>Populates <code>req.user</code> with decoded token data, calls <code>next()</code></td>
+</tr>
+<tr>
+<td><strong>Failure Action</strong></td>
+<td>Redirects to <code>/authadmin</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="verifyadmin-authorization-flow">verifyAdmin Authorization Flow<a class="headerlink" href="#verifyadmin-authorization-flow" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart TD
+
+Start["verifyAdmin invoked"]
+CheckToken["Token exists in&lt;br&gt;req.cookies.token?"]
+VerifyJWT["jwt.verify(token,&lt;br&gt;process.env.JWT_SECRET)"]
+DecodeSuccess["JWT verification&lt;br&gt;successful?"]
+CheckRole["decoded.rol === 'admin'?"]
+PopulateUser["req.user = decoded"]
+CallNext["next()"]
+RedirectAuth["res.redirect('/authadmin')"]
+
+Start --&gt; CheckToken
+CheckToken --&gt; RedirectAuth
+CheckToken --&gt; VerifyJWT
+VerifyJWT --&gt; DecodeSuccess
+DecodeSuccess --&gt; RedirectAuth
+DecodeSuccess --&gt; CheckRole
+CheckRole --&gt; RedirectAuth
+CheckRole --&gt; PopulateUser
+PopulateUser --&gt; CallNext</code></pre>
+<p><strong>Key Differences from verifyToken:</strong></p>
+<ol>
+<li><strong>Different Redirect Target:</strong> <code>verifyAdmin</code> redirects to <code>/authadmin</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L5-L13">middlewares/verifyAdmin.js L5-L13</a>  instead of <code>/loginadmin</code></li>
+<li><strong>Additional Role Check:</strong> After successful JWT verification, <code>decoded.rol</code> is compared against <code>"admin"</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L9-L9">middlewares/verifyAdmin.js L9</a></li>
+<li><strong>Stricter Access Control:</strong> Only tokens with <code>rol === "admin"</code> proceed to the route handler</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L1-L17">middlewares/verifyAdmin.js L1-L17</a></p>
+<hr />
+<h2 id="file-upload-middleware">File Upload Middleware<a class="headerlink" href="#file-upload-middleware" title="Permanent link">&para;</a></h2>
+<h3 id="multer-configuration">multer Configuration<a class="headerlink" href="#multer-configuration" title="Permanent link">&para;</a></h3>
+<p>The <code>multer</code> middleware handles file uploads for participant photo registration. It configures disk storage with custom destination paths and filename generation strategies.</p>
+<h4 id="storage-configuration">Storage Configuration<a class="headerlink" href="#storage-configuration" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart TD
+
+IncomingFile["Incoming File Upload"]
+MulterDiskStorage["multer.diskStorage&lt;br&gt;configuration"]
+DestinationFn["destination function&lt;br&gt;(line 6-8)"]
+FilenameFn["filename function&lt;br&gt;(line 9-12)"]
+FileSystem["public/uploads/participantes/&lt;br&gt;participante-{timestamp}.ext"]
+
+IncomingFile --&gt; MulterDiskStorage
+MulterDiskStorage --&gt; DestinationFn
+MulterDiskStorage --&gt; FilenameFn
+DestinationFn --&gt; FileSystem
+FilenameFn --&gt; FileSystem</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<h4 id="configuration-details">Configuration Details<a class="headerlink" href="#configuration-details" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storage Type</strong></td>
+<td><code>multer.diskStorage</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L5-L5">middlewares/multer.js L5</a></td>
+</tr>
+<tr>
+<td><strong>Destination</strong></td>
+<td><code>'public/uploads/participantes'</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a></td>
+</tr>
+<tr>
+<td><strong>Filename Strategy</strong></td>
+<td><code>'participante-' + Date.now() + ext</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L11-L11">middlewares/multer.js L11</a></td>
+</tr>
+<tr>
+<td><strong>Extension Extraction</strong></td>
+<td><code>path.extname(file.originalname)</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L10-L10">middlewares/multer.js L10</a></td>
+</tr>
+<tr>
+<td><strong>Export</strong></td>
+<td><code>multer({ storage })</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L15-L15">middlewares/multer.js L15</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="filename-generation-process">Filename Generation Process<a class="headerlink" href="#filename-generation-process" title="Permanent link">&para;</a></h4>
+<p>The filename generation logic at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L9-L12">middlewares/multer.js L9-L12</a></p>
+<p>follows this pattern:</p>
+<ol>
+<li>Extract the original file extension using <code>path.extname(file.originalname)</code></li>
+<li>Generate a unique timestamp using <code>Date.now()</code></li>
+<li>Concatenate prefix <code>'participante-'</code>, timestamp, and extension</li>
+<li>Example output: <code>participante-1703524892341.jpg</code></li>
+</ol>
+<p>This strategy ensures:</p>
+<ul>
+<li><strong>Uniqueness:</strong> Timestamps prevent filename collisions</li>
+<li><strong>Traceability:</strong> The <code>participante-</code> prefix identifies file origin</li>
+<li><strong>Format Preservation:</strong> Original file extension is maintained</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<hr />
+<h2 id="middleware-integration-patterns">Middleware Integration Patterns<a class="headerlink" href="#middleware-integration-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="route-protection-patterns">Route Protection Patterns<a class="headerlink" href="#route-protection-patterns" title="Permanent link">&para;</a></h3>
+<p>The middleware stack is applied to routes using three distinct patterns:</p>
+<h4 id="pattern-1-public-routes-no-middleware">Pattern 1: Public Routes (No Middleware)<a class="headerlink" href="#pattern-1-public-routes-no-middleware" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/info&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p>Public routes bypass all authentication and authorization middleware. Examples include landing page, event information, and registration forms.</p>
+<h4 id="pattern-2-general-authentication-verifytoken">Pattern 2: General Authentication (verifyToken)<a class="headerlink" href="#pattern-2-general-authentication-verifytoken" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/perfil&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">verifyToken</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p>Participant-facing protected routes use <code>verifyToken</code> to ensure the user is authenticated. This pattern is applied to profile viewing and editing interfaces.</p>
+<h4 id="pattern-3-admin-only-access-verifyadmin">Pattern 3: Admin-Only Access (verifyAdmin)<a class="headerlink" href="#pattern-3-admin-only-access-verifyadmin" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">verifyAdmin</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p>Administrative routes use <code>verifyAdmin</code> to enforce both authentication and role-based authorization. This pattern protects participant management, winner selection, and organizer registration interfaces.</p>
+<h4 id="pattern-4-file-upload-with-authentication">Pattern 4: File Upload with Authentication<a class="headerlink" href="#pattern-4-file-upload-with-authentication" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/inscripcion&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">upload</span><span class="p">.</span><span class="nx">single</span><span class="p">(</span><span class="s1">&#39;foto&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+<p>Registration routes combine <code>upload.single('foto')</code> with the route handler to process file uploads. The <code>upload</code> instance exported from <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L15-L15">middlewares/multer.js L15</a></p>
+<p>is applied using the <code>single()</code> method, which expects a form field named <code>'foto'</code>.</p>
+<h3 id="middleware-composition-table">Middleware Composition Table<a class="headerlink" href="#middleware-composition-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Route Pattern</th>
+<th>Middleware Stack</th>
+<th>Protected Resource</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>None</td>
+<td>Landing page</td>
+</tr>
+<tr>
+<td><code>/info</code></td>
+<td>None</td>
+<td>Event information</td>
+</tr>
+<tr>
+<td><code>/inscripcion</code></td>
+<td><code>upload.single('foto')</code></td>
+<td>Registration form + photo upload</td>
+</tr>
+<tr>
+<td><code>/login</code></td>
+<td>None</td>
+<td>Participant login form</td>
+</tr>
+<tr>
+<td><code>/loginadmin</code></td>
+<td>None</td>
+<td>Admin login form</td>
+</tr>
+<tr>
+<td><code>/perfil</code></td>
+<td><code>verifyToken</code></td>
+<td>Participant profile view</td>
+</tr>
+<tr>
+<td><code>/editparti/:id</code></td>
+<td><code>verifyToken</code></td>
+<td>Participant profile edit</td>
+</tr>
+<tr>
+<td><code>/admin</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Admin participant management</td>
+</tr>
+<tr>
+<td><code>/editadmin/:id</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Admin participant edit</td>
+</tr>
+<tr>
+<td><code>/delete/:id</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Admin participant deletion</td>
+</tr>
+<tr>
+<td><code>/register</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Organizer registration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> Based on analysis of authentication patterns in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L1-L18">middlewares/verifyToken.js L1-L18</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L1-L17">middlewares/verifyAdmin.js L1-L17</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<hr />
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="jwt-token-security">JWT Token Security<a class="headerlink" href="#jwt-token-security" title="Permanent link">&para;</a></h3>
+<p>Both authentication middlewares rely on JWT tokens stored in HTTP cookies:</p>
+<ul>
+<li><strong>Secret Key:</strong> <code>process.env.JWT_SECRET</code> used for token signing and verification</li>
+<li><strong>Token Location:</strong> <code>req.cookies.token</code> accessed by both middlewares</li>
+<li><strong>Token Validation:</strong> <code>jwt.verify()</code> throws errors for expired, malformed, or invalid tokens</li>
+</ul>
+<h3 id="error-handling-strategy">Error Handling Strategy<a class="headerlink" href="#error-handling-strategy" title="Permanent link">&para;</a></h3>
+<p>All middleware failures result in redirects rather than error responses:</p>
+<table>
+<thead>
+<tr>
+<th>Middleware</th>
+<th>Error Condition</th>
+<th>Redirect Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>verifyToken</code></td>
+<td>Missing token</td>
+<td><code>/loginadmin</code></td>
+</tr>
+<tr>
+<td><code>verifyToken</code></td>
+<td>Invalid JWT</td>
+<td><code>/loginadmin</code></td>
+</tr>
+<tr>
+<td><code>verifyAdmin</code></td>
+<td>Missing token</td>
+<td><code>/authadmin</code></td>
+</tr>
+<tr>
+<td><code>verifyAdmin</code></td>
+<td>Invalid JWT</td>
+<td><code>/authadmin</code></td>
+</tr>
+<tr>
+<td><code>verifyAdmin</code></td>
+<td>Non-admin role</td>
+<td><code>/authadmin</code></td>
+</tr>
+</tbody>
+</table>
+<p>This redirect-on-failure strategy ensures:</p>
+<ul>
+<li><strong>User Experience:</strong> Failed authentication redirects to login rather than showing error pages</li>
+<li><strong>Security:</strong> Error details are not exposed to potential attackers</li>
+<li><strong>Consistency:</strong> All authentication failures follow the same redirect pattern</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js#L5-L15">middlewares/verifyToken.js L5-L15</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js#L5-L14">middlewares/verifyAdmin.js L5-L14</a></p>
+<hr />
+<h2 id="file-storage-security">File Storage Security<a class="headerlink" href="#file-storage-security" title="Permanent link">&para;</a></h2>
+<p>The multer configuration implements basic file handling security:</p>
+<ol>
+<li><strong>Controlled Destination:</strong> Files are restricted to <code>public/uploads/participantes/</code> directory <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L7-L7">middlewares/multer.js L7</a></li>
+<li><strong>Filename Sanitization:</strong> Original filenames are discarded in favor of generated names <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L11-L11">middlewares/multer.js L11</a></li>
+<li><strong>Extension Preservation:</strong> Original file extensions are preserved to maintain file type information <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L10-L10">middlewares/multer.js L10</a></li>
+</ol>
+<p><strong>Limitations:</strong> The current implementation does not include:</p>
+<ul>
+<li>File type validation (MIME type checking)</li>
+<li>File size limits</li>
+<li>Malicious file content scanning</li>
+<li>Extension whitelist validation</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

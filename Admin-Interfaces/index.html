@@ -1,0 +1,1851 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Admin Interfaces - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#admin-interfaces" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Admin Interfaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="admin-interfaces">Admin Interfaces<a class="headerlink" href="#admin-interfaces" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs">views/admin.ejs</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs">views/info.ejs</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs">views/register.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document describes the three administrator-only interfaces in the HAPPY RUNNER 42K application: the <strong>Admin Panel</strong> for participant management, <strong>Winner Management</strong> for selecting race winners, and <strong>Organizer Registration</strong> for creating new admin accounts. These interfaces are protected by role-based access control and accessible only to users with <code>rol === "admin"</code> in their session.</p>
+<p>For information about participant-facing interfaces, see <a href="/Lourdes12587/Proyecto-Node.js/4.1-participant-interfaces">Participant Interfaces</a>. For details on the authentication mechanisms that protect these interfaces, see <a href="/Lourdes12587/Proyecto-Node.js/3.2-role-based-access-control">Role-Based Access Control</a>.</p>
+<hr />
+<h2 id="overview-of-admin-interfaces">Overview of Admin Interfaces<a class="headerlink" href="#overview-of-admin-interfaces" title="Permanent link">&para;</a></h2>
+<p>The system provides three distinct administrative interfaces, each serving a specific management function:</p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Route</th>
+<th>View File</th>
+<th>Primary Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Admin Panel</strong></td>
+<td><code>/admin</code></td>
+<td><code>views/admin.ejs</code></td>
+<td>View, search, edit, and delete participant records</td>
+</tr>
+<tr>
+<td><strong>Winner Management</strong></td>
+<td><code>/info</code> (admin section)</td>
+<td><code>views/info.ejs</code></td>
+<td>Select 1st/2nd/3rd place winners from participant list</td>
+</tr>
+<tr>
+<td><strong>Organizer Registration</strong></td>
+<td><code>/register</code></td>
+<td><code>views/register.ejs</code></td>
+<td>Create new admin accounts for organizers</td>
+</tr>
+</tbody>
+</table>
+<p>All three interfaces require authentication through the <code>verifyAdmin</code> middleware, which validates both the presence of a valid JWT token and confirms that <code>req.session.rol === "admin"</code>.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L1-L79">views/admin.ejs L1-L79</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L30-L84">views/info.ejs L30-L84</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L71">views/register.ejs L1-L71</a></p>
+<hr />
+<h2 id="access-control-architecture">Access Control Architecture<a class="headerlink" href="#access-control-architecture" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+AdminLogin["/loginadmin&lt;br&gt;POST"]
+AuthController["authcontroller.js&lt;br&gt;validateCredentials()"]
+OrganizadoresDB["organizadores table&lt;br&gt;user, nombre, password"]
+SessionSet["Set session:&lt;br&gt;rol='admin'&lt;br&gt;user=username"]
+AdminRoute["/admin&lt;br&gt;GET"]
+InfoRoute["/info&lt;br&gt;GET"]
+RegisterRoute["/register&lt;br&gt;GET, POST"]
+GanadoresRoute["/ganadores&lt;br&gt;POST"]
+EditAdminRoute["/editadmin/:id&lt;br&gt;GET, POST"]
+DeleteRoute["/delete/:id&lt;br&gt;GET"]
+VerifyAdmin["verifyAdmin middleware&lt;br&gt;Check JWT token&lt;br&gt;Verify rol === 'admin'"]
+AdminView["admin.ejs&lt;br&gt;Participant table"]
+InfoViewAdmin["info.ejs&lt;br&gt;Winner form section"]
+RegisterView["register.ejs&lt;br&gt;Organizer form"]
+
+SessionSet --&gt; VerifyAdmin
+VerifyAdmin --&gt; AdminRoute
+VerifyAdmin --&gt; InfoRoute
+VerifyAdmin --&gt; RegisterRoute
+VerifyAdmin --&gt; GanadoresRoute
+VerifyAdmin --&gt; EditAdminRoute
+VerifyAdmin --&gt; DeleteRoute
+AdminRoute --&gt; AdminView
+InfoRoute --&gt; InfoViewAdmin
+RegisterRoute --&gt; RegisterView
+
+subgraph subGraph3 ["Admin Views"]
+    AdminView
+    InfoViewAdmin
+    RegisterView
+end
+
+subgraph subGraph2 ["Middleware Guards"]
+    VerifyAdmin
+end
+
+subgraph subGraph1 ["Protected Admin Routes"]
+    AdminRoute
+    InfoRoute
+    RegisterRoute
+    GanadoresRoute
+    EditAdminRoute
+    DeleteRoute
+end
+
+subgraph subGraph0 ["Admin Authentication Flow"]
+    AdminLogin
+    AuthController
+    OrganizadoresDB
+    SessionSet
+    AdminLogin --&gt; AuthController
+    AuthController --&gt; OrganizadoresDB
+    AuthController --&gt; SessionSet
+end</code></pre>
+<p><strong>Admin Access Requirements:</strong></p>
+<ol>
+<li><strong>Session Authentication:</strong> Valid JWT token stored in cookie (verified using <code>process.env.JWT_SECRET</code>)</li>
+<li><strong>Role Verification:</strong> Session must contain <code>rol === "admin"</code></li>
+<li><strong>Redirect Behavior:</strong> Failed authentication redirects to <code>/authadmin</code> or <code>/loginadmin</code></li>
+</ol>
+<p>The <code>verifyAdmin</code> middleware enforces these requirements for all administrative routes. Without proper authorization, users are redirected and cannot access admin functionality.</p>
+<p><strong>Sources:</strong> High-level architecture diagrams (Diagram 2), <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L1-L79">views/admin.ejs L1-L79</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L30-L84">views/info.ejs L30-L84</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L71">views/register.ejs L1-L71</a></p>
+<hr />
+<h2 id="admin-panel-421">Admin Panel (4.2.1)<a class="headerlink" href="#admin-panel-421" title="Permanent link">&para;</a></h2>
+<p>The Admin Panel provides a comprehensive view of all registered participants with search, edit, and delete capabilities. The interface is rendered by <code>views/admin.ejs</code> and accessible via the <code>/admin</code> route.</p>
+<h3 id="interface-components">Interface Components<a class="headerlink" href="#interface-components" title="Permanent link">&para;</a></h3>
+<p><strong>Participant Table Structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Data Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N° Dorsal</td>
+<td><code>participante.id</code></td>
+<td>Unique participant identifier / race number</td>
+</tr>
+<tr>
+<td>Nombre</td>
+<td><code>participante.nombre</code></td>
+<td>First name</td>
+</tr>
+<tr>
+<td>Apellido</td>
+<td><code>participante.apellido</code></td>
+<td>Last name</td>
+</tr>
+<tr>
+<td>DNI</td>
+<td><code>participante.dni</code></td>
+<td>National identification number</td>
+</tr>
+<tr>
+<td>Tel.</td>
+<td><code>participante.telefono</code></td>
+<td>Contact phone</td>
+</tr>
+<tr>
+<td>Calle</td>
+<td><code>participante.calle</code></td>
+<td>Street address</td>
+</tr>
+<tr>
+<td>N°</td>
+<td><code>participante.numero</code></td>
+<td>Street number</td>
+</tr>
+<tr>
+<td>Población</td>
+<td><code>participante.poblacion</code></td>
+<td>City/town</td>
+</tr>
+<tr>
+<td>CP°</td>
+<td><code>participante.codigo_postal</code></td>
+<td>Postal code</td>
+</tr>
+<tr>
+<td>Acciones</td>
+<td>—</td>
+<td>Edit/Delete action buttons</td>
+</tr>
+</tbody>
+</table>
+<p>The table iterates over the <code>participantes</code> array passed from the server, rendering each participant as a table row <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L39-L59">views/admin.ejs L39-L59</a></p>
+<h3 id="client-side-search-implementation">Client-Side Search Implementation<a class="headerlink" href="#client-side-search-implementation" title="Permanent link">&para;</a></h3>
+<p>The admin panel includes a real-time search filter implemented entirely in client-side JavaScript:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This implementation:</p>
+<ul>
+<li>Listens for input events on the search field <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L18-L18">views/admin.ejs L18</a></li>
+<li>Converts the query to lowercase for case-insensitive matching</li>
+<li>Iterates through all table rows (<code>&lt;tbody id="participantesTable"&gt;</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L38-L38">views/admin.ejs L38</a> )</li>
+<li>Shows/hides rows based on whether their text content includes the query string</li>
+<li>Searches across all visible fields (name, DNI, address, etc.)</li>
+</ul>
+<h3 id="action-buttons">Action Buttons<a class="headerlink" href="#action-buttons" title="Permanent link">&para;</a></h3>
+<p>Each participant row includes two action buttons in the "Acciones" column <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L50-L57">views/admin.ejs L50-L57</a></p>
+<p>:</p>
+<p><strong>Edit Button:</strong></p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li>Links to <code>/editadmin/:id</code> route</li>
+<li>Opens a form to modify participant data</li>
+<li>Uses Boxicons <code>bxs-edit</code> icon</li>
+</ul>
+<p><strong>Delete Button:</strong></p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li>Links to <code>/delete/:id</code> route</li>
+<li>Includes JavaScript confirmation dialog</li>
+<li>Uses Boxicons <code>bxs-trash</code> icon</li>
+</ul>
+<h3 id="participant-count-badge">Participant Count Badge<a class="headerlink" href="#participant-count-badge" title="Permanent link">&para;</a></h3>
+<p>The interface displays the total participant count using a badge component:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This badge is rendered at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L19-L19">views/admin.ejs L19</a></p>
+<p>and updates only on page reload (not dynamically filtered by the search).</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L1-L79">views/admin.ejs L1-L79</a></p>
+<hr />
+<h2 id="winner-management-422">Winner Management (4.2.2)<a class="headerlink" href="#winner-management-422" title="Permanent link">&para;</a></h2>
+<p>Winner management functionality is embedded within the <code>info.ejs</code> view as a conditional admin-only section. When an administrator is logged in, the page renders a form to select and register the top three finishers.</p>
+<h3 id="conditional-rendering">Conditional Rendering<a class="headerlink" href="#conditional-rendering" title="Permanent link">&para;</a></h3>
+<p>The winner management form only appears when the <code>isAdmin</code> variable is truthy:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This conditional block spans <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L30-L84">views/info.ejs L30-L84</a></p>
+<p>The <code>isAdmin</code> variable is populated by server-side logic based on the user's session role.</p>
+<h3 id="winner-selection-form">Winner Selection Form<a class="headerlink" href="#winner-selection-form" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Select3[""]
+Form["method='POST'enctype='multipart/form-data'&gt;"]
+Select1[""]
+Select2[""]
+Submit[""]
+ParticipantList1["Populate from&lt;br&gt;participantes array"]
+ParticipantList2["Populate from&lt;br&gt;participantes array"]
+ParticipantList3["Populate from&lt;br&gt;participantes array"]
+File3["name='foto3'&gt;"]
+File2["name='foto2'&gt;"]
+File1["name='foto1'&gt;"]
+
+subgraph subGraph3 ["Winner Form Structure"]
+    Form
+    Submit
+    Form --&gt; Select1
+    Form --&gt; Select2
+    Form --&gt; Select3
+    Form --&gt; Submit
+
+subgraph subGraph2 ["Third Place"]
+    Select3
+    ParticipantList3
+    File3
+    Select3 --&gt; ParticipantList3
+end
+
+subgraph subGraph1 ["Second Place"]
+    Select2
+    ParticipantList2
+    File2
+    Select2 --&gt; ParticipantList2
+end
+
+subgraph subGraph0 ["First Place"]
+    Select1
+    ParticipantList1
+    File1
+    Select1 --&gt; ParticipantList1
+end
+end</code></pre>
+<p><strong>Form Structure:</strong></p>
+<p>The form posts to <code>/ganadores</code> with <code>multipart/form-data</code> encoding <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L34-L34">views/info.ejs L34</a></p>
+<p>to support file uploads. Each place (1st, 2nd, 3rd) has:</p>
+<ol>
+<li><strong>Dropdown selector</strong> - populated from the <code>participantes</code> array</li>
+<li><strong>Optional file upload</strong> - for winner-specific photos</li>
+</ol>
+<h3 id="participant-dropdown-population">Participant Dropdown Population<a class="headerlink" href="#participant-dropdown-population" title="Permanent link">&para;</a></h3>
+<p>Each dropdown is populated identically using this EJS loop:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This pattern repeats for <code>primero</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L38-L43">views/info.ejs L38-L43</a></p>
+<p><code>segundo</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L51-L56">views/info.ejs L51-L56</a></p>
+<p>and <code>tercero</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L64-L69">views/info.ejs L64-L69</a></p>
+<p>Each option displays the participant's dorsal number (ID), first name, and last name.</p>
+<h3 id="file-upload-fields">File Upload Fields<a class="headerlink" href="#file-upload-fields" title="Permanent link">&para;</a></h3>
+<p>Winner photos are optional and handled through standard file inputs:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>These correspond to first, second, and third place respectively <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L44-L70">views/info.ejs L44-L70</a></p>
+<p>The <code>accept="image/*"</code> attribute restricts uploads to image files.</p>
+<h3 id="form-actions">Form Actions<a class="headerlink" href="#form-actions" title="Permanent link">&para;</a></h3>
+<p>The form includes two buttons <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L74-L77">views/info.ejs L74-L77</a></p>
+<p>:</p>
+<ul>
+<li><strong>Submit button:</strong> <code>&lt;button type="submit" class="btn cta-btn"&gt;Guardar ganadores&lt;/button&gt;</code></li>
+<li><strong>Cancel link:</strong> <code>&lt;a href="/admin" class="btn btn-neutral"&gt;Cancelar&lt;/a&gt;</code> - returns to admin panel</li>
+</ul>
+<h3 id="feedback-messages">Feedback Messages<a class="headerlink" href="#feedback-messages" title="Permanent link">&para;</a></h3>
+<p>After form submission, the page displays server-generated feedback:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This conditional rendering <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L79-L81">views/info.ejs L79-L81</a></p>
+<p>shows success or error messages based on <code>mensaje</code> and <code>mensajeTipo</code> variables passed from the route handler.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L30-L84">views/info.ejs L30-L84</a></p>
+<hr />
+<h2 id="organizer-registration-423">Organizer Registration (4.2.3)<a class="headerlink" href="#organizer-registration-423" title="Permanent link">&para;</a></h2>
+<p>The organizer registration interface allows existing administrators to create new admin accounts. This is the only mechanism for adding administrators to the system.</p>
+<h3 id="form-structure">Form Structure<a class="headerlink" href="#form-structure" title="Permanent link">&para;</a></h3>
+<p>The registration form is rendered by <code>views/register.ejs</code> and accessible via the <code>/register</code> route. The form uses POST method to submit credentials:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p><strong>Form Fields:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Input Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usuario</td>
+<td><code>user</code></td>
+<td><code>text</code></td>
+<td>Unique username for authentication</td>
+</tr>
+<tr>
+<td>Nombre</td>
+<td><code>nombre</code></td>
+<td><code>text</code></td>
+<td>Organizer's display name</td>
+</tr>
+<tr>
+<td>Contraseña</td>
+<td><code>password</code></td>
+<td><code>password</code></td>
+<td>Account password (hashed with bcrypt)</td>
+</tr>
+</tbody>
+</table>
+<p>All fields are required <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L27">views/register.ejs L15-L27</a></p>
+<h3 id="value-persistence">Value Persistence<a class="headerlink" href="#value-persistence" title="Permanent link">&para;</a></h3>
+<p>The form implements value persistence for failed submissions, repopulating fields with previously entered data:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This pattern repeats for <code>user</code>, <code>nombre</code>, and <code>password</code> fields <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L18-L26">views/register.ejs L18-L26</a></p>
+<p>The <code>valores</code> object is passed from the server when validation fails.</p>
+<h3 id="server-side-validation">Server-Side Validation<a class="headerlink" href="#server-side-validation" title="Permanent link">&para;</a></h3>
+<p>The form displays validation errors from <code>express-validator</code>:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This block <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L31-L37">views/register.ejs L31-L37</a></p>
+<p>iterates over the <code>validaciones</code> array, displaying each error message in a styled alert box. The <code>aria-live="polite"</code> attribute ensures screen reader accessibility.</p>
+<h3 id="sweetalert-integration">SweetAlert Integration<a class="headerlink" href="#sweetalert-integration" title="Permanent link">&para;</a></h3>
+<p>Successful registration triggers a SweetAlert2 modal:</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>This script block <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L44-L67">views/register.ejs L44-L67</a></p>
+<p>:</p>
+<ul>
+<li>Displays a styled modal with title, message, and icon</li>
+<li>Applies custom colors matching the application theme</li>
+<li>Auto-closes after the specified <code>timer</code> duration</li>
+<li>Redirects to the route specified in <code>ruta</code> variable</li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L71">views/register.ejs L1-L71</a></p>
+<hr />
+<h2 id="admin-operation-data-flow">Admin Operation Data Flow<a class="headerlink" href="#admin-operation-data-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Admin Browser
+  participant app.js
+  participant verifyAdmin
+  participant middleware
+  participant Route Handler
+  participant MySQL Database
+  participant (participantes,
+  participant organizadores,
+  participant ganadores)
+  participant File System
+  participant (uploads/participantes/)
+
+  note over Admin Browser,Route Handler: Admin Panel Flow (/admin)
+  Admin Browser-&gt;&gt;app.js: GET /admin
+  app.js-&gt;&gt;verifyAdmin: Check authorization
+  verifyAdmin-&gt;&gt;verifyAdmin: Verify JWT + rol==='admin'
+  verifyAdmin-&gt;&gt;Route Handler: Authorized
+  Route Handler-&gt;&gt;MySQL Database: SELECT * FROM participantes
+  MySQL Database--&gt;&gt;Route Handler: participantes[]
+  Route Handler--&gt;&gt;Admin Browser: Render admin.ejs with participantes
+  Admin Browser-&gt;&gt;Admin Browser: Client-side search
+  Admin Browser-&gt;&gt;app.js: (filter table rows)
+  app.js-&gt;&gt;verifyAdmin: GET /delete/:id
+  verifyAdmin-&gt;&gt;Route Handler: Check authorization
+  Route Handler-&gt;&gt;MySQL Database: Authorized
+  MySQL Database--&gt;&gt;Route Handler: DELETE FROM participantes WHERE id=?
+  Route Handler--&gt;&gt;Admin Browser: Success
+  note over Admin Browser,(uploads/participantes/): Winner Management Flow (/ganadores)
+  Admin Browser-&gt;&gt;app.js: Redirect to /admin
+  app.js-&gt;&gt;verifyAdmin: GET /info
+  verifyAdmin-&gt;&gt;Route Handler: Check authorization
+  Route Handler-&gt;&gt;MySQL Database: Authorized
+  Route Handler-&gt;&gt;MySQL Database: SELECT * FROM participantes
+  MySQL Database--&gt;&gt;Route Handler: SELECT * FROM ganadores
+  Route Handler--&gt;&gt;Admin Browser: participantes[], ganadores[]
+  Admin Browser-&gt;&gt;app.js: Render info.ejs
+  app.js-&gt;&gt;verifyAdmin: (isAdmin=true, show form)
+  verifyAdmin-&gt;&gt;Route Handler: POST /ganadores
+  Route Handler-&gt;&gt;File System: (primero, segundo, tercero, foto1-3)
+  File System--&gt;&gt;Route Handler: Check authorization
+  Route Handler-&gt;&gt;MySQL Database: Authorized
+  MySQL Database--&gt;&gt;Route Handler: Save foto1, foto2, foto3
+  Route Handler--&gt;&gt;Admin Browser: (if provided)
+  note over Admin Browser,ganadores): Organizer Registration Flow (/register)
+  Admin Browser-&gt;&gt;app.js: File paths
+  app.js-&gt;&gt;verifyAdmin: INSERT/UPDATE ganadores table
+  verifyAdmin-&gt;&gt;Route Handler: (positions 1,2,3)
+  Route Handler--&gt;&gt;Admin Browser: Success
+  Admin Browser-&gt;&gt;app.js: Redirect to /info with mensaje
+  app.js-&gt;&gt;verifyAdmin: GET /register
+  verifyAdmin-&gt;&gt;Route Handler: Check authorization
+  Route Handler-&gt;&gt;Route Handler: Authorized
+  loop [Validation Failed]
+    Route Handler--&gt;&gt;Admin Browser: Render register.ejs
+    Route Handler-&gt;&gt;Route Handler: POST /register
+    Route Handler-&gt;&gt;MySQL Database: (user, nombre, password)
+    MySQL Database--&gt;&gt;Route Handler: Check authorization
+    Route Handler--&gt;&gt;Admin Browser: Authorized
+  end</code></pre>
+<p><strong>Key Data Flow Characteristics:</strong></p>
+<ol>
+<li><strong>Consistent Authorization:</strong> Every admin request passes through <code>verifyAdmin</code> middleware before reaching route handlers</li>
+<li><strong>Admin Panel:</strong> Fetches all participants in a single query, performs search client-side without additional server requests</li>
+<li><strong>Winner Management:</strong> Handles both database operations (inserting/updating <code>ganadores</code> table) and file operations (saving winner photos)</li>
+<li><strong>Organizer Registration:</strong> Implements server-side validation, password hashing, and provides feedback through both inline errors and SweetAlert modals</li>
+</ol>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L67-L78">views/admin.ejs L67-L78</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L34-L84">views/info.ejs L34-L84</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L67">views/register.ejs L15-L67</a></p>
+<p>High-level architecture diagrams (Diagram 5)</p>
+<hr />
+<h2 id="route-and-view-mapping">Route and View Mapping<a class="headerlink" href="#route-and-view-mapping" title="Permanent link">&para;</a></h2>
+<p>The following table summarizes the routing architecture for all admin interfaces:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>Route Path</th>
+<th>Protected By</th>
+<th>Renders View</th>
+<th>Data Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/admin</code></td>
+<td><code>verifyAdmin</code></td>
+<td><code>admin.ejs</code></td>
+<td>SELECT all participantes</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/editadmin/:id</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Edit form (not in provided files)</td>
+<td>SELECT participante by id</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/editadmin/:id</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Redirect</td>
+<td>UPDATE participante</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/delete/:id</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Redirect to <code>/admin</code></td>
+<td>DELETE participante</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/info</code></td>
+<td><code>verifyAdmin</code></td>
+<td><code>info.ejs</code> (with admin section)</td>
+<td>SELECT participantes, ganadores</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/ganadores</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Redirect to <code>/info</code></td>
+<td>INSERT/UPDATE ganadores, file upload</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/register</code></td>
+<td><code>verifyAdmin</code></td>
+<td><code>register.ejs</code></td>
+<td>None</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/register</code></td>
+<td><code>verifyAdmin</code></td>
+<td>Redirect or re-render</td>
+<td>INSERT organizador (with bcrypt hash)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Navigation Links:</strong></p>
+<ul>
+<li>Admin panel links to edit: <code>/editadmin/&lt;%= participante.id %&gt;</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L51-L51">views/admin.ejs L51</a></li>
+<li>Admin panel links to delete: <code>/delete/&lt;%= participante.id %&gt;</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L54-L54">views/admin.ejs L54</a></li>
+<li>Winner form cancels to: <code>/admin</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L76-L76">views/info.ejs L76</a></li>
+<li>Registration success redirects to: <code>/&lt;%= ruta %&gt;</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L64-L64">views/register.ejs L64</a></li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/admin.ejs#L51-L56">views/admin.ejs L51-L56</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/info.ejs#L34-L76">views/info.ejs L34-L76</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L64">views/register.ejs L15-L64</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
