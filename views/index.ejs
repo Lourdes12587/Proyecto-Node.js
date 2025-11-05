@@ -1,45 +1,118 @@
 <%- include('partials/head') %>
 
-  <%- include('partials/header') %>
+<%- include('partials/header') %>
 
-<!-- HEADER -->
 <header>
-  <div class="banner">
-    <div class="banner-text">
-      <h1>Happy Running 2025</h1>
-      <p>¡Desafía tus límites y vive la experiencia!</p>
-      <a href="/inscripcion" class="btn-banner">Inscripción</a>
+  <div class="banner" role="img" aria-label="Corredores en Barcelona" id="heroBanner" data-tilt="on">
+    <div class="banner-overlay" aria-hidden="true"></div>
+    <div class="banner-text container">
+      <h1 class="hero-title">HAPPY RUNNER <span class="accent">42K</span></h1>
+      <p class="lead">29 de noviembre de 2025 — Park Güell, Barcelona</p>
+
+      <p class="banner-desc">Únete al maratón urbano que recorre los puntos más emblemáticos de Barcelona. Kit oficial, cronometraje y puntos de hidratación.</p>
+
+      <div class="hero-cta" role="group" aria-label="Llamados a la acción">
+        <a href="/inscripcion" class="btn-banner">INSCRIPCIÓN</a>
+        <a href="#recorrido" class="btn-outline">VER RECORRIDO</a>
+      </div>
+
+      <!-- Elemento de cuenta regresiva eliminado a petición -->
+      <div class="hero-badges" aria-hidden="true">
+        <span class="badge">Masculina • 42K</span>
+        <span class="badge">Femenina • 42K</span>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- INFORMACIÓN DEL EVENTO -->
-<section id="info" class="event-info">
-  <h2>Nocturna Mendoza - 10K</h2>
-  <div class="event-details">
-    <div class="detail">
-      <h3>Fecha</h3>
-      <p>29 de Noviembre de 2025</p>
-    </div>
-    <div class="detail">
-      <h3>Hora</h3>
-      <p>21:30 pm</p>
-    </div>
-    <div class="detail">
-      <h3>Ubicacion:</h3>
-      <p> Explanada Casa de Gobierno, Mendoza.</p>
-    </div>
-  </div>
-</section>
+<main>
+  <section id="info" class="event-info">
+    <div class="container">
+      <h2>Información del Evento</h2>
+      <p class="intro small">Todo lo que necesitas saber para preparar tu carrera: horarios, punto de salida, servicios y reglas.</p>
 
-<!-- GALERÍA -->
-<section class="gallery">
-  <h2>¡Desafía tus límites y vive la experiencia!</h2>
-  <div class="gallery-container">
-    <img src="/resources/img/corredores-alegres-divirtiendose-mientras-participan-en-una-carrera-en-la-naturaleza.jpg" alt="Corredores en acción">
-    <img src="/resources/img/diferentes-personas-participando-en-un-campo-traves.jpg" alt="Salida de la carrera">
-    <img src="/resources/img/mujeres-atleticas-felices-apoyandose-mutuamente-mientras-corren-un-maraton-en-la-naturaleza (1).jpg" alt="Llegada a la meta">
-  </div>
-</section>
+      <div class="event-details">
+        <article class="detail">
+          <h3>Fecha</h3>
+          <p>9 de septiembre 2025</p>
+        </article>
+        <article class="detail">
+          <h3>Hora</h3>
+          <p>10:00 AM — Salida por olas</p>
+        </article>
+        <article class="detail">
+          <h3>Ubicación</h3>
+          <p>Park Güell (salida) — Meta en zona centro</p>
+        </article>
+        <article class="detail">
+          <h3>Hidratación</h3>
+          <p>Avituallamiento cada ~5 km y zona de meta.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="categorias" class="categories">
+    <div class="container">
+      <h2>Categorías</h2>
+      <div class="categories-grid">
+        <article class="cat">
+          <h3>Masculina — 42K</h3>
+          <p>Trofeos y premios por puesto y por categoría de edad.</p>
+        </article>
+        <article class="cat">
+          <h3>Femenina — 42K</h3>
+          <p>Trofeos y premios por puesto y por categoría de edad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2>Galería</h2>
+      <div class="gallery-container">
+        <figure><img src="/resources/img/corredores-alegres-divirtiendose-mientras-participan-en-una-carrera-en-la-naturaleza.jpg" alt="Corredores en ruta" loading="lazy"><figcaption>Corredores disfrutando de la ruta.</figcaption></figure>
+        <figure><img src="/resources/img/diferentes-personas-participando-en-un-campo-traves.jpg" alt="Salida" loading="lazy"><figcaption>Salida oficial.</figcaption></figure>
+        <figure><img src="/resources/img/mujeres-atleticas-felices-apoyandose-mutuamente-mientras-corren-un-maraton-en-la-naturaleza (1).jpg" alt="Meta" loading="lazy"><figcaption>Emoción en meta.</figcaption></figure>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recorrido" class="race">
+    <div class="container">
+      <h2>Recorrido de la Carera</h2>
+      <p class="small">Distancia oficial: 42.195 m. Puntos de paso y avituallamiento señalizados.</p>
+      <div id="map" style="height: 400px; width: 100%; border: 2px solid #ccc;"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+
+  var map = L.map('map').setView([41.4145, 2.1527], 14); // Park Güell, Barcelona
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var racePath = [
+      [41.4145, 2.1527], // Inicio
+      [41.4150, 2.1535],
+      [41.4155, 2.1545],
+      [41.4160, 2.1555]  // Meta
+  ];
+
+  var polyline = L.polyline(racePath, {color: 'red', weight: 5, opacity: 0.8}).addTo(map);
+
+  map.fitBounds(polyline.getBounds());
+
+  L.marker(racePath[0]).addTo(map).bindPopup("<b>Inicio</b>").openPopup();
+  L.marker(racePath[racePath.length - 1]).addTo(map).bindPopup("<b>Meta</b>");
+</script>
 
 <%- include('partials/footer') %>

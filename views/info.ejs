@@ -1,48 +1,147 @@
 <%- include('partials/head') %>
 
-  <%- include('partials/header') %>
+<%- include('partials/header') %>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
 <link rel="stylesheet" href="/resources/css/info.css">
 
-<div class="container mt-4">
-  <h1 class="text-center mb-4">Todo lo que tienes que saber la carrera: Nocturna Mendoza</h1>
-  <div class="card shadow-sm p-4 mb-4">
-    <p>
-      <strong>Nocturna Ciudad de Mendoza 2025</strong> se llevará a cabo el 
-      <strong>29 de noviembre</strong>, con un emocionante recorrido nocturno que promete ser una experiencia inolvidable. 
-      La carrera contará con distancia de <strong>10K</strong>, y además de la categoría 
-      <strong>KIDS / Familiar</strong> para que todos puedan participar.
-    </p>
-    <p>
-      La largada y llegada serán en la explanada de la <strong>Casa de Gobierno (Calle Virgen del Carmen)</strong>, 
-      ofreciendo un ambiente vibrante y lleno de energía. Cada corredor recibirá un kit de competición que incluirá 
-      una remera oficial diseñada especialmente para el evento. Además, habrá puestos de hidratación estratégicamente 
-      ubicados a lo largo del recorrido.
-    </p>
-  </div>
-  <div class="card shadow-sm p-3 mb-4 text-center">
-    <h3><strong>Total de Participantes:</strong> <%= total %></h3>
-  </div>
-
-  <div class="card shadow-sm p-3">
-    <h2 class="mb-3 text-center">GANADORES</h2>
-    <% if (ganadores.length > 0) { %>
-      <ol class="list-group list-group-numbered">
-        <% ganadores.forEach(g => { %>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div>
-              <strong><%= g.posicion %>º</strong> — <%= g.nombre %> <%= g.apellido %>
-            </div>
-            <span class="badge bg-primary rounded-pill">Dorsal <%= g.dorsal %></span>
-          </li>
-        <% }) %>
-      </ol>
-    <% } else { %>
-      <p class="text-muted text-center">Aún no se han registrado ganadores.</p>
-    <% } %>
+<div class="info-hero">
+  <div class="info-hero-inner">
+    <h1>42K <span class="accent">BARCELONA RUNNING</span></h1>
+    <p class="lead">Ciudad de Barcelona 2025 — <strong>29 de noviembre</strong> · 42K · Lugar: <strong>Park Güell</strong></p>
   </div>
 </div>
 
+<div class="container page-body">
+  <div class="grid">
+    <section class="card overview">
+      <h2>Detalles del evento</h2>
+      <p><strong>La carrera de 42K Ciudad de Barcelona 2025</strong> se llevará a cabo el <strong>29 de noviembre</strong>, con un recorrido emocionante diseñado para desafiar tu resistencia, pasion y espiritu competitivo.<strong>Cada participantes recibira un </strong>Kit oficial del corredor y contara con puntos de hidratación distribuidos estrategitamente. Prepárate para vivir una jornada inolvidable de esfuerzo, superación y energía deportiva en una de las ciudades más icónicas del mundo.</p>
+    </section>
 
+    <aside class="card stats">
+      <div class="stat">
+        <span class="stat-number"><%= total %></span>
+        <span class="stat-label">Participantes</span>
+      </div>
+      <div class="stat small-note">Revisa el panel de organizadores para gestionar inscripciones y ganadores.</div>
+    </aside>
+  </div>
+
+  <% if (typeof isAdmin !== 'undefined' && isAdmin) { %>
+    <section class="card admin-panel">
+      <h2 class="section-title">Registrar / actualizar ganadores</h2>
+
+      <form action="/ganadores" method="post" enctype="multipart/form-data" class="ganadores-form">
+        <div class="field-row">
+          <label>1º Clasificado</label>
+          <div class="row">
+            <select name="primero" required>
+              <option value="">Selecciona participante</option>
+              <% participantes.forEach(p => { %>
+                <option value="<%= p.id %>"><%= p.id %> — <%= p.nombre %> <%= p.apellido %></option>
+              <% }) %>
+            </select>
+            <input type="file" name="foto1" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>2º Clasificado</label>
+          <div class="row">
+            <select name="segundo" required>
+              <option value="">Selecciona participante</option>
+              <% participantes.forEach(p => { %>
+                <option value="<%= p.id %>"><%= p.id %> — <%= p.nombre %> <%= p.apellido %></option>
+              <% }) %>
+            </select>
+            <input type="file" name="foto2" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <label>3º Clasificado</label>
+          <div class="row">
+            <select name="tercero" required>
+              <option value="">Selecciona participante</option>
+              <% participantes.forEach(p => { %>
+                <option value="<%= p.id %>"><%= p.id %> — <%= p.nombre %> <%= p.apellido %></option>
+              <% }) %>
+            </select>
+            <input type="file" name="foto3" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn cta-btn">Guardar ganadores</button>
+          <a href="/admin" class="btn btn-neutral">Cancelar</a>
+        </div>
+
+        <% if (typeof mensaje !== 'undefined' && mensaje) { %>
+          <div class="form-alert <%= mensajeTipo === 'success' ? 'success' : '' %>"><%= mensaje %></div>
+        <% } %>
+      </form>
+    </section>
+  <% } %>
+</div>
+
+  <!-- SECCIÓN MAPA INTERACTIVO -->
+  <section class="card race-map">
+    <h2 class="section-title">Recorrido de la Carrera</h2>
+    <div id="map" style="height: 400px; width: 100%; border: 2px solid #ccc;"></div>
+  </section>
+
+  <section class="card winners-section">
+    <h2 class="section-title">GANADORES</h2>
+
+    <% if (ganadores && ganadores.length > 0) { %>
+      <div class="winners-grid">
+        <% ganadores.forEach(g => { %>
+          <article class="winner-card">
+            <div class="winner-photo-wrap">
+              <% if (g.foto) { %>
+                <img class="winner-photo" src="/uploads/participantes/<%= g.foto %>" alt="Foto ganador <%= g.nombre %>">
+              <% } else { %>
+                <div class="winner-placeholder">
+                  <i class="bx bxs-user"></i>
+                </div>
+              <% } %>
+            </div>
+            <div class="winner-info">
+              <div class="winner-place">#<%= g.posicion %></div>
+              <div class="winner-name"><%= g.nombre %> <%= g.apellido %></div>
+              <div class="winner-dorsal">Dorsal <span class="dorsal-badge"><%= g.dorsal %></span></div>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p class="text-muted">Aún no se han registrado ganadores.</p>
+    <% } %>
+  </section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+
+  var map = L.map('map').setView([41.4145, 2.1527], 14); // Park Güell, Barcelona
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var racePath = [
+      [41.4145, 2.1527], // Inicio
+      [41.4150, 2.1535],
+      [41.4155, 2.1545],
+      [41.4160, 2.1555]  // Meta
+  ];
+
+  var polyline = L.polyline(racePath, {color: 'red', weight: 5, opacity: 0.8}).addTo(map);
+
+  map.fitBounds(polyline.getBounds());
+
+  L.marker(racePath[0]).addTo(map).bindPopup("<b>Inicio</b>").openPopup();
+  L.marker(racePath[racePath.length - 1]).addTo(map).bindPopup("<b>Meta</b>");
+</script>
+
+<%- include('partials/footer') %>

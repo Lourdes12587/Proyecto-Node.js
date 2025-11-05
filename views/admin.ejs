@@ -1,64 +1,78 @@
 <%- include('partials/head') %>
+<!-- Asegúrate de tener Montserrat + Boxicons en tu head partial.
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/css/admin.css">
 
-  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/resources/css/admin.css">
+<%- include('partials/header') %>
 
-  <%- include('partials/header') %>
+<main class="auth-wrapper admin-wrapper">
+  <div class="login-container admin-card">
+    <h2>Panel de Organizador</h2>
 
-  <div class="container">
-    <h2 class="mt-4">PARTICIPANTES INSCRIPTOS</h2>
-    <table class="table table-bordered table-striped text-center mt-4">
-      <thead>
-        <tr class="bg-primary text-white">
-          <th scope="col">N|Dorsal</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">DNI</th>
-          <th scope="col">Telefono</th>
-          <th scope="col">Calle</th>
-          <th scope="col">N°</th>
-          <th scope="col">Poblacion</th>
-          <th scope="col">CP°</th>   
-          <th scope="col">Acciones</th>       
-        </tr>
-      </thead>
+    <p class="helper small mb-2">Listado de participantes inscritos</p>
 
-      <tbody>
-        <% participantes.forEach(participante => { %>
+    <div class="mb-2 d-flex gap-2">
+      <input id="searchInput" class="form-control form-control-sm" placeholder="Buscar por nombre, DNI..." />
+      <span class="badge participantes-count align-self-center">Total: <%= participantes.length %></span>
+    </div>
+
+    <div class="table-responsive small-table mb-2">
+      <table class="table table-sm table-hover text-center align-middle mb-0">
+        <thead class="table-head-custom">
           <tr>
-            <td><%= participante.id %></td>
-            <td><%= participante.nombre %></td>
-            <td><%= participante.apellido %></td>
-            <td><%= participante.dni %></td>
-            <td><%= participante.telefono %></td>
-            <td><%= participante.calle %></td>
-            <td><%= participante.numero %></td>
-            <td><%= participante.poblacion %></td>
-            <td><%= participante.codigo_postal %></td>
-              <td>
-                <a href="/editadmin/<%= participante.id %>" class="btn btn-outline-warning me-2">
+            <th>N° Dorsal</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>DNI</th>
+            <th>Tel.</th>
+            <th>Calle</th>
+            <th>N°</th>
+            <th>Población</th>
+            <th>CP°</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="participantesTable">
+          <% participantes.forEach(participante => { %>
+            <tr>
+              <td><%= participante.id %></td>
+              <td><%= participante.nombre %></td>
+              <td><%= participante.apellido %></td>
+              <td><%= participante.dni %></td>
+              <td><%= participante.telefono %></td>
+              <td><%= participante.calle %></td>
+              <td><%= participante.numero %></td>
+              <td><%= participante.poblacion %></td>
+              <td><%= participante.codigo_postal %></td>
+              <td class="actions-col">
+                <a href="/editadmin/<%= participante.id %>" class="btn btn-sm btn-edit" title="Editar">
                   <i class="bx bxs-edit"></i>
                 </a>
-                <a href="/delete/<%= participante.id %>" class="btn btn-outline-danger">
+                <a href="/delete/<%= participante.id %>" class="btn btn-sm btn-delete" title="Borrar" onclick="return confirm('¿Eliminar participante?');">
                   <i class="bx bxs-trash"></i>
                 </a>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-    <h2>REGISTRAR GANADORES</h2>
-    <form action="/ganadores" method="post">
-      <label>1º Clasificado:</label>
-      <input type="number" name="primero" required>
-      <br>
-      <label>2º Clasificado:</label>
-      <input type="number" name="segundo" required>
-      <br>
-      <label>3º Clasificado:</label>
-      <input type="number" name="tercero" required>
-      <br>
-      <button type="submit">GUARDAR</button>
-    </form>
-  </div>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+</main>
 
-  <%- include('partials/footer') %>
+<%- include('partials/footer') %>
+
+<script>
+  // búsqueda cliente (simple)
+  const searchInput = document.getElementById('searchInput');
+  const participantesTable = document.getElementById('participantesTable');
+  searchInput?.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    Array.from(participantesTable.rows).forEach(row => {
+      const txt = row.innerText.toLowerCase();
+      row.style.display = txt.includes(q) ? '' : 'none';
+    });
+  });
+</script>

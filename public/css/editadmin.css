@@ -1,0 +1,149 @@
+/* ---------- Edit Admin (mantener coherencia con login) ---------- */
+
+/* usa las variables que ya definiste en :root */
+:root{
+  --lapis-lazuli: #2f6690ff;
+  --cerulean:     #3a7ca5ff;
+  --platinum:     #d9dcd6ff;
+  --indigo-dye:   #16425bff;
+  --sky-blue:     #81c3d7ff;
+  --white: #ffffff;
+  --muted-shadow: rgba(22,66,91,0.08);
+}
+
+/* Reutiliza estructura centrada */
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 16px;
+  min-height: calc(100vh - 150px);
+}
+
+/* Card pequeño y compacto (igual look & feel que login) */
+.login-container {
+  width: 100%;
+  max-width: 420px;          /* cuadro pequeño */
+  background: linear-gradient(180deg, var(--white), var(--platinum));
+  border-radius: 14px;
+  padding: 26px 20px;
+  box-shadow: 0 10px 30px var(--muted-shadow);
+  border: 1px solid rgba(22,66,91,0.06);
+  text-align: left;
+}
+
+/* Título */
+.login-container h2 {
+  margin: 0 0 10px 0;
+  color: var(--lapis-lazuli);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+/* helper text */
+.login-container .helper {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: rgba(22,66,91,0.75);
+}
+
+/* Labels */
+.login-container label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+  color: rgba(22,66,91,0.9);
+  font-size: 0.95rem;
+}
+
+/* Inputs: idénticos al login */
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="email"],
+.login-container input[type="tel"],
+.login-container input[type="number"],
+.login-container input[type="hidden"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(22,66,91,0.12);
+  background: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .12s ease, transform .09s ease;
+  box-sizing: border-box;
+}
+
+/* Focus: mismo efecto que el login */
+.login-container input:focus {
+  border-color: var(--cerulean);
+  box-shadow: 0 8px 22px rgba(58,124,165,0.10);
+  transform: translateY(-1px);
+}
+
+/* Botones: CTA con el gradiente lapis/cerulean, forma redondeada */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(58,124,165,0.14);
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* Hover/active */
+.cta-btn:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 18px 40px rgba(58,124,165,0.18); }
+.cta-btn:active { transform: translateY(-1px); }
+
+/* Botón secundario (Cancelar) */
+.btn-neutral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(22,66,91,0.06);
+  color: var(--indigo-dye);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Contenedor de botones lado a lado */
+.login-container .form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Mensaje de alerta dentro de la card (error/info) */
+.form-alert {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,235,235,0.95), rgba(255,245,245,0.95));
+  color: #6b1a1a;
+  border-left: 6px solid rgba(200,40,40,0.12);
+  font-size: 0.95rem;
+}
+
+/* Pequeños ajustes responsive */
+@media (max-width: 480px) {
+  .auth-wrapper { padding: 24px 12px; min-height: calc(100vh - 120px); }
+  .login-container { padding: 18px 14px; max-width: 360px; border-radius: 12px; }
+  .login-container h2 { font-size: 1.15rem; }
+  .login-container label { font-size: 0.9rem; }
+  .cta-btn, .btn-neutral { padding: 10px; font-size: 0.95rem; }
+  .login-container .form-actions { flex-direction: column; }
+}

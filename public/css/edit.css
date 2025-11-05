@@ -1,0 +1,149 @@
+/* public/resources/css/edit.css */
+:root{
+  --lapis-lazuli: #2f6690ff;
+  --cerulean:     #3a7ca5ff;
+  --platinum:     #d9dcd6ff;
+  --indigo-dye:   #16425bff;
+  --sky-blue:     #81c3d7ff;
+  --white:        #ffffff;
+}
+
+/* Body / layout */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, var(--sky-blue), var(--platinum));
+  color: var(--indigo-dye);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure header (navbar) stays above and footer at bottom */
+nav, .navbar { position: sticky; top: 0; z-index: 1100; background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean)); }
+
+/* Center wrapper so the card doesn't span whole page */
+.container.mt-4.w-50 {
+  max-width: 460px;       /* compact width */
+  width: 100%;
+  margin: 36px auto !important;  /* center horizontally and add vertical spacing */
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Card style */
+.container .card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(22,66,91,0.12);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), #ffffff);
+}
+
+/* Card header */
+.container .card .card-header {
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: 0;
+  padding: 14px 18px;
+  font-size: 1rem;
+}
+
+/* Card body spacing */
+.container .card .card-body {
+  padding: 18px;
+}
+
+/* Labels */
+.container .form-label {
+  font-weight: 600;
+  color: rgba(22,66,91,0.9);
+}
+
+/* Inputs - custom look matching login/register */
+.container .form-control {
+  border-radius: 10px;
+  border: 1px solid rgba(22,66,91,0.12);
+  background: linear-gradient(180deg, #fff, var(--platinum));
+  padding: 10px 12px;
+  box-shadow: none;
+  transition: box-shadow .15s ease, border-color .12s ease, transform .09s ease;
+}
+
+/* Focus on inputs */
+.container .form-control:focus {
+  border-color: var(--cerulean);
+  box-shadow: 0 10px 30px rgba(58,124,165,0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Buttons — primary (Guardar) styled like login button, but not huge */
+.container .card .btn.btn-primary,
+.container .card .btn.btn-primary:visited {
+  display: inline-block;
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean)) !important;
+  color: var(--white) !important;
+  box-shadow: 0 12px 30px rgba(58,124,165,0.14);
+  border: 0;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+/* Primary hover */
+.container .card .btn.btn-primary:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(58,124,165,0.18);
+  opacity: 0.98;
+}
+
+/* Cancel button — outline but matching palette */
+.container .card .btn.btn-danger {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--lapis-lazuli) !important;
+  background: transparent !important;
+  border: 2px solid rgba(47,102,144,0.12);
+  transition: all .12s ease;
+}
+
+/* Cancel hover */
+.container .card .btn.btn-danger:hover {
+  background: rgba(47,102,144,0.06);
+  color: var(--lapis-lazuli) !important;
+  transform: translateY(-2px);
+}
+
+/* Make the two buttons sit with small gap on wider screens */
+.container .card .btn + .btn {
+  margin-top: 10px;
+}
+
+/* Smaller form on mobile */
+@media (max-width: 576px) {
+  .container.mt-4.w-50 {
+    max-width: 360px;
+    margin: 22px 12px !important;
+  }
+  .container .card .card-header { font-size: 0.95rem; padding: 12px 14px; }
+  .container .card .card-body { padding: 14px; }
+  .container .card .btn { padding: 9px 12px; }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

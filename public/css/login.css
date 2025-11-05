@@ -1,130 +1,181 @@
+:root{
+  --lapis-lazuli: #2f6690ff;
+  --cerulean:     #3a7ca5ff;
+  --platinum:     #d9dcd6ff;
+  --indigo-dye:   #16425bff;
+  --sky-blue:     #81c3d7ff;
 
+  --white: #ffffff;
+  --muted-shadow: rgba(22,66,91,0.08);
+}
+
+/* ---------- Base / Layout ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: 'Montserrat';
-  background: linear-gradient(135deg, #74ebd5, #9face6);
-  min-height: 100vh;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--platinum), #ffffff);
+  color: var(--indigo-dye);
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* permite que footer quede abajo */
 }
 
+/* Asegura que el contenido empuje el footer hacia abajo */
+main, .main-content, .auth-wrapper { flex: 1 0 auto; }
 
-nav {
-  position: fixed;
+/* ---------- NAVBAR (sticky arriba) ---------- */
+nav, .navbar, .custom-navbar {
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  z-index: 1200;
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  box-shadow: 0 6px 18px rgba(22,66,91,0.12);
 }
 
-
+/* ---------- CENTRADO DEL LOGIN ---------- */
 .auth-wrapper {
-  flex: 1;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  padding-top: 80px; 
-  padding-bottom: 20px;
+  padding: 48px 16px;
+  min-height: calc(100vh - 150px); /* sitúa verticalmente centrado teniendo en cuenta header+footer */
 }
 
-
+/* Caja del form */
 .login-container {
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-30px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-
-
-.login-container h2 {
+  max-width: 420px;        /* no muy grande */
+  background: linear-gradient(180deg, #ffffff, var(--platinum));
+  border-radius: 14px;
+  padding: 28px 22px;
+  box-shadow: 0 10px 30px var(--muted-shadow);
+  border: 1px solid rgba(22,66,91,0.06);
   text-align: center;
-  margin-bottom: 2rem;
-  color: #1e3f66;
-  letter-spacing: 1px;
 }
 
+/* Título */
+.login-container h2 {
+  margin: 0 0 12px 0;
+  color: var(--lapis-lazuli);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
 
+/* Labels e Inputs */
 .login-container label {
-  align-self: flex-start;
-  margin-bottom: 0.3rem;
+  display: block;
+  text-align: left;
+  margin: 10px 0 6px 0;
   font-weight: 600;
-  color: #1e3f66;
+  color: rgba(22,66,91,0.9);
+  font-size: 0.95rem;
 }
 
-.login-container input {
+.login-container input[type="text"],
+.login-container input[type="password"] {
   width: 100%;
-  padding: 0.85rem 1rem;
-  margin-bottom: 1rem;
-  border: 1.5px solid #ccc;
+  padding: 10px 12px;
   border-radius: 10px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(22,66,91,0.12);
+  background: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .12s ease, transform .09s ease;
 }
 
 .login-container input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 10px rgba(74,144,226,0.3);
-  outline: none;
+  border-color: var(--cerulean);
+  box-shadow: 0 8px 22px rgba(58,124,165,0.10);
+  transform: translateY(-1px);
 }
 
-
-.login-container button {
+/* Botón */
+.login-container button[type="submit"] {
+  margin-top: 18px;
   width: 100%;
-  padding: 0.85rem;
-  background: linear-gradient(90deg, #4a90e2, #1e78d6);
-  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(58,124,165,0.14);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
 }
 
-.login-container button:hover {
-  background: linear-gradient(90deg, #1e78d6, #4a90e2);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(30,120,214,0.4);
+.login-container button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(58,124,165,0.18);
+}
+
+/* Mensajes/errores (si usas alert dentro del form) */
+.login-container .form-alert {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,235,235,0.95), rgba(255,245,245,0.95));
+  color: #6b1a1a;
+  border-left: 6px solid rgba(200,40,40,0.12);
+  text-align: left;
+}
+
+/* Pequeños enlaces debajo */
+.login-container .helper {
+  margin-top: 12px;
+  font-size: 0.92rem;
+  color: rgba(22,66,91,0.75);
+}
+
+/* Clases personalizadas para SweetAlert2 */
+.swal2-border-rounded {
+  border-radius: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.swal2-title-custom {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.swal2-content-custom {
+  font-size: 1rem;
+  color: #d9dcd6ff; /* platinum */
 }
 
 
-.register-link {
-  margin-top: 15px;
-  color: #1e78d6;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.register-link:hover {
-  color: #0056b3;
-}
-
-
-@media (max-width: 768px) {
-  .login-container {
-    padding: 2rem;
-  }
-}
-
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 480px) {
-  .login-container h2 {
-    font-size: 1.5rem;
-  }
-
-  .login-container input,
-  .login-container button {
-    font-size: 0.95rem;
-  }
+  .auth-wrapper { padding: 28px 12px; min-height: calc(100vh - 140px); }
+  .login-container { padding: 20px 14px; border-radius: 12px; max-width: 360px; }
+  .login-container h2 { font-size: 1.2rem; }
+  .login-container label { font-size: 0.9rem; }
+  .login-container button { padding: 10px; font-size: 0.95rem; }
 }
+
+/* ---------- FOOTER (al fondo) ---------- */
+footer, .footer {
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: #fff;
+  padding: 22px 16px;
+  text-align: center;
+  margin-top: 24px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 24px rgba(22,66,91,0.06);
+  flex-shrink: 0;
+}
+
+footer .brand {
+  font-weight: 800;
+}
+
+/* Small screens footer */
+@media (max-width: 768px) {
+  footer, .footer { padding: 18px 12px; font-size: 0.95rem; }
+}
+

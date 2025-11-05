@@ -1,17 +1,78 @@
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h2></h2>Happy Runner</h2>
-      <p>Conectando a los deportistas con más oportunidades.</p>
+<footer role="contentinfo" class="site-footer">
+  <div class="container footer-grid">
+    <!-- Column 1: identidad + breve -->
+    <div class="footer-brand" aria-label="Identidad del sitio">
+      <a href="/" class="brand-link" aria-label="Ir al inicio">
+        <!-- Replace con tu logo SVG/IMG si tienes -->
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M6 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Happy Runner</span>
+      </a>
+      <p class="brand-tagline">42K Barcelona — Carrera popular y comunidad deportiva.</p>
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 Happy Runner| Todos los derechos reservados</p>
+    <!-- Column 3: contacto y newsletter -->
+    <div class="footer-contact" aria-label="Contacto y suscripción">
+      <h3 class="footer-title">Contacto</h3>
+      <p class="small">Email: <a href="mailto:info@tusitio.ejemplo">happyrunner@gmail.com</a><br>Tel: <a href="tel:+34600000000">+34 600 000 000</a></p>
+
+      <!-- Newsletter (opcional) -->
+      <form id="footer-newsletter" class="newsletter" action="/newsletter/subscribe" method="post" aria-label="Formulario de suscripción al boletín">
+        <label for="footer-email" class="sr-only">Correo electrónico</label>
+        <input id="footer-email" name="email" type="email" placeholder="Tu email para novedades" required>
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </form>
+    </div>
+
+    <!-- Column 4: redes sociales + patrocinadores -->
+    <div class="footer-social" aria-label="Redes sociales y patrocinadores">
+      <h3 class="footer-title">Síguenos</h3>
+      <div class="footer-icons" role="navigation" aria-label="Redes sociales">
+        <a href="https://instagram.com/tuevento" class="social-icon" aria-label="Instagram (abre en nueva pestaña)" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://facebook.com/tuevento" class="social-icon" aria-label="Facebook (abre en nueva pestaña)" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="mailto:info@tusitio.ejemplo" class="social-icon" aria-label="Correo electrónico" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-sponsors" aria-label="Patrocinadores">
+        <a href="https://sponsor1.example" target="_blank" rel="noopener noreferrer"><img src="/resources/img/6420372.jpg" alt="Sponsor 1" loading="lazy" height="48"></a>
+        <a href="https://sponsor2.example" target="_blank" rel="noopener noreferrer"><img src="/resources/img/8390458.jpg" alt="Sponsor 2" loading="lazy" height="48"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer-bottom">
+    <div class="container footer-legal">
+      <p class="small">© <span id="currentYear"></span> Happy Runner — 42K Barcelona. <a href="/politica-privacidad">Política de privacidad</a> • <a href="/terminos">Términos y condiciones</a></p>
+      <p class="small">Desarrollado por <a href="https://tudesarrollador.ejemplo" target="_blank" rel="noopener noreferrer">Lourdes Ortiz</a></p>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script>
+  // Año automático
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  // Mejor experiencia en formulario (opcional): prevenir doble envío y mostrar feedback
+  const newsletterForm = document.getElementById('footer-newsletter');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      const btn = newsletterForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      // Si usas fetch/AJAX aquí puedes enviar el form y mostrar resultado, en el ejemplo simple dejamos el submit normal.
+    });
+  }
+</script>
+
 </body>
 </html>

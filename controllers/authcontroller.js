@@ -76,7 +76,7 @@ exports.loginAdmin = (req, res) => {
         // Guardar sesión
         req.session.loggedin = true;
         req.session.user = results[0].user;
-        req.session.rol = "admin";  // 👈 lo ponemos fijo
+        req.session.rol = "admin";  
 
         res.render("loginadmin", {
             alert: true,

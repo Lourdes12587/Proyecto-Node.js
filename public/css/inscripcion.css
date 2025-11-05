@@ -1,106 +1,312 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
+:root {
+  /* Paleta principal */
+  --lapis-lazuli: #2f6690ff;
+  --cerulean:     #3a7ca5ff;
+  --platinum:     #d9dcd6ff;
+  --indigo-dye:   #16425bff;
+  --sky-blue:     #81c3d7ff;
+  --white:        #ffffff;
+  --accent:       #d2643c;
+  --glass:        rgba(255,255,255,0.96);
+  --muted-shadow: rgba(22,66,91,0.08);
 
-body {
+  /* Clima y acentos vivos */
+  --color1: #ffbca5; /* warm peach */
+  --color2: #ffdf84; /* soft yellow */
+  --color3: #0660dc; /* deep blue */
+  --color4: #07c0ff; /* bright cyan */
+  --color5: #0ffff8; /* neon aqua */
+
+  --bg-soft: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  --card-shadow: 0 12px 30px rgba(6,96,220,0.12);
+  --muted-text: rgba(6,96,220,0.75);
+}
+
+/* =========================
+   PAGE SETUP
+========================= */
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Montserrat';
-  background: linear-gradient(135deg, #74ebd5, #9face6);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--platinum), #ffffff);
+  color: var(--indigo-dye);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
+.container {
+  flex: 1 0 auto;
+  padding: 28px 18px;
+  display: flex;
+  justify-content: center;
+}
 
+/* =========================
+   FORM CARD
+========================= */
 .inscripcion-container {
-  background-color: #fff;
-  max-width: 420px;
-  width: 85%;
-  margin: 100px auto 50px auto;
-  padding: 1.8rem; 
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 0.8s ease;
-  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 980px;
+  padding: 28px;
+  background: var(--bg-soft);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(22,66,91,0.06);
+  display: grid;
+  gap: 18px;
+  animation: fadeIn 0.6s ease forwards;
+  justify-items: center;
 }
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-25px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-
 
 .inscripcion-container h2 {
+  color: var(--lapis-lazuli);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #1e3f66;
-  letter-spacing: 1px;
-  font-size: 1.6rem;
+  text-shadow: 0 2px 6px rgba(22,66,91,0.15);
+}
+
+/* =========================
+   FORM LAYOUT
+========================= */
+form {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+.form-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.9rem;
+  gap: 6px;
 }
 
 .form-group label {
-  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #1e3f66;
-  font-size: 0.95rem;
+  color: var(--lapis-lazuli);
 }
 
-.form-group input {
-  padding: 0.7rem 0.9rem;
-  border: 1.3px solid #ccc;
-  border-radius: 10px;
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="file"],
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(22,66,91,0.12);
+  background: linear-gradient(180deg,#ffffff,#f7fbff);
+  box-shadow: 0 6px 18px rgba(22,66,91,0.03) inset;
+  transition: transform .14s ease, box-shadow .18s ease, border-color .12s ease;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  color: var(--indigo-dye);
 }
 
-.form-group input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 8px rgba(74,144,226,0.3);
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
+  transform: translateY(-3px);
+  border-color: var(--cerulean);
+  box-shadow: 0 18px 40px rgba(58,124,165,0.12);
 }
 
+.form-group.full { grid-column: 1 / -1; }
 
+/* Submit button */
 .btn-registrarse {
-  width: 100%;
-  background: linear-gradient(90deg, #4a90e2, #1e78d6);
-  color: #fff;
-  padding: 0.75rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: linear-gradient(90deg, var(--cerulean), var(--lapis-lazuli));
+  color: var(--white);
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(22,66,91,0.18);
   border: none;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform .14s ease, box-shadow .14s ease;
 }
-
 .btn-registrarse:hover {
-  background: linear-gradient(90deg, #1e78d6, #4a90e2);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(30,120,214,0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(22,66,91,0.22);
+}
+
+/* Alerts */
+.alert { border-radius: 12px; }
+.alert-danger {
+  background: linear-gradient(180deg, #fff4f4, #fff8f8);
+  border-left: 6px solid rgba(255,188,165,0.18);
+  color:#7a1b1b;
+}
+
+/* =========================
+   WEATHER WIDGET (COLORES SUAVES, ADAPTABLE AL CLIMA)
+========================= */
+.weather-widget {
+  margin-left: 18px;
+  width: 100%;
+  max-width: 360px;
+  padding: 22px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(135deg, #81c3d7, #2f6690);
+  color: #ffffff;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.weather-widget:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.22);
+  background: linear-gradient(135deg, #3a7ca5, #16425b);
+}
+
+.weather-widget h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+}
+
+.weather-widget .weather-icon img {
+  width: 100px;
+  height: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.weather-widget .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.weather-widget .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
+
+.weather-widget .stat:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.25);
+}
+
+.weather-widget .stat .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffdf84;
+  box-shadow: 0 4px 12px rgba(255,223,132,0.3);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .weather-widget { order: -1; width: 100%; margin-left: 0; margin-bottom: 18px; }
 }
 
 
-.alert {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  border-radius: 8px;
+
+/* =========================
+   BANNER MOTIVACIONAL
+========================= */
+.motivational-banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: url('/resources/img/jovenes-amigos-corriendo-durante-una-maraton.jpg') center center / cover no-repeat;
+  display: flex;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  align-items: center;
+  justify-content: center;
 }
 
+.motivational-banner .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22,66,91,0.48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.motivational-banner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.6);
+}
+
+.motivational-banner p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   ANIMACIONES & RESPONSIVE
+========================= */
+@keyframes fadeIn {
+  0% { opacity:0; transform: translateY(10px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+@media (max-width: 980px) {
+  form { grid-template-columns: 1fr; }
+  .form-left { grid-template-columns: 1fr; }
+  .weather-widget { order: -1; width: 100%; margin-left: 0; margin-bottom: 14px; }
+}
 
 @media (max-width: 768px) {
-  .inscripcion-container {
-    margin: 120px 15px 50px 15px;
-    padding: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .inscripcion-container h2 {
-    font-size: 1.4rem;
-  }
-
-  .form-group input, .btn-registrarse {
-    font-size: 0.9rem;
-  }
+  .motivational-banner { height: 160px; }
+  .motivational-banner h2 { font-size: 1.5rem; }
+  .motivational-banner p { font-size: 1rem; }
 }

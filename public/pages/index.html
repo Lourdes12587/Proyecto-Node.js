@@ -1,85 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/resources/css/inicio.css">
-  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <title>HAPPY RUNNER</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Runner</title>
+    <meta name="description" content="Maratón 42K Ciudad de Barcelona — 29 Nov 2025. Categorías masculina y femenina. Inscripciones abiertas. Kit oficial y puntos de hidratación.">
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
 </head>
 
 <body>
   <nav>
-    <div class="logo">NUNboating</div>
+    <div class="logo">Happy Runner</div>
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
     <div class="nav-links" id="navLinks">
-      <a href="http://localhost:4000/">INSCRIPCION</a>
-      <a href="http://localhost:4000/inscripcion">INSCRIPCION</a>
-      <a href="http://localhost:4000/info">INFORMACION</a>
-      <a href="http://localhost:4000/Login">Login</a>
+      <a href="/">INICIO</a>
+      <a href="/info">INFO</a>
+        <% if (!user) { %>
+      <a href="/inscripcion">INSCRIPCION</a>
+      <a href="/login"><i class='bx bx-user-circle'></i></a>
+      <a href="/loginadmin"><i class='bx bxs-shield'></i></a>
+      <% } else if (rol === 'participante') { %>
+      <a href="/perfil">MI PERFIL</a>
+      <a href="/logout"><i class='bx bxs-log-out' ></i></a>
+      <% } else if (rol === 'admin') { %>
+      <a href="/register">REGISTRATE</a>
+      <a href="/admin">PANEL ADMINISTRADOR</a>
+      <a href="/ganadores">GANADORES</a>
+      <a href="/logout"><i class='bx bxs-log-out' ></i></a>
+      <% } %>
     </div>
   </nav>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>
   <header>
-    <div class="banner">
-      <div class="banner-text">
-        <h1>Carrera Running 2025</h1>
-        <p>¡Desafía tus límites y vive la experiencia!</p>
-        <a href="/inscripcion" class="btn-banner">Inscripcion</a>
+  <div class="banner" role="img" aria-label="Corredores en Barcelona" id="heroBanner" data-tilt="on">
+    <div class="banner-overlay" aria-hidden="true"></div>
+    <div class="banner-text container">
+      <h1 class="hero-title">HAPPY RUNNER <span class="accent">42K</span></h1>
+      <p class="lead">29 de noviembre de 2025 — Park Güell, Barcelona</p>
+
+      <p class="banner-desc">Únete al maratón urbano que recorre los puntos más emblemáticos de Barcelona. Kit oficial, cronometraje y puntos de hidratación.</p>
+
+      <div class="hero-cta" role="group" aria-label="Llamados a la acción">
+        <a href="/inscripcion" class="btn-banner">INSCRIPCIÓN</a>
+        <a href="#recorrido" class="btn-outline">VER RECORRIDO</a>
+      </div>
+
+      <!-- Elemento de cuenta regresiva eliminado a petición -->
+      <div class="hero-badges" aria-hidden="true">
+        <span class="badge">Masculina • 42K</span>
+        <span class="badge">Femenina • 42K</span>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- INFORMACIÓN DEL EVENTO -->
+<main>
   <section id="info" class="event-info">
-    <h2>Información del Evento</h2>
-    <div class="event-details">
-      <div class="detail">
-        <h3>📅 Fecha</h3>
-        <p>Domingo, 21 de Septiembre 2025</p>
-      </div>
-      <div class="detail">
-        <h3>🕒 Hora</h3>
-        <p>8:00 AM</p>
-      </div>
-      <div class="detail">
-        <h3>📍 Lugar</h3>
-        <p>Parque Central de la Ciudad</p>
+    <div class="container">
+      <h2>Información del Evento</h2>
+      <p class="intro small">Todo lo que necesitas saber para preparar tu carrera: horarios, punto de salida, servicios y reglas.</p>
+
+      <div class="event-details">
+        <article class="detail">
+          <h3>Fecha</h3>
+          <p>9 de septiembre 2025</p>
+        </article>
+        <article class="detail">
+          <h3>Hora</h3>
+          <p>10:00 AM — Salida por olas</p>
+        </article>
+        <article class="detail">
+          <h3>Ubicación</h3>
+          <p>Park Güell (salida) — Meta en zona centro</p>
+        </article>
+        <article class="detail">
+          <h3>Hidratación</h3>
+          <p>Avituallamiento cada ~5 km y zona de meta.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- GALERÍA -->
+  <section id="categorias" class="categories">
+    <div class="container">
+      <h2>Categorías</h2>
+      <div class="categories-grid">
+        <article class="cat">
+          <h3>Masculina — 42K</h3>
+          <p>Trofeos y premios por puesto y por categoría de edad.</p>
+        </article>
+        <article class="cat">
+          <h3>Femenina — 42K</h3>
+          <p>Trofeos y premios por puesto y por categoría de edad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="gallery">
-    <h2>Momentos de la Carrera</h2>
-    <div class="gallery-container">
-      <img src="img/run1.jpg" alt="Corredores en acción">
-      <img src="img/run2.jpg" alt="Salida de la carrera">
-      <img src="img/run3.jpg" alt="Llegada a la meta">
+    <div class="container">
+      <h2>Galería</h2>
+      <div class="gallery-container">
+        <figure><img src="/resources/img/corredores-alegres-divirtiendose-mientras-participan-en-una-carrera-en-la-naturaleza.jpg" alt="Corredores en ruta" loading="lazy"><figcaption>Corredores disfrutando de la ruta.</figcaption></figure>
+        <figure><img src="/resources/img/diferentes-personas-participando-en-un-campo-traves.jpg" alt="Salida" loading="lazy"><figcaption>Salida oficial.</figcaption></figure>
+        <figure><img src="/resources/img/mujeres-atleticas-felices-apoyandose-mutuamente-mientras-corren-un-maraton-en-la-naturaleza (1).jpg" alt="Meta" loading="lazy"><figcaption>Emoción en meta.</figcaption></figure>
+      </div>
     </div>
   </section>
- <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <h2>🏃 Happy Running</h2>
-        <p>Conectando a los deportistas con más oportunidades.</p>
+
+  <section id="recorrido" class="race">
+    <div class="container">
+      <h2>Recorrido de la Carera</h2>
+      <p class="small">Distancia oficial: 42.195 m. Puntos de paso y avituallamiento señalizados.</p>
+      <div id="map" style="height: 400px; width: 100%; border: 2px solid #ccc;"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+
+  var map = L.map('map').setView([41.4145, 2.1527], 14); // Park Güell, Barcelona
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var racePath = [
+      [41.4145, 2.1527], // Inicio
+      [41.4150, 2.1535],
+      [41.4155, 2.1545],
+      [41.4160, 2.1555]  // Meta
+  ];
+
+  var polyline = L.polyline(racePath, {color: 'red', weight: 5, opacity: 0.8}).addTo(map);
+
+  map.fitBounds(polyline.getBounds());
+
+  L.marker(racePath[0]).addTo(map).bindPopup("<b>Inicio</b>").openPopup();
+  L.marker(racePath[racePath.length - 1]).addTo(map).bindPopup("<b>Meta</b>");
+</script>
+
+<footer role="contentinfo" class="site-footer">
+  <div class="container footer-grid">
+    <!-- Column 1: identidad + breve -->
+    <div class="footer-brand" aria-label="Identidad del sitio">
+      <a href="/" class="brand-link" aria-label="Ir al inicio">
+        <!-- Replace con tu logo SVG/IMG si tienes -->
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M6 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">Happy Runner</span>
+      </a>
+      <p class="brand-tagline">42K Barcelona — Carrera popular y comunidad deportiva.</p>
+    </div>
+
+    <!-- Column 3: contacto y newsletter -->
+    <div class="footer-contact" aria-label="Contacto y suscripción">
+      <h3 class="footer-title">Contacto</h3>
+      <p class="small">Email: <a href="mailto:info@tusitio.ejemplo">happyrunner@gmail.com</a><br>Tel: <a href="tel:+34600000000">+34 600 000 000</a></p>
+
+      <!-- Newsletter (opcional) -->
+      <form id="footer-newsletter" class="newsletter" action="/newsletter/subscribe" method="post" aria-label="Formulario de suscripción al boletín">
+        <label for="footer-email" class="sr-only">Correo electrónico</label>
+        <input id="footer-email" name="email" type="email" placeholder="Tu email para novedades" required>
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </form>
+    </div>
+
+    <!-- Column 4: redes sociales + patrocinadores -->
+    <div class="footer-social" aria-label="Redes sociales y patrocinadores">
+      <h3 class="footer-title">Síguenos</h3>
+      <div class="footer-icons" role="navigation" aria-label="Redes sociales">
+        <a href="https://instagram.com/tuevento" class="social-icon" aria-label="Instagram (abre en nueva pestaña)" target="_blank" rel="noopener noreferrer">
+          <!-- Instagram -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+        </a>
+
+        <a href="https://facebook.com/tuevento" class="social-icon" aria-label="Facebook (abre en nueva pestaña)" target="_blank" rel="noopener noreferrer">
+          <!-- Facebook -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><path d="M15 8h2V5h-2c-1.1 0-2 .9-2 2v1H11v3h2v6h3v-6h2.5l.5-3H16V7" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        </a>
+
+        <a href="mailto:info@tusitio.ejemplo" class="social-icon" aria-label="Correo electrónico" target="_blank" rel="noopener noreferrer">
+          <!-- Email -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><path d="M3 6.5h18v11H3z" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M21 6.5l-9 7-9-7" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+        </a>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 Happy Running | Todos los derechos reservados</p>
+      <div class="footer-sponsors" aria-label="Patrocinadores">
+        <a href="https://sponsor1.example" target="_blank" rel="noopener noreferrer"><img src="/resources/img/logo-sponsor1.webp" alt="Sponsor 1" loading="lazy" height="48"></a>
+        <a href="https://sponsor2.example" target="_blank" rel="noopener noreferrer"><img src="/resources/img/logo-sponsor2.webp" alt="Sponsor 2" loading="lazy" height="48"></a>
       </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </div>
+  </div>
+
+  <div class="site-footer-bottom">
+    <div class="container footer-legal">
+      <p class="small">© <span id="currentYear"></span> Happy Runner — 42K Barcelona. <a href="/politica-privacidad">Política de privacidad</a> • <a href="/terminos">Términos y condiciones</a></p>
+      <p class="small">Desarrollado por <a href="https://tudesarrollador.ejemplo" target="_blank" rel="noopener noreferrer">TuDesarrollador</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Año automático
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  // Mejor experiencia en formulario (opcional): prevenir doble envío y mostrar feedback
+  const newsletterForm = document.getElementById('footer-newsletter');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      const btn = newsletterForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      // Si usas fetch/AJAX aquí puedes enviar el form y mostrar resultado, en el ejemplo simple dejamos el submit normal.
+    });
+  }
+</script>
+
 </body>
 </html>

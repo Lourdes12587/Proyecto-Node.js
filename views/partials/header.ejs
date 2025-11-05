@@ -1,34 +1,32 @@
+
 </head>
 
 <body>
   <nav>
-    <div class="logo">Happy Runner</div>
+    <div class="logo">
+      <img src="/resources/img/happy.png" alt="Happy Runner Logo">
+      <span>Happy Runner</span>
+    </div>
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
     <div class="nav-links" id="navLinks">
-      <a href="/">Inicio</a>
-      <a href="/info">Informacion</a>
-        <% if (!user) { %>
-      <a href="/inscripcion">Inscripcion</a>
-      <a href="/login"><i class='bx bx-user-circle'></i></a>
-      <a href="/loginadmin"><i class='bx bxs-shield'></i></a>
+      <a href="/">INICIO</a>
+      <a href="/info">INFO</a>
+      <% if (!user) { %>
+        <a href="/inscripcion" class="btn-primary">INSCRIPCIÓN</a>
+        <a href="/login"><i class='bx bx-user-circle'></i></a>
+        <a href="/loginadmin"><i class='bx bxs-shield'></i></a>
       <% } else if (rol === 'participante') { %>
-      <a href="/perfil">Mi Perfil</a>
-      <a href="/inscripcion">Inscripcion</a>
-      <a href="/logout"><i class='bx bxs-log-out' ></i></a>
+        <a href="/perfil">MI PERFIL</a>
+        <a href="/logout"><i class='bx bxs-log-out'></i></a>
       <% } else if (rol === 'admin') { %>
-      <a href="/register">Registro</a>
-      <a href="/admin">Panel de Administrador</a>
-      <a href="/logout"><i class='bx bxs-log-out' ></i></a>
+        <a href="/register">REGÍSTRATE</a>
+        <a href="/admin">PANEL</a>
+        <a href="/ganadores">GANADORES</a>
+        <a href="/logout"><i class='bx bxs-log-out'></i></a>
       <% } %>
     </div>
   </nav>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>

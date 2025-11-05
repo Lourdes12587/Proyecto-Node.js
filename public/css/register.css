@@ -1,103 +1,178 @@
+:root{
+  --lapis-lazuli: #2f6690ff;
+  --cerulean:     #3a7ca5ff;
+  --platinum:     #d9dcd6ff;
+  --indigo-dye:   #16425bff;
+  --sky-blue:     #81c3d7ff;
+  --white: #ffffff;
+  --muted-shadow: rgba(22,66,91,0.08);
+}
 
+/* ---------- Base / Layout ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: 'Montserrat';
-  background: linear-gradient(135deg, #74ebd5, #9face6);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--platinum), #ffffff);
+  color: var(--indigo-dye);
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
+/* Asegura que el contenido empuje el footer hacia abajo */
+main, .main-content, .auth-wrapper { flex: 1 0 auto; }
 
-.inscripcion-container {
-  background-color: #fff;
-  max-width: 600px;
-  width: 90%;
-  margin: 100px auto 50px auto; 
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-30px);}
-  100% { opacity: 1; transform: translateY(0);}
-}
-
-
-.inscripcion-container h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #1e3f66;
-  letter-spacing: 1px;
-}
-
-
-.form-group {
+/* ---------- CENTRADO DEL FORM ---------- */
+.auth-wrapper {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  min-height: calc(100vh - 150px); /* sitúa verticalmente centrado teniendo en cuenta header+footer */
 }
 
-.form-group label {
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  color: #1e3f66;
-}
-
-.form-group input {
-  padding: 0.85rem 1rem;
-  border: 1.5px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 10px rgba(74,144,226,0.3);
-  outline: none;
-}
-
-
-.btn-registrarse {
+/* Caja del form (idéntica al login) */
+.login-container {
   width: 100%;
-  background: linear-gradient(90deg, #4a90e2, #1e78d6);
-  color: #fff;
-  padding: 0.85rem;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  max-width: 420px;
+  background: linear-gradient(180deg, #ffffff, var(--platinum));
+  border-radius: 14px;
+  padding: 28px 22px;
+  box-shadow: 0 10px 30px var(--muted-shadow);
+  border: 1px solid rgba(22,66,91,0.06);
+  text-align: center;
 }
 
-.btn-registrarse:hover {
-  background: linear-gradient(90deg, #1e78d6, #4a90e2);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(30,120,214,0.4);
+/* Título */
+.login-container h2 {
+  margin: 0 0 8px 0;
+  color: var(--lapis-lazuli);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
 }
 
+/* Subtítulo/helper */
+.login-container .helper {
+  margin: 6px 0 14px;
+  color: rgba(22,66,91,0.75);
+  font-size: 0.95rem;
+  text-align: center;
+}
 
-.alert {
-  margin-top: 1rem;
+/* Labels e Inputs */
+.login-container label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 6px 0;
+  font-weight: 600;
+  color: rgba(22,66,91,0.9);
   font-size: 0.95rem;
 }
 
-
-@media (max-width: 768px) {
-  .inscripcion-container {
-    margin: 120px 20px 50px 20px;
-    padding: 2rem;
-  }
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(22,66,91,0.12);
+  background: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .12s ease, transform .09s ease;
 }
 
-@media (max-width: 480px) {
-  .inscripcion-container h2 {
-    font-size: 1.5rem;
-  }
+.login-container input:focus {
+  border-color: var(--cerulean);
+  box-shadow: 0 8px 22px rgba(58,124,165,0.10);
+  transform: translateY(-1px);
+}
 
-  .form-group input, .btn-registrarse {
-    font-size: 0.95rem;
-  }
+/* Botón Principal */
+.cta-btn, .login-container button[type="submit"], .btn-registrarse {
+  margin-top: 18px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: var(--white);
+  box-shadow: 0 12px 30px rgba(58,124,165,0.14);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  font-size: 0.98rem;
+}
+
+.cta-btn:hover, .btn-registrarse:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(58,124,165,0.18);
+}
+
+/* Mensajes/errores (validaciones) */
+.form-alert, .validation-list .form-alert {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255,235,235,0.95), rgba(255,245,245,0.95));
+  color: #6b1a1a;
+  border-left: 6px solid rgba(200,40,40,0.12);
+  text-align: left;
+  font-weight: 700;
+}
+
+/* SweetAlert popup tweaks */
+.swal2-popup {
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  border-radius: 12px !important;
+}
+
+/* Pequeños enlaces debajo */
+.login-container .helper-link {
+  margin-top: 12px;
+  font-size: 0.92rem;
+  color: rgba(22,66,91,0.75);
+}
+
+/* SweetAlert2 personalizado */
+.swal2-border-rounded {
+  border-radius: 16px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 12px 28px rgba(22,66,91,0.18);
+}
+
+.swal2-title-custom {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+}
+
+.swal2-content-custom {
+  font-size: 1rem;
+  color: #d9dcd6ff; /* platinum */
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .auth-wrapper { padding: 28px 12px; min-height: calc(100vh - 140px); }
+  .login-container { padding: 20px 14px; border-radius: 12px; max-width: 360px; }
+  .login-container h2 { font-size: 1.2rem; }
+  .login-container label { font-size: 0.9rem; }
+  .cta-btn, .btn-registrarse { padding: 10px; font-size: 0.95rem; }
+}
+
+/* ---------- FOOTER (al fondo) ---------- */
+footer, .footer {
+  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
+  color: #fff;
+  padding: 22px 16px;
+  text-align: center;
+  margin-top: 24px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 24px rgba(22,66,91,0.06);
+  flex-shrink: 0;
 }
