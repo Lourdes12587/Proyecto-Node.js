@@ -15,8 +15,8 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000 
 }));
 
-server.listen(3000, () => { 
-    console.log("Servidor corriendo en http://localhost:3000");
+server.listen(4000, () => { 
+    console.log("Servidor corriendo en http://localhost:4000");
 });
 
 app.use((req, res, next) => {

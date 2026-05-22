@@ -3,9 +3,14 @@
 
 <body>
   <nav>
-    <div class="logo">
-      <img src="/resources/img/happy.png" alt="Happy Runner Logo">
-      <span>Happy Runner</span>
+    <div class="logo brand-lockup" aria-label="Happy Runner">
+      <span class="brand-logo-frame">
+        <img src="/resources/img/happy.png" alt="Happy Runner Logo">
+      </span>
+      <span class="brand-name">
+        <strong>Happy</strong>
+        <em>Runner</em>
+      </span>
     </div>
     <div class="menu-btn" onclick="toggleMenu()">
       <div></div>
@@ -21,12 +26,12 @@
         <a href="/loginadmin"><i class='bx bxs-shield'></i></a>
       <% } else if (rol === 'participante') { %>
         <a href="/perfil">MI PERFIL</a>
-        <a href="/logout"><i class='bx bxs-log-out'></i></a>
+        <a href="/logout" class="logout-link" aria-label="Cerrar sesion" title="Cerrar sesion"><i class='bx bx-log-out'></i></a>
       <% } else if (rol === 'admin') { %>
         <a href="/register">REGÍSTRATE</a>
         <a href="/admin">PANEL</a>
         <a href="/ganadores">GANADORES</a>
-        <a href="/logout"><i class='bx bxs-log-out'></i></a>
+        <a href="/logout" class="logout-link" aria-label="Cerrar sesion" title="Cerrar sesion"><i class='bx bx-log-out'></i></a>
       <% } %>
     </div>
   </nav>

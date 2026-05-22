@@ -1,162 +1,350 @@
-:root{
-  --lapis-lazuli: #2f6690ff;
-  --cerulean:     #3a7ca5ff;
-  --platinum:     #d9dcd6ff;
-  --indigo-dye:   #16425bff;
-  --sky-blue:     #81c3d7ff;
-  --white: #ffffff;
-  --muted-shadow: rgba(22,66,91,0.10);
-
-  --card-radius: 16px;
-  --glass-alpha: 0.96;
+:root {
+  --win-black: #050505;
+  --win-ink: #151515;
+  --win-paper: #f4f1e8;
+  --win-cream: #e8e6dc;
+  --win-orange: #ff4f18;
+  --win-muted: rgba(5, 5, 5, 0.62);
+  --win-line: rgba(5, 5, 5, 0.16);
 }
 
-/* Wrapper (usa .auth-wrapper ya presente en tu layout) */
-.auth-wrapper {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding: 36px 18px;
+.winners-admin-page {
   min-height: calc(100vh - 140px);
-  background: linear-gradient(180deg, rgba(58,124,165,0.02), rgba(47,102,144,0.01));
+  display: grid;
+  place-items: center;
+  padding: clamp(32px, 6vw, 76px) 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 79, 24, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(255, 79, 24, 0.24), transparent 24%),
+    var(--win-paper);
+  overflow: hidden;
 }
 
-/* Card principal */
-.login-container {
+.winners-admin-shell {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 0.78fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: stretch;
+  perspective: 1300px;
+}
+
+.winners-visual-panel,
+.winners-form-card {
+  border: 1px solid var(--win-line);
+  box-shadow: 18px 22px 0 var(--win-black);
+}
+
+.winners-visual-panel {
+  position: relative;
+  min-height: clamp(360px, 48vw, 560px);
+  padding: clamp(22px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(180deg, rgba(5, 5, 5, 0.1), rgba(5, 5, 5, 0.82)),
+    linear-gradient(105deg, rgba(255, 79, 24, 0.95), rgba(255, 79, 24, 0.16) 44%, rgba(5, 5, 5, 0.94) 72%),
+    url("/resources/img/corriendo.png") center / cover;
+  color: var(--win-paper);
+  overflow: hidden;
+  transform: rotateY(7deg) rotateX(1deg);
+  transform-origin: right center;
+}
+
+.winners-visual-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(90deg, rgba(244, 241, 232, 0.11) 0 1px, transparent 1px 84px),
+    linear-gradient(90deg, transparent 0 36%, rgba(255, 79, 24, 0.25) 36% 39%, transparent 39%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.winners-mark {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  text-transform: uppercase;
+}
+
+.winners-mark span {
+  font-size: clamp(5rem, 11vw, 9.5rem);
+  line-height: 0.78;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.winners-mark strong {
+  padding-top: 10px;
+  border-top: 3px solid var(--win-orange);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+}
+
+.podium-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 10px;
+}
+
+.podium-card {
+  min-height: 132px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(244, 241, 232, 0.94);
+  color: var(--win-black);
+  border: 1px solid rgba(244, 241, 232, 0.34);
+  transform: translateZ(26px);
+}
+
+.podium-card span {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.8;
+  font-weight: 950;
+}
+
+.podium-card strong {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+}
+
+.podium-first {
+  min-height: 190px;
+  background: var(--win-orange);
+}
+
+.podium-second {
+  min-height: 154px;
+}
+
+.podium-third {
+  min-height: 122px;
+  background: var(--win-black);
+  color: var(--win-paper);
+}
+
+.winners-form-card {
   width: 100%;
-  max-width: 420px;
-  background: linear-gradient(180deg, rgba(255,255,255,var(--glass-alpha)), rgba(245,247,249,0.98));
-  border-radius: var(--card-radius);
-  padding: 22px;
-  box-shadow:
-    0 8px 30px rgba(22,66,91,0.06),
-    0 28px 70px rgba(22,66,91,0.04);
-  border: 1px solid rgba(22,66,91,0.06);
-  backdrop-filter: blur(4px);
-  transition: transform .18s ease, box-shadow .18s ease;
+  max-width: none !important;
+  padding: clamp(24px, 4vw, 42px);
+  background: var(--win-paper);
+  color: var(--win-black);
+  border-radius: 0;
+  transform: rotateY(-5deg) translateY(18px);
+  transform-origin: left center;
 }
 
-/* Lift on hover */
-.login-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 80px rgba(22,66,91,0.09);
+.winners-kicker {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 10px;
+  background: var(--win-black);
+  color: var(--win-paper);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-/* Heading */
-.login-container h2 {
-  margin: 0 0 6px 0;
-  font-size: 1.25rem;
+.winners-form-card h2 {
+  margin: 0 0 8px;
+  color: var(--win-black);
+  font-size: clamp(1.75rem, 3.4vw, 3.1rem);
+  line-height: 0.95;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.winners-form-card .helper {
+  max-width: 34ch;
+  margin-bottom: 22px;
+  color: var(--win-muted);
+  font-size: 0.78rem;
   font-weight: 800;
-  color: var(--lapis-lazuli);
-  letter-spacing: 0.3px;
-  display:flex;
-  align-items:center;
-  gap:10px;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
-/* helper text */
-.login-container .helper {
-  color: rgba(22,66,91,0.72);
-  font-size: 0.92rem;
-  margin-bottom: 12px;
+.winner-field {
+  position: relative;
+  margin-top: 13px;
+  padding: 14px;
+  background: var(--win-cream);
+  border: 1px solid var(--win-line);
 }
 
-/* Labels */
-.login-container label {
-  display:block;
-  margin: 10px 0 6px;
-  font-weight:700;
-  color: rgba(22,66,91,0.9);
-  font-size: 0.95rem;
+.winner-field::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: var(--win-black);
 }
 
-/* Inputs (premium) */
-.login-container input[type="number"] {
-  width:100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(22,66,91,0.08);
-  background: rgba(255,255,255,0.98);
-  font-size: 0.96rem;
-  outline:none;
-  transition: box-shadow .14s ease, border-color .12s ease, transform .12s ease;
-  box-shadow: 0 6px 20px rgba(22,66,91,0.03) inset;
+.winner-field-first::before {
+  background: var(--win-orange);
 }
 
-/* focus */
-.login-container input[type="number"]:focus {
-  border-color: var(--cerulean);
-  box-shadow: 0 14px 36px rgba(58,124,165,0.10);
-  transform: translateY(-2px);
+.winners-form-card label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--win-black);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-/* Button row */
-.form-actions {
-  display:flex;
-  gap:10px;
-  margin-top:14px;
+.winners-form-card input[type="number"] {
+  width: 100%;
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid rgba(5, 5, 5, 0.28);
+  border-radius: 0;
+  background: rgba(244, 241, 232, 0.82);
+  color: var(--win-black);
+  font-size: 1.25rem;
+  font-weight: 900;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
-/* CTA button */
-.cta-btn {
-  flex:1;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 14px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-weight:800;
-  letter-spacing:0.5px;
-  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
-  color: var(--white);
-  box-shadow: 0 14px 36px rgba(58,124,165,0.14);
-  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+.winners-form-card input[type="number"]:focus {
+  border-color: var(--win-orange);
+  box-shadow: 7px 7px 0 rgba(255, 79, 24, 0.26);
+  transform: translate(-2px, -2px);
+}
+
+.winners-form-card .form-actions {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.winners-form-card .cta-btn,
+.winners-form-card .btn-neutral {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
 }
 
-/* CTA hover */
-.cta-btn:hover { transform: translateY(-4px); box-shadow: 0 22px 48px rgba(58,124,165,0.18); }
+.winners-form-card .cta-btn {
+  border: 1px solid var(--win-orange);
+  background: var(--win-orange);
+  color: var(--win-black);
+  cursor: pointer;
+  box-shadow: 7px 7px 0 var(--win-black);
+}
 
-/* Neutral button */
-.btn-neutral {
-  flex:1;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border:1px solid rgba(22,66,91,0.06);
+.winners-form-card .cta-btn:hover,
+.winners-form-card .cta-btn:focus-visible {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--win-black);
+}
+
+.winners-form-card .btn-neutral {
+  border: 1px solid var(--win-black);
   background: transparent;
-  color: var(--indigo-dye);
-  font-weight:700;
-  text-decoration:none;
+  color: var(--win-black);
 }
 
-/* Icons in buttons */
-.cta-btn i, .btn-neutral i { margin-left:8px; font-size:1.05rem; }
-
-/* Alert messages */
-.form-alert {
-  margin-top:12px;
-  padding:10px 12px;
-  border-radius:10px;
-  font-size:0.95rem;
-  background: linear-gradient(180deg, rgba(255,235,235,0.98), rgba(255,245,245,0.98));
-  color:#6b1a1a;
-  border-left:6px solid rgba(200,40,40,0.12);
-}
-.form-alert.success {
-  background: linear-gradient(180deg, rgba(230,255,240,0.98), rgba(240,255,245,0.98));
-  color:#1b6b3f;
-  border-left:6px solid rgba(39,174,96,0.12);
+.winners-form-card .btn-neutral:hover,
+.winners-form-card .btn-neutral:focus-visible {
+  background: var(--win-black);
+  color: var(--win-paper);
 }
 
-/* Small devices: stack buttons */
-@media (max-width:480px) {
-  .login-container { padding:18px; border-radius:14px; max-width:360px; }
-  .form-actions { flex-direction:column; }
-  .cta-btn, .btn-neutral { width:100%; }
-  .login-container h2 { font-size:1.12rem; }
+.winners-form-card .form-alert {
+  margin: 16px 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(170, 30, 20, 0.22);
+  background: rgba(255, 79, 24, 0.12);
+  color: #7a1f0f;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.winners-form-card .form-alert.success {
+  border-color: rgba(5, 5, 5, 0.24);
+  background: rgba(5, 5, 5, 0.92);
+  color: var(--win-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .winners-admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .winners-visual-panel,
+  .winners-form-card {
+    transform: none;
+    box-shadow: 10px 12px 0 var(--win-black);
+  }
+
+  .winners-visual-panel {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .winners-admin-page {
+    padding-inline: 12px;
+  }
+
+  .winners-visual-panel,
+  .winners-form-card {
+    box-shadow: 6px 7px 0 var(--win-black);
+  }
+
+  .podium-grid,
+  .winners-form-card .form-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .podium-card,
+  .podium-first,
+  .podium-second,
+  .podium-third {
+    min-height: 92px;
+  }
+
+  .winners-form-card h2 {
+    font-size: 1.75rem;
+  }
 }

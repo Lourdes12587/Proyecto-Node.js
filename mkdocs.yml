@@ -1,0 +1,80 @@
+site_name: "Proyecto Node.js"
+site_author: "Lourdes12587"
+docs_dir: "docs/mkdocs"
+repo_url:  "https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview"
+docs_dir: "docs/mkdocs"
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.highlight
+
+nav:
+  - Overview: Overview.md
+
+  - Architecture:
+      - Application Server: Application-Server.md
+      - Middleware Layer: Middleware-Layer.md
+      - Database Layer: Database-Layer.md
+
+  - Authentication & Authorization:
+      - Login System: Login-System.md
+      - Role-Based Access Control: Role-Based-Access-Control.md
+      - Session Management: Session-Management.md
+
+  - User Interfaces:
+      - Participant Interfaces: Participant-Interfaces.md
+      - Landing Page: Landing-Page.md
+      - Registration Flow: Registration-Flow.md
+      - Profile Management: Profile-Management.md
+
+  - Admin Interfaces:
+      - Admin Panel: Admin-Panel.md
+      - Winner Management: Winner-Management.md
+      - Organizer Registration: Organizer-Registration.md
+
+  - Shared Components: Shared-Components.md
+
+  - Styling System:
+      - Design System: Design-System.md
+      - Component Styles: Component-Styles.md
+
+  - Data Management:
+      - Participant Data: Participant-Data.md
+      - File Upload System: File-Upload-System.md
+
+  - Appendix:
+      - README: README.md
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+

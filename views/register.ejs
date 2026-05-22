@@ -3,11 +3,12 @@
 <link rel="stylesheet" href="/resources/css/register.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="/resources/css/editorial-running.css">
 
 
 <%- include('partials/header') %>
 
-<main class="auth-wrapper">
+<main class="auth-wrapper editorial-auth register-page">
   <div class="login-container">
     <h2>REGISTRO</h2>
     <p class="helper">Crea tu cuenta de organizador</p>
@@ -44,21 +45,22 @@
 <% if (typeof alert !== 'undefined' && alert) { %>
   <script>
     Swal.fire({
-      title: '<b style="color:#ffffff;"><%= alertTitle %></b>',
-      html: '<span style="color:#d9dcd6ff;"><%= alertMessage %></span>',
+      title: '<%= alertTitle %>',
+      html: '<strong><%= alertMessage %></strong>',
       icon: '<%= alertIcon %>',
-      background: 'linear-gradient(135deg, #2f6690ff, #3a7ca5ff)', // lapis-lazuli a cerulean
-      color: '#ffffff',
-      iconColor: '#81c3d7ff', // sky-blue
+      background: '#f4f1e8',
+      color: '#050505',
+      iconColor: '#ff4f18',
       confirmButtonText: 'Aceptar',
-      confirmButtonColor: '#16425bff', // indigo-dye
+      confirmButtonColor: '#ff4f18',
       showConfirmButton: <%= showConfirmButton %>,
       timer: <%= timer %>,
-      backdrop: 'rgba(0,0,0,0.25)',
+      backdrop: 'rgba(5,5,5,0.78)',
       customClass: {
-        popup: 'swal2-border-rounded',
-        title: 'swal2-title-custom',
-        content: 'swal2-content-custom'
+        popup: 'run-alert-popup',
+        title: 'run-alert-title',
+        htmlContainer: 'run-alert-content',
+        confirmButton: 'run-alert-confirm'
       }
     }).then(() => {
     window.location = '/<%= ruta %>';

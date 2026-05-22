@@ -1,0 +1,2199 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Winner-Management/">
+      
+      
+        <link rel="next" href="../Shared-Components/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Organizer Registration - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#organizer-registration" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Organizer Registration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registration Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#page-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-fields-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Fields and Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Fields and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Persistence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-error-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Error Display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-flow-and-data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request Flow and Data Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request Flow and Data Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Process Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-design-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Design System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Design System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Palette
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-container-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Container Styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-interaction-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Interaction States
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsive-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-and-error-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success and Error Feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Success and Error Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-object-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Object Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-styling-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alert Styling Customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-alert-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Alert Navigation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typography-and-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typography and Fonts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-shared-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration with Shared Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration with Shared Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#component-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Diagram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-navigation-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Header Navigation Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Password Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-prevention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duplicate Prevention
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-structure-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Structure Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="organizer-registration">Organizer Registration<a class="headerlink" href="#organizer-registration" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css">public/css/register.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs">views/register.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document describes the organizer registration interface and process, which allows existing administrators to create new organizer accounts. Organizers are admin users who can manage participants, select race winners, and perform other administrative functions within the HAPPY RUNNER 42K marathon management system.</p>
+<p>For information about participant registration, see <a href="/Lourdes12587/Proyecto-Node.js/4.1.2-registration-flow">Participant Registration Flow</a>. For details about how organizer accounts authenticate, see <a href="/Lourdes12587/Proyecto-Node.js/3.1-login-system">Login System</a>. For an overview of all admin interfaces, see <a href="/Lourdes12587/Proyecto-Node.js/4.2-admin-interfaces">Admin Interfaces</a>.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L72">views/register.ejs L1-L72</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L1-L179">public/css/register.css L1-L179</a></p>
+<hr />
+<h2 id="access-control">Access Control<a class="headerlink" href="#access-control" title="Permanent link">&para;</a></h2>
+<p>The organizer registration interface is protected by the <code>verifyAdmin</code> middleware, ensuring that only authenticated administrators can create new organizer accounts. This prevents unauthorized account creation and maintains the integrity of the admin user base.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Route Protection</strong></td>
+<td><code>verifyAdmin</code> middleware guard</td>
+</tr>
+<tr>
+<td><strong>User Role Required</strong></td>
+<td><code>rol === "admin"</code> in session</td>
+</tr>
+<tr>
+<td><strong>Access Denial Behavior</strong></td>
+<td>Redirect to <code>/authadmin</code> or <code>/loginadmin</code></td>
+</tr>
+<tr>
+<td><strong>Session Validation</strong></td>
+<td>JWT token verification via <code>process.env.JWT_SECRET</code></td>
+</tr>
+</tbody>
+</table>
+<p>The registration form is rendered at the <code>/register</code> route (GET) and processes submissions at the same route (POST), both protected by admin authentication.</p>
+<p><strong>Sources:</strong> High-level architecture diagrams, authentication flow context</p>
+<hr />
+<h2 id="registration-interface">Registration Interface<a class="headerlink" href="#registration-interface" title="Permanent link">&para;</a></h2>
+<p>The organizer registration interface is implemented in <code>register.ejs</code> and styled by <code>register.css</code>. The page follows the same visual design language as other authentication pages (login.ejs, loginadmin.ejs), creating a cohesive user experience.</p>
+<h3 id="page-structure">Page Structure<a class="headerlink" href="#page-structure" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Head["partials/head.ejs&lt;br&gt;External libraries&lt;br&gt;(Bootstrap, Boxicons)"]
+Header["partials/header.ejs&lt;br&gt;Role-based navigation"]
+Main["Main Content&lt;br&gt;(.auth-wrapper)"]
+FormContainer["Form Container&lt;br&gt;(.login-container)"]
+Form["Registration Form&lt;br&gt;(POST /register)"]
+Footer["partials/footer.ejs"]
+
+Head --&gt; Header
+Header --&gt; Main
+Main --&gt; FormContainer
+FormContainer --&gt; Form
+Form --&gt; Footer</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L72">views/register.ejs L1-L72</a></p>
+<h3 id="layout-components">Layout Components<a class="headerlink" href="#layout-components" title="Permanent link">&para;</a></h3>
+<p>The page uses the standard partial inclusion pattern:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>partials/head</code></td>
+<td>Loads Bootstrap, Boxicons, Montserrat font</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L1">views/register.ejs L1</a></td>
+</tr>
+<tr>
+<td><code>partials/header</code></td>
+<td>Displays role-based navigation</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L8-L8">views/register.ejs L8</a></td>
+</tr>
+<tr>
+<td><code>.auth-wrapper</code></td>
+<td>Centers form vertically and horizontally</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L10-L10">views/register.ejs L10</a></td>
+</tr>
+<tr>
+<td><code>.login-container</code></td>
+<td>Form container with styling</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L11-L11">views/register.ejs L11</a></td>
+</tr>
+<tr>
+<td><code>partials/footer</code></td>
+<td>Footer with branding</td>
+<td><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L70-L70">views/register.ejs L70</a></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>.auth-wrapper</code> uses flexbox to center the form both horizontally and vertically, with <code>min-height: calc(100vh - 150px)</code> accounting for header and footer space <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L28-L34">public/css/register.css L28-L34</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L10">views/register.ejs L1-L10</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L28-L46">public/css/register.css L28-L46</a></p>
+<hr />
+<h2 id="form-fields-and-validation">Form Fields and Validation<a class="headerlink" href="#form-fields-and-validation" title="Permanent link">&para;</a></h2>
+<p>The registration form collects three fields to create a new organizer account. The form uses <code>novalidate</code> to bypass browser validation in favor of server-side validation with <code>express-validator</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L15">views/register.ejs L15</a></p>
+<h3 id="field-schema">Field Schema<a class="headerlink" href="#field-schema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Input Type</th>
+<th>HTML <code>name</code></th>
+<th>Placeholder</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Usuario</strong></td>
+<td><code>text</code></td>
+<td><code>user</code></td>
+<td>"Ingrese su usuario"</td>
+<td>Yes</td>
+<td>Unique username for login</td>
+</tr>
+<tr>
+<td><strong>Nombre</strong></td>
+<td><code>text</code></td>
+<td><code>nombre</code></td>
+<td>"Ingrese su nombre"</td>
+<td>Yes</td>
+<td>Display name for the organizer</td>
+</tr>
+<tr>
+<td><strong>Contraseña</strong></td>
+<td><code>password</code></td>
+<td><code>password</code></td>
+<td>"Ingrese su contraseña"</td>
+<td>Yes</td>
+<td>Password (stored as bcrypt hash)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L28">views/register.ejs L15-L28</a></p>
+<h3 id="form-persistence">Form Persistence<a class="headerlink" href="#form-persistence" title="Permanent link">&para;</a></h3>
+<p>The form implements value persistence on validation failure. When server-side validation fails, the form re-renders with previously submitted values pre-populated using the <code>valores</code> object:</p>
+<div class="highlight"><pre><span></span><code>value=&quot;&lt;% if (typeof valores !== &#39;undefined&#39;) { %&gt;&lt;%= valores.user %&gt;&lt;% } %&gt;&quot;
+</code></pre></div>
+<p>This pattern is applied to all three input fields <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L18-L18">views/register.ejs L18</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L22-L22">views/register.ejs L22</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L26-L26">views/register.ejs L26</a></p>
+<p>preventing users from re-entering information after validation errors.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L16-L26">views/register.ejs L16-L26</a></p>
+<h3 id="validation-error-display">Validation Error Display<a class="headerlink" href="#validation-error-display" title="Permanent link">&para;</a></h3>
+<p>Server-side validation errors from <code>express-validator</code> are displayed below the form using the <code>validaciones</code> array. Each validation error appears in a styled <code>.form-alert</code> container:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">validaciones</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s1">&#39;undefined&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">%&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">&quot;validation-list&quot;</span><span class="w"> </span><span class="nx">aria</span><span class="o">-</span><span class="nx">live</span><span class="o">=</span><span class="s2">&quot;polite&quot;</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;%</span><span class="w"> </span><span class="nx">validaciones</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">v</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">%&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">&quot;form-alert&quot;</span><span class="o">&gt;&lt;</span><span class="nx">strong</span><span class="o">&gt;&lt;%=</span><span class="w"> </span><span class="nx">v</span><span class="p">.</span><span class="nx">msg</span><span class="w"> </span><span class="o">%&gt;&lt;</span><span class="err">/strong&gt;&lt;/div&gt;</span>
+<span class="w">    </span><span class="o">&lt;%</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">%&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="o">&lt;%</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">%&gt;</span>
+</code></pre></div>
+<p>The validation display includes ARIA live region attributes for accessibility <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L30-L37">views/register.ejs L30-L37</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L30-L38">views/register.ejs L30-L38</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L115-L125">public/css/register.css L115-L125</a></p>
+<hr />
+<h2 id="request-flow-and-data-processing">Request Flow and Data Processing<a class="headerlink" href="#request-flow-and-data-processing" title="Permanent link">&para;</a></h2>
+<p>The following diagram illustrates the complete flow from form submission to database persistence and user feedback.</p>
+<h3 id="registration-process-flow">Registration Process Flow<a class="headerlink" href="#registration-process-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Browser
+  participant Express Server
+  participant verifyAdmin
+  participant Middleware
+  participant /register
+  participant Route Handler
+  participant express-validator
+  participant bcrypt
+  participant organizadores
+  participant Table
+
+  Browser-&gt;&gt;Express Server: "GET /register"
+  Express Server-&gt;&gt;verifyAdmin: "Check admin session"
+  loop ["Not Admin"]
+    verifyAdmin--&gt;&gt;Browser: "Redirect /authadmin"
+    verifyAdmin-&gt;&gt;/register: "Proceed"
+    /register--&gt;&gt;Browser: "Render register.ejs"
+    Browser-&gt;&gt;Express Server: "POST /register
+    Express Server-&gt;&gt;verifyAdmin: (user, nombre, password)"
+    verifyAdmin-&gt;&gt;express-validator: "Verify admin token"
+    express-validator-&gt;&gt;/register: "Validate fields"
+    /register--&gt;&gt;Browser: "validaciones array"
+    express-validator-&gt;&gt;/register: "Re-render with errors
+    /register-&gt;&gt;organizadores: (valores, validaciones)"
+    organizadores--&gt;&gt;/register: "Fields valid"
+    /register--&gt;&gt;Browser: "SELECT user=?"
+    organizadores--&gt;&gt;/register: "Duplicate found"
+    /register-&gt;&gt;bcrypt: "SweetAlert error
+    bcrypt--&gt;&gt;/register: (alert object)"
+    /register-&gt;&gt;organizadores: "No duplicate"
+    organizadores--&gt;&gt;/register: "Hash password"
+    /register--&gt;&gt;Browser: "Hashed password"
+  end</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L15-L67">views/register.ejs L15-L67</a></p>
+<p>authentication flow context</p>
+<h3 id="database-operations">Database Operations<a class="headerlink" href="#database-operations" title="Permanent link">&para;</a></h3>
+<p>The registration process interacts with the <code>organizadores</code> table:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>SQL Pattern</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duplicate Check</strong></td>
+<td><code>SELECT * FROM organizadores WHERE user = ?</code></td>
+<td>Prevent duplicate usernames</td>
+</tr>
+<tr>
+<td><strong>Insert Record</strong></td>
+<td><code>INSERT INTO organizadores (user, nombre, password) VALUES (?, ?, ?)</code></td>
+<td>Create new organizer account</td>
+</tr>
+<tr>
+<td><strong>Password Storage</strong></td>
+<td>Bcrypt hash (not plaintext)</td>
+<td>Secure password storage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> Database layer context from high-level diagrams</p>
+<hr />
+<h2 id="visual-design-system">Visual Design System<a class="headerlink" href="#visual-design-system" title="Permanent link">&para;</a></h2>
+<p>The registration page follows the application's established design system, utilizing CSS custom properties defined at the root level.</p>
+<h3 id="color-palette">Color Palette<a class="headerlink" href="#color-palette" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--lapis-lazuli</span><span class="p">:</span><span class="w"> </span><span class="mh">#2f6690</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--cerulean</span><span class="p">:</span><span class="w">     </span><span class="mh">#3a7ca5</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--platinum</span><span class="p">:</span><span class="w">     </span><span class="mh">#d9dcd6</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--indigo-dye</span><span class="p">:</span><span class="w">   </span><span class="mh">#16425b</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--sky-blue</span><span class="p">:</span><span class="w">     </span><span class="mh">#81c3d7</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--white</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--muted-shadow</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>These tokens ensure visual consistency across all authentication interfaces <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L1-L9">public/css/register.css L1-L9</a></p>
+<h3 id="form-container-styling">Form Container Styling<a class="headerlink" href="#form-container-styling" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>CSS Class</th>
+<th>Purpose</th>
+<th>Key Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.auth-wrapper</code></td>
+<td>Vertical/horizontal centering</td>
+<td><code>display: flex; align-items: center; justify-content: center</code></td>
+</tr>
+<tr>
+<td><code>.login-container</code></td>
+<td>Form card container</td>
+<td><code>max-width: 420px; border-radius: 14px; box-shadow: 0 10px 30px</code></td>
+</tr>
+<tr>
+<td><code>.cta-btn</code></td>
+<td>Submit button</td>
+<td><code>background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean))</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>.login-container</code> class is reused from the login interfaces, maintaining visual consistency <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L37-L46">public/css/register.css L37-L46</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L1-L109">public/css/register.css L1-L109</a></p>
+<h3 id="input-interaction-states">Input Interaction States<a class="headerlink" href="#input-interaction-states" title="Permanent link">&para;</a></h3>
+<p>Input fields feature enhanced interaction feedback:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">login-container</span><span class="w"> </span><span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">22</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="mf">0.10</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-1</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The focus state includes border color change, shadow elevation, and subtle upward translation <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L87-L91">public/css/register.css L87-L91</a></p>
+<h3 id="responsive-behavior">Responsive Behavior<a class="headerlink" href="#responsive-behavior" title="Permanent link">&para;</a></h3>
+<p>The interface adapts for mobile devices at the 480px breakpoint:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Desktop</th>
+<th>Mobile (&lt;480px)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.auth-wrapper</code> padding</td>
+<td><code>48px 16px</code></td>
+<td><code>28px 12px</code></td>
+</tr>
+<tr>
+<td><code>.login-container</code> max-width</td>
+<td><code>420px</code></td>
+<td><code>360px</code></td>
+</tr>
+<tr>
+<td><code>.login-container</code> padding</td>
+<td><code>28px 22px</code></td>
+<td><code>20px 14px</code></td>
+</tr>
+<tr>
+<td>Title font size</td>
+<td><code>1.4rem</code></td>
+<td><code>1.2rem</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L160-L166">public/css/register.css L160-L166</a></p>
+<hr />
+<h2 id="success-and-error-feedback">Success and Error Feedback<a class="headerlink" href="#success-and-error-feedback" title="Permanent link">&para;</a></h2>
+<p>The registration process uses SweetAlert2 for user feedback, providing visual confirmation of success or detailed error messages.</p>
+<h3 id="alert-configuration">Alert Configuration<a class="headerlink" href="#alert-configuration" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+ServerResponse["Server Response"]
+AlertObject["alert object&lt;br&gt;(alertTitle, alertMessage,&lt;br&gt;alertIcon, timer, ruta)"]
+SweetAlert["Swal.fire()"]
+Redirect["window.location&lt;br&gt;redirect"]
+
+ServerResponse --&gt; AlertObject
+AlertObject --&gt; SweetAlert
+SweetAlert --&gt; Redirect</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L44-L67">views/register.ejs L44-L67</a></p>
+<h3 id="alert-object-structure">Alert Object Structure<a class="headerlink" href="#alert-object-structure" title="Permanent link">&para;</a></h3>
+<p>The server passes an <code>alert</code> object to the view when rendering feedback:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Purpose</th>
+<th>Example Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alert</code></td>
+<td>Boolean flag</td>
+<td><code>true</code> (show alert), <code>undefined</code> (no alert)</td>
+</tr>
+<tr>
+<td><code>alertTitle</code></td>
+<td>Alert heading</td>
+<td>"REGISTRO EXITOSO", "ERROR"</td>
+</tr>
+<tr>
+<td><code>alertMessage</code></td>
+<td>Detailed message</td>
+<td>"El usuario ya existe"</td>
+</tr>
+<tr>
+<td><code>alertIcon</code></td>
+<td>SweetAlert icon type</td>
+<td>"success", "error", "warning"</td>
+</tr>
+<tr>
+<td><code>timer</code></td>
+<td>Auto-close timer (ms)</td>
+<td><code>3000</code>, <code>false</code></td>
+</tr>
+<tr>
+<td><code>showConfirmButton</code></td>
+<td>Display confirm button</td>
+<td><code>true</code>, <code>false</code></td>
+</tr>
+<tr>
+<td><code>ruta</code></td>
+<td>Redirect path after alert</td>
+<td><code>"admin"</code>, <code>"register"</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L44-L67">views/register.ejs L44-L67</a></p>
+<h3 id="alert-styling-customization">Alert Styling Customization<a class="headerlink" href="#alert-styling-customization" title="Permanent link">&para;</a></h3>
+<p>SweetAlert2 popups are customized to match the application's color scheme:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Swal</span><span class="p">.</span><span class="nc">fire</span><span class="o">(</span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;linear-gradient(135deg, #2f6690ff, #3a7ca5ff)&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">lapis-lazuli</span><span class="w"> </span><span class="kc">to</span><span class="w"> </span><span class="n">cerulean</span>
+<span class="w">  </span><span class="kc">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">iconColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#81c3d7ff&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">sky-blue</span>
+<span class="w">  </span><span class="n">confirmButtonColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#16425bff&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="kc">indigo</span><span class="o">-</span><span class="n">dye</span>
+<span class="w">  </span><span class="n">customClass</span><span class="o">:</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="n">popup</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;swal2-border-rounded&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;swal2-title-custom&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="k">content</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;swal2-content-custom&#39;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="err">}</span><span class="o">)</span>
+</code></pre></div>
+<p>Custom CSS classes provide additional styling <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L128-L157">public/css/register.css L128-L157</a></p>
+<p>including rounded borders, custom font families, and shadow effects.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L46-L62">views/register.ejs L46-L62</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L140-L156">public/css/register.css L140-L156</a></p>
+<h3 id="post-alert-navigation">Post-Alert Navigation<a class="headerlink" href="#post-alert-navigation" title="Permanent link">&para;</a></h3>
+<p>After the alert closes (either automatically via timer or user confirmation), the page redirects to the specified <code>ruta</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nx">then</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/&lt;%= ruta %&gt;&#39;</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Successful registrations typically redirect to <code>/admin</code>, while errors may remain on <code>/register</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L63-L65">views/register.ejs L63-L65</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L63-L65">views/register.ejs L63-L65</a></p>
+<hr />
+<h2 id="typography-and-fonts">Typography and Fonts<a class="headerlink" href="#typography-and-fonts" title="Permanent link">&para;</a></h2>
+<p>The registration page explicitly loads the Montserrat font family from Google Fonts:</p>
+<div class="highlight"><pre><span></span><code>&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre></div>
+<p>Font weights used:</p>
+<ul>
+<li><strong>400</strong>: Regular body text</li>
+<li><strong>600</strong>: Labels and helper text</li>
+<li><strong>800</strong>: Headings and button text</li>
+</ul>
+<p>The Montserrat font is applied globally to the <code>body</code> element with fallbacks: <code>"Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial</code> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L16-L16">public/css/register.css L16</a></p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L4-L4">views/register.ejs L4</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L14-L22">public/css/register.css L14-L22</a></p>
+<hr />
+<h2 id="integration-with-shared-components">Integration with Shared Components<a class="headerlink" href="#integration-with-shared-components" title="Permanent link">&para;</a></h2>
+<p>The registration page integrates with the application's shared partial system, ensuring consistent navigation and layout.</p>
+<h3 id="component-diagram">Component Diagram<a class="headerlink" href="#component-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+RegisterPage["register.ejs"]
+Head["partials/head.ejs&lt;br&gt;Bootstrap, Leaflet,&lt;br&gt;Font Awesome, Boxicons"]
+Header["partials/header.ejs&lt;br&gt;Role-based nav&lt;br&gt;(admin menu items)"]
+Footer["partials/footer.ejs&lt;br&gt;Branding + links"]
+RegisterCSS["register.css&lt;br&gt;Page-specific styling"]
+MontserratFont["Montserrat font&lt;br&gt;(Google Fonts)"]
+BoxiconsCSS["Boxicons CSS&lt;br&gt;(unpkg CDN)"]
+SweetAlert2["SweetAlert2 library&lt;br&gt;(CDN)"]
+SessionRole["req.session.rol"]
+
+RegisterPage --&gt; Head
+RegisterPage --&gt; Header
+RegisterPage --&gt; Footer
+RegisterPage --&gt; RegisterCSS
+RegisterPage --&gt; MontserratFont
+RegisterPage --&gt; BoxiconsCSS
+RegisterPage --&gt; SweetAlert2
+Header --&gt; SessionRole</code></pre>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L72">views/register.ejs L1-L72</a></p>
+<h3 id="header-navigation-context">Header Navigation Context<a class="headerlink" href="#header-navigation-context" title="Permanent link">&para;</a></h3>
+<p>The <code>header.ejs</code> partial adjusts navigation items based on <code>res.locals.rol</code>, which is populated from <code>req.session.rol</code>. For admin users accessing <code>/register</code>, the header displays admin-appropriate navigation options (participant management, winner management, logout).</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L8-L8">views/register.ejs L8</a></p>
+<p>header component context</p>
+<hr />
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<h3 id="authentication-layer">Authentication Layer<a class="headerlink" href="#authentication-layer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pre-condition</strong>: User must be authenticated as admin before accessing <code>/register</code> routes</li>
+<li><strong>Middleware</strong>: <code>verifyAdmin</code> validates JWT token from cookies</li>
+<li><strong>Session validation</strong>: Checks <code>req.session.rol === "admin"</code></li>
+<li><strong>Token source</strong>: <code>JWT_SECRET</code> environment variable</li>
+</ul>
+<h3 id="password-security">Password Security<a class="headerlink" href="#password-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Hashing algorithm</strong>: bcrypt</li>
+<li><strong>Storage</strong>: Password hashes stored in <code>organizadores.password</code> column</li>
+<li><strong>Plain text</strong>: Never stored or transmitted after form submission</li>
+</ul>
+<h3 id="duplicate-prevention">Duplicate Prevention<a class="headerlink" href="#duplicate-prevention" title="Permanent link">&para;</a></h3>
+<p>The route handler queries the database before insertion to prevent duplicate usernames:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">organizadores</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">?</span>
+</code></pre></div>
+<p>If a match is found, the registration is rejected with an error alert.</p>
+<p><strong>Sources:</strong> Authentication flow context, database operations from high-level diagrams</p>
+<hr />
+<h2 id="file-structure-summary">File Structure Summary<a class="headerlink" href="#file-structure-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Lines of Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>views/register.ejs</code></td>
+<td>Registration form template</td>
+<td>72</td>
+</tr>
+<tr>
+<td><code>public/css/register.css</code></td>
+<td>Page-specific styling</td>
+<td>179</td>
+</tr>
+</tbody>
+</table>
+<p>Both files work together to provide the complete organizer registration experience, from visual presentation to form submission and feedback handling.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/register.ejs#L1-L72">views/register.ejs L1-L72</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/register.css#L1-L179">public/css/register.css L1-L179</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

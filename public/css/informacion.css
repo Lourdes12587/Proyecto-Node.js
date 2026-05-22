@@ -1,0 +1,78 @@
+/* Archivo: /resources/css/inicio.css */
+
+/* Contenedor principal */
+.container {
+  margin-top: 50px;
+}
+
+/* Total de participantes */
+.bg-gradient-to-right {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Títulos de las tarjetas */
+.card h2,
+.card h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Tarjeta de ganadores */
+.card {
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Lista de ganadores */
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover sobre cada ganador */
+.list-group-item:hover {
+  transform: scale(1.02);
+  background-color: #e7f0ff;
+}
+
+/* Badges (dorsales) */
+.badge {
+  font-size: 0.9rem;
+}
+
+/* Mensaje de alerta si no hay ganadores */
+.alert {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Tipografía y jerarquía visual */
+.fs-4 {
+  font-size: 1.5rem !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}

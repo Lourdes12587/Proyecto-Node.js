@@ -39,11 +39,12 @@ html, body {
   min-height: 100vh;
 }
 
-.container {
+.inscripcion-page {
   flex: 1 0 auto;
   padding: 28px 18px;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 /* =========================
@@ -76,12 +77,14 @@ html, body {
 /* =========================
    FORM LAYOUT
 ========================= */
-form {
+.inscripcion-form {
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 20px;
   align-items: start;
   width: 100%;
+  visibility: visible;
+  opacity: 1;
 }
 
 .form-left {
@@ -159,7 +162,6 @@ form {
    WEATHER WIDGET (COLORES SUAVES, ADAPTABLE AL CLIMA)
 ========================= */
 .weather-widget {
-  margin-left: 18px;
   width: 100%;
   max-width: 360px;
   padding: 22px;
@@ -300,7 +302,7 @@ form {
 }
 
 @media (max-width: 980px) {
-  form { grid-template-columns: 1fr; }
+  .inscripcion-form { grid-template-columns: 1fr; }
   .form-left { grid-template-columns: 1fr; }
   .weather-widget { order: -1; width: 100%; margin-left: 0; margin-bottom: 14px; }
 }

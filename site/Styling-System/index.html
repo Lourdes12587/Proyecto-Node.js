@@ -1,0 +1,2391 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Styling System - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#styling-system" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Styling System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Registration-Flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="styling-system">Styling System<a class="headerlink" href="#styling-system" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js">middlewares/multer.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js">middlewares/verifyAdmin.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js">middlewares/verifyToken.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css">public/css/admin.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css">public/css/edit.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css">public/css/style.css</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document describes the CSS architecture and styling system used throughout the HAPPY RUNNER 42K application. The styling system is built on a foundation of CSS custom properties (design tokens), modular page-specific stylesheets, and responsive design patterns. All styles follow a consistent design language centered around a blue/teal color palette and modern gradient effects.</p>
+<p>For information about the EJS view templates that these styles are applied to, see <a href="/Lourdes12587/Proyecto-Node.js/4-user-interfaces">User Interfaces</a>. For details about external library integration (Bootstrap, Leaflet, Font Awesome), see <a href="/Lourdes12587/Proyecto-Node.js/4.3-shared-components">Shared Components</a>.</p>
+<hr />
+<h2 id="css-architecture-overview">CSS Architecture Overview<a class="headerlink" href="#css-architecture-overview" title="Permanent link">&para;</a></h2>
+<p>The styling system follows a modular architecture where a base stylesheet defines global design tokens and reusable patterns, while page-specific stylesheets handle component-level customization.</p>
+<h3 id="stylesheet-organization">Stylesheet Organization<a class="headerlink" href="#stylesheet-organization" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L1-L721">public/css/style.css L1-L721</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L1-L157">public/css/admin.css L1-L157</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L1-L150">public/css/edit.css L1-L150</a></p>
+<hr />
+<h2 id="design-token-system">Design Token System<a class="headerlink" href="#design-token-system" title="Permanent link">&para;</a></h2>
+<p>The application uses CSS custom properties defined in <code>:root</code> blocks to maintain a consistent design language across all pages. These tokens are accessible globally and ensure visual coherence.</p>
+<h3 id="core-color-palette">Core Color Palette<a class="headerlink" href="#core-color-palette" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Token Name</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--lapis-lazuli</code></td>
+<td><code>#2f6690ff</code></td>
+<td>Primary brand color, navigation gradients, headings</td>
+</tr>
+<tr>
+<td><code>--cerulean</code></td>
+<td><code>#3a7ca5ff</code></td>
+<td>Secondary brand color, gradient endpoints</td>
+</tr>
+<tr>
+<td><code>--platinum</code></td>
+<td><code>#d9dcd6ff</code></td>
+<td>Background tints, subtle overlays</td>
+</tr>
+<tr>
+<td><code>--indigo-dye</code></td>
+<td><code>#16425bff</code></td>
+<td>Dark text, strong contrast elements</td>
+</tr>
+<tr>
+<td><code>--sky-blue</code></td>
+<td><code>#81c3d7ff</code></td>
+<td>Accent color, badges, highlights</td>
+</tr>
+<tr>
+<td><code>--white</code></td>
+<td><code>#ffffff</code></td>
+<td>Text on dark backgrounds, card backgrounds</td>
+</tr>
+<tr>
+<td><code>--accent</code></td>
+<td><code>#d2643c</code></td>
+<td>Call-to-action elements (only in style.css)</td>
+</tr>
+</tbody>
+</table>
+<p>The color system is defined identically across all stylesheets:</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L3-L11">public/css/style.css L3-L11</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--lapis-lazuli</span><span class="p">:</span><span class="w"> </span><span class="mh">#2f6690</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--cerulean</span><span class="p">:</span><span class="w">     </span><span class="mh">#3a7ca5</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--platinum</span><span class="p">:</span><span class="w">     </span><span class="mh">#d9dcd6</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--indigo-dye</span><span class="p">:</span><span class="w">   </span><span class="mh">#16425b</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--sky-blue</span><span class="p">:</span><span class="w">     </span><span class="mh">#81c3d7</span><span class="n">ff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--white</span><span class="p">:</span><span class="w">        </span><span class="mh">#ffffff</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--accent</span><span class="p">:</span><span class="w">       </span><span class="mh">#d2643c</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--glass</span><span class="p">:</span><span class="w">        </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.96</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="spacing-and-layout-tokens">Spacing and Layout Tokens<a class="headerlink" href="#spacing-and-layout-tokens" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--radius</code></td>
+<td><code>14px</code></td>
+<td>Default border radius for cards and components</td>
+</tr>
+<tr>
+<td><code>--gap</code></td>
+<td><code>1rem</code></td>
+<td>Standard spacing between elements</td>
+</tr>
+<tr>
+<td><code>--max-width</code></td>
+<td><code>1200px</code></td>
+<td>Maximum content width for containers</td>
+</tr>
+<tr>
+<td><code>--card-max-width</code></td>
+<td><code>980px</code></td>
+<td>Maximum width for admin cards (admin.css only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shadow-system">Shadow System<a class="headerlink" href="#shadow-system" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--shadow-soft</code></td>
+<td><code>0 12px 32px rgba(10,30,45,0.08)</code></td>
+<td>Default card elevation</td>
+</tr>
+<tr>
+<td><code>--shadow-strong</code></td>
+<td><code>0 20px 60px rgba(10,30,45,0.14)</code></td>
+<td>Hover states, emphasized elements</td>
+</tr>
+<tr>
+<td><code>--muted-shadow</code></td>
+<td><code>rgba(22,66,91,0.08)</code></td>
+<td>Subtle shadows (admin.css)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="typography-tokens">Typography Tokens<a class="headerlink" href="#typography-tokens" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L22-L27">public/css/style.css L22-L27</a></p>
+<div class="highlight"><pre><span></span><code>/* typography (AUMENTADO) */
+--fz-base: 18px;         /* aumentado para mejor lectura */
+--fz-lg: 1.25rem;
+--fz-sm: .95rem;
+--leading: 1.55;
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L3-L27">public/css/style.css L3-L27</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L1-L11">public/css/admin.css L1-L11</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L2-L9">public/css/edit.css L2-L9</a></p>
+<hr />
+<h2 id="global-base-styles">Global Base Styles<a class="headerlink" href="#global-base-styles" title="Permanent link">&para;</a></h2>
+<p>The base stylesheet <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css">public/css/style.css</a></p>
+<p>establishes foundational styles that apply across all pages.</p>
+<h3 id="box-model-and-reset">Box Model and Reset<a class="headerlink" href="#box-model-and-reset" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L29-L40">public/css/style.css L29-L40</a></p>
+<div class="highlight"><pre><span></span><code><span class="c">/* ----------------- Base / Reset ----------------- */</span>
+<span class="o">*</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nt">html</span><span class="o">,</span><span class="w"> </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nt">body</span><span class="p">{</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Montserrat&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Segoe UI&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Roboto</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--fz-base</span><span class="p">);</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--leading</span><span class="p">);</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--indigo-dye</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--platinum</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#f4fbff</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="n">font-smoothing</span><span class="p">:</span><span class="n">antialiased</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>All pages use the <strong>Montserrat</strong> font family with system font fallbacks. The body has a subtle gradient background from <code>--platinum</code> to a light blue tint.</p>
+<h3 id="container-utility">Container Utility<a class="headerlink" href="#container-utility" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L42-L43">public/css/style.css L42-L43</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="nb">calc</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--max-width</span><span class="p">);</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>The <code>.container</code> class provides centered content with responsive width and maximum constraints.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L29-L43">public/css/style.css L29-L43</a></p>
+<hr />
+<h2 id="navigation-system">Navigation System<a class="headerlink" href="#navigation-system" title="Permanent link">&para;</a></h2>
+<p>The navigation bar uses a sticky positioning pattern with gradient backgrounds and responsive behavior.</p>
+<h3 id="desktop-navigation-structure">Desktop Navigation Structure<a class="headerlink" href="#desktop-navigation-structure" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Nav["nav element&lt;br&gt;sticky position"]
+Logo["logo div&lt;br&gt;img + span"]
+NavLinks["nav-links div&lt;br&gt;desktop menu"]
+MenuBtn["menu-btn div&lt;br&gt;mobile hamburger"]
+LinkStandard["Standard links&lt;br&gt;hover: rgba white"]
+LinkCTA["btn-primary CTA&lt;br&gt;gradient background"]
+
+Nav --&gt; Logo
+Nav --&gt; NavLinks
+Nav --&gt; MenuBtn
+NavLinks --&gt; LinkStandard
+NavLinks --&gt; LinkCTA</code></pre>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L45-L58">public/css/style.css L45-L58</a></p>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">),</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">));</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">);</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">sticky</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">);</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Montserrat&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="navigation-link-styles">Navigation Link Styles<a class="headerlink" href="#navigation-link-styles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Styling</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.nav-links a</code></td>
+<td>White text, <code>0.5rem 1rem</code> padding, <code>border-radius: 12px</code></td>
+<td>Standard navigation links</td>
+</tr>
+<tr>
+<td><code>.nav-links a:hover</code></td>
+<td><code>background: rgba(255, 255, 255, 0.15)</code>, <code>transform: translateY(-2px)</code></td>
+<td>Hover state with subtle lift</td>
+</tr>
+<tr>
+<td><code>.nav-links a.btn-primary</code></td>
+<td>Gradient <code>#ff5f6d</code> to <code>#ffc371</code>, rounded pill shape</td>
+<td>Special CTA button (Inscripción)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobile-navigation-behavior">Mobile Navigation Behavior<a class="headerlink" href="#mobile-navigation-behavior" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L150-L167">public/css/style.css L150-L167</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">780px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">menu-btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">nav-links</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.7</span><span class="p">);</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">nav-links</span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>On mobile (≤780px), the navigation collapses into a hamburger menu. The <code>.menu-btn</code> displays three horizontal bars that toggle the <code>.nav-links.active</code> state via JavaScript.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L45-L167">public/css/style.css L45-L167</a></p>
+<hr />
+<h2 id="hero-banner-system">Hero Banner System<a class="headerlink" href="#hero-banner-system" title="Permanent link">&para;</a></h2>
+<p>The landing page hero banner combines a background image, overlay effects, and parallax-inspired transforms.</p>
+<h3 id="banner-structure-and-styling">Banner Structure and Styling<a class="headerlink" href="#banner-structure-and-styling" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Banner[".banner&lt;br&gt;min-height: 72vh&lt;br&gt;position: relative"]
+BgImage["background-image&lt;br&gt;/resources/img/bunner.jpg"]
+Overlay[".banner-overlay&lt;br&gt;gradient overlay&lt;br&gt;backdrop-filter: blur"]
+BannerText[".banner-text&lt;br&gt;z-index: 2&lt;br&gt;transform: translateZ"]
+HeroTitle[".hero-title&lt;br&gt;clamp 2rem-3.6rem"]
+Lead[".lead&lt;br&gt;font-weight: 700"]
+BannerDesc[".banner-desc&lt;br&gt;max-width: 68ch"]
+HeroCTA[".hero-cta&lt;br&gt;flex gap"]
+Countdown[".countdown&lt;br&gt;inline-block badge"]
+BtnBanner[".btn-banner&lt;br&gt;gradient accent"]
+BtnOutline[".btn-outline&lt;br&gt;border white"]
+
+Banner --&gt; BgImage
+Banner --&gt; Overlay
+Banner --&gt; BannerText
+BannerText --&gt; HeroTitle
+BannerText --&gt; Lead
+BannerText --&gt; BannerDesc
+BannerText --&gt; HeroCTA
+BannerText --&gt; Countdown
+HeroCTA --&gt; BtnBanner
+HeroCTA --&gt; BtnOutline</code></pre>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L209-L229">public/css/style.css L209-L229</a></p>
+<div class="highlight"><pre><span></span><code>.banner {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(&#39;/resources/img/bunner.jpg&#39;);
+  background-size: cover;
+  background-position: center;
+  perspective: 1400px;
+  transition: transform .18s ease;
+}
+
+/* overlay intenso para mejor contraste del texto */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,24,36,0.72), rgba(17,46,66,0.45));
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+</code></pre></div>
+<p>The banner uses a dark gradient overlay (<code>rgba(6,24,36,0.72)</code> to <code>rgba(17,46,66,0.45)</code>) with a 2px blur to ensure text contrast over the background image.</p>
+<h3 id="responsive-typography">Responsive Typography<a class="headerlink" href="#responsive-typography" title="Permanent link">&para;</a></h3>
+<p>The <code>.hero-title</code> uses <code>clamp()</code> for fluid typography:</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L243-L249">public/css/style.css L243-L249</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">hero-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="nf">clamp</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">,</span><span class="w"> </span><span class="mf">5.2</span><span class="kt">vw</span><span class="p">,</span><span class="w"> </span><span class="mf">3.6</span><span class="kt">rem</span><span class="p">);</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span>
+<span class="w">  </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.02</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.02</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This scales from 2rem (mobile) to 3.6rem (desktop) based on viewport width.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L208-L297">public/css/style.css L208-L297</a></p>
+<hr />
+<h2 id="card-system">Card System<a class="headerlink" href="#card-system" title="Permanent link">&para;</a></h2>
+<p>Cards are the primary content container pattern, with two variants: light (default) and dark (emphasized).</p>
+<h3 id="card-component-hierarchy">Card Component Hierarchy<a class="headerlink" href="#card-component-hierarchy" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+CardBase[".card base styles&lt;br&gt;border-radius: var--radius&lt;br&gt;padding: 1.25rem"]
+CardLight[".card default&lt;br&gt;background: linear-gradient&lt;br&gt;white to fbfdff"]
+CardDark[".card--dark&lt;br&gt;background: dark gradients&lt;br&gt;color: white"]
+CardDetail[".detail&lt;br&gt;flex: 1 1 220px"]
+CardCat[".cat&lt;br&gt;category cards&lt;br&gt;hover: translateY-10px"]
+CardWinners["winners-section&lt;br&gt;dark emphasis"]
+CardMap["map-card&lt;br&gt;dark tones"]
+
+CardBase --&gt; CardLight
+CardBase --&gt; CardDark
+CardLight --&gt; CardDetail
+CardLight --&gt; CardCat
+CardDark --&gt; CardWinners
+CardDark --&gt; CardMap</code></pre>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L318-L348">public/css/style.css L318-L348</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-soft</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.06</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.98</span><span class="p">),</span><span class="w"> </span><span class="mh">#fbfdff</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">.18</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">.18</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Dark / Emphasized card (más color oscuro y contraste) */</span>
+<span class="p">.</span><span class="nc">card--dark</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mf">0.92</span><span class="p">),</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mf">0.94</span><span class="p">));</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.04</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-strong</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="category-cards-with-hover-effects">Category Cards with Hover Effects<a class="headerlink" href="#category-cards-with-hover-effects" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L354-L365">public/css/style.css L354-L365</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">cat</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.06</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-soft</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">),</span><span class="w"> </span><span class="mh">#fbfdff</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">.28</span><span class="kt">s</span><span class="w"> </span><span class="nb">cubic-bezier</span><span class="p">(</span><span class="mf">.2</span><span class="p">,</span><span class="mf">.9</span><span class="p">,</span><span class="mf">.3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">.28</span><span class="kt">s</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cat</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-10</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-strong</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Category cards (<code>.cat</code>) lift 10px on hover with a cubic-bezier easing for smooth animation.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L316-L365">public/css/style.css L316-L365</a></p>
+<hr />
+<h2 id="specialized-component-styles">Specialized Component Styles<a class="headerlink" href="#specialized-component-styles" title="Permanent link">&para;</a></h2>
+<h3 id="photo-gallery-grid">Photo Gallery Grid<a class="headerlink" href="#photo-gallery-grid" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L368-L385">public/css/style.css L368-L385</a></p>
+<div class="highlight"><pre><span></span><code>.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.gallery-container figure {
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(6,24,36,0.03), rgba(6,24,36,0.01));
+  box-shadow: var(--shadow-soft);
+  transition: transform .36s ease, box-shadow .22s;
+}
+.gallery-container img { width:100%; height: 260px; object-fit: cover; transition: transform .5s ease, filter .3s; display:block; }
+.gallery-container figure:hover { transform: translateY(-10px); box-shadow: var(--shadow-strong); }
+.gallery-container figure:hover img { transform: scale(1.05); filter: brightness(1.03); }
+</code></pre></div>
+<p>The gallery uses CSS Grid with <code>auto-fit</code> and <code>minmax()</code> for responsive columns. Hover effects include:</p>
+<ul>
+<li>Container lift: <code>translateY(-10px)</code></li>
+<li>Image zoom: <code>scale(1.05)</code></li>
+<li>Brightness increase: <code>brightness(1.03)</code></li>
+</ul>
+<h3 id="leaflet-map-container">Leaflet Map Container<a class="headerlink" href="#leaflet-map-container" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L408-L428">public/css/style.css L408-L428</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">map-wrapper</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">35</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mf">0.10</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">fadeIn</span><span class="w"> </span><span class="mf">.6</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-out</span><span class="w"> </span><span class="kc">forwards</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">map</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mf">0.12</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>#map</code> element is styled as a rounded, shadowed container. Custom Leaflet popup styles override defaults:</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L431-L442">public/css/style.css L431-L442</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">leaflet-popup-content-wrapper</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1b3a57</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.15</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="winner-cards-display">Winner Cards Display<a class="headerlink" href="#winner-cards-display" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+WinnersGrid[".winners-grid&lt;br&gt;CSS Grid auto-fit"]
+WinnerCard[".winner-card&lt;br&gt;flex column center"]
+PhotoWrap[".winner-photo-wrap&lt;br&gt;110px circle&lt;br&gt;border gradient"]
+Photo[".winner-photo&lt;br&gt;object-fit: cover"]
+DorsalBadge[".dorsal-badge&lt;br&gt;gradient pill&lt;br&gt;font-weight: 800"]
+
+WinnersGrid --&gt; WinnerCard
+WinnerCard --&gt; PhotoWrap
+PhotoWrap --&gt; Photo
+WinnerCard --&gt; DorsalBadge</code></pre>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L466-L485">public/css/style.css L466-L485</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">winners-grid</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="nv">-fit</span><span class="p">,</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="mi">160</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">winner-card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">flex-direction</span><span class="p">:</span><span class="kc">column</span><span class="p">;</span><span class="w"> </span><span class="k">align-items</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="mh">#fff</span><span class="p">,</span><span class="mh">#f7fbff</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-soft</span><span class="p">);</span><span class="w"> </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">.18</span><span class="kt">s</span><span class="p">,</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">.18</span><span class="kt">s</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">winner-card</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-8</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--shadow-strong</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">winner-photo-wrap</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="mi">110</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="mi">110</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">overflow</span><span class="p">:</span><span class="kc">hidden</span><span class="p">;</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">align-items</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="k">justify-content</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">144</span><span class="p">,</span><span class="mf">0.06</span><span class="p">);</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">144</span><span class="p">,</span><span class="mf">0.04</span><span class="p">),</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="mf">0.02</span><span class="p">));</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Winner photos are displayed in 110px circular containers with subtle gradient borders. The <code>.dorsal-badge</code> uses the primary gradient:</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L481-L485">public/css/style.css L481-L485</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">dorsal-badge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="kc">inline-block</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="mi">6</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">),</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">));</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"> </span><span class="k">margin-left</span><span class="p">:</span><span class="w"> </span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L368-L491">public/css/style.css L368-L491</a></p>
+<hr />
+<h2 id="footer-system">Footer System<a class="headerlink" href="#footer-system" title="Permanent link">&para;</a></h2>
+<p>The footer implements a three-column grid layout with brand identity, navigation links, and social elements.</p>
+<h3 id="footer-structure">Footer Structure<a class="headerlink" href="#footer-structure" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L525-L542">public/css/style.css L525-L542</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">site-footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">);</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">);</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">rem</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Segoe UI&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Roboto</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">footer-grid</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">start</span><span class="p">;</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">1200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="social-icon-styling">Social Icon Styling<a class="headerlink" href="#social-icon-styling" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L624-L651">public/css/style.css L624-L651</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">social-icon</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.2</span><span class="p">);</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">0.16</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">0.16</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">background</span><span class="w"> </span><span class="mf">0.16</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">56</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">social-icon</span><span class="p">:</span><span class="nd">hover</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">social-icon</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-6</span><span class="kt">px</span><span class="p">)</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">1.05</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.25</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.16</span><span class="p">);</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--platinum</span><span class="p">);</span>
+<span class="w">  </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Social icons are 56px circles with hover effects including vertical lift and scale transform.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L525-L720">public/css/style.css L525-L720</a></p>
+<hr />
+<h2 id="page-specific-stylesheets">Page-Specific Stylesheets<a class="headerlink" href="#page-specific-stylesheets" title="Permanent link">&para;</a></h2>
+<h3 id="admin-panel-styles">Admin Panel Styles<a class="headerlink" href="#admin-panel-styles" title="Permanent link">&para;</a></h3>
+<p>The admin panel stylesheet extends the base design system for table-heavy interfaces.</p>
+<h4 id="admin-card-container">Admin Card Container<a class="headerlink" href="#admin-card-container" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L36-L44">public/css/admin.css L36-L44</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">login-container</span><span class="p">.</span><span class="nc">admin-card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* ancho total de la tarjeta con tabla */</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--platinum</span><span class="p">));</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--muted-shadow</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.06</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>.admin-card</code> uses a wider max-width (900px) to accommodate data tables.</p>
+<h4 id="table-styling">Table Styling<a class="headerlink" href="#table-styling" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart TD
+
+SmallTable[".small-table&lt;br&gt;max-height: 420px&lt;br&gt;overflow: auto"]
+TableHead[".table-head-custom th&lt;br&gt;gradient background&lt;br&gt;lapis-lazuli to cerulean"]
+TableRows["tbody tr:nth-child-even&lt;br&gt;alternating row color"]
+TableCells["th, td&lt;br&gt;compact padding&lt;br&gt;0.45rem 0.5rem"]
+ActionButtons["Action buttons&lt;br&gt;34x34px inline-flex"]
+BtnEdit[".btn-edit&lt;br&gt;yellow gradient"]
+BtnDelete[".btn-delete&lt;br&gt;red gradient"]
+
+SmallTable --&gt; TableHead
+SmallTable --&gt; TableRows
+SmallTable --&gt; TableCells
+TableCells --&gt; ActionButtons
+ActionButtons --&gt; BtnEdit
+ActionButtons --&gt; BtnDelete</code></pre>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L75-L105">public/css/admin.css L75-L105</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">small-table</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-height</span><span class="p">:</span><span class="w"> </span><span class="mi">420</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">table-head-custom</span><span class="w"> </span><span class="nt">th</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">),</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">));</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">);</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.85</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">table</span><span class="w"> </span><span class="nt">th</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">table</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.45</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">vertical-align</span><span class="p">:</span><span class="w"> </span><span class="kc">middle</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.86</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.06</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">table</span><span class="w"> </span><span class="nt">tbody</span><span class="w"> </span><span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">121</span><span class="p">,</span><span class="mf">0.03</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Action buttons (<code>.btn-edit</code> and <code>.btn-delete</code>) are compact 34x34px squares:</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L107-L131">public/css/admin.css L107-L131</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="n">btn</span><span class="o">-</span><span class="n">edit</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">btn</span><span class="o">-</span><span class="k">delete</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="n">width</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="n">px</span><span class="p">;</span>
+<span class="w">  </span><span class="n">height</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="n">px</span><span class="p">;</span>
+<span class="w">  </span><span class="n">display</span><span class="p">:</span><span class="w"> </span><span class="n">inline</span><span class="o">-</span><span class="n">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="p">:</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+<span class="w">  </span><span class="n">justify</span><span class="o">-</span><span class="n">content</span><span class="p">:</span><span class="w"> </span><span class="n">center</span><span class="p">;</span>
+<span class="w">  </span><span class="n">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+<span class="w">  </span><span class="n">border</span><span class="p">:</span><span class="w"> </span><span class="k">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="n">pointer</span><span class="p">;</span>
+<span class="err">}</span>
+
+<span class="cm">/* estilo edit (amarillo/contrast) */</span>
+<span class="p">.</span><span class="n">btn</span><span class="o">-</span><span class="n">edit</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="n">background</span><span class="p">:</span><span class="w"> </span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="mi">180</span><span class="n">deg</span><span class="p">,</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">239</span><span class="p">,</span><span class="mi">186</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">95</span><span class="p">),</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">249</span><span class="p">,</span><span class="mi">230</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">95</span><span class="p">));</span>
+<span class="w">  </span><span class="n">color</span><span class="p">:</span><span class="w"> </span><span class="o">#</span><span class="mi">7</span><span class="n">a5a00</span><span class="p">;</span>
+<span class="w">  </span><span class="n">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">px</span><span class="w"> </span><span class="n">solid</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">122</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">08</span><span class="p">);</span>
+<span class="err">}</span>
+
+<span class="cm">/* estilo delete (suave) */</span>
+<span class="p">.</span><span class="n">btn</span><span class="o">-</span><span class="k">delete</span><span class="w"> </span><span class="err">{</span>
+<span class="w">  </span><span class="n">background</span><span class="p">:</span><span class="w"> </span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="mi">180</span><span class="n">deg</span><span class="p">,</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">232</span><span class="p">,</span><span class="mi">232</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">95</span><span class="p">),</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">245</span><span class="p">,</span><span class="mi">245</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">95</span><span class="p">));</span>
+<span class="w">  </span><span class="n">color</span><span class="p">:</span><span class="w"> </span><span class="o">#</span><span class="mi">8</span><span class="n">b1e1e</span><span class="p">;</span>
+<span class="w">  </span><span class="n">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">px</span><span class="w"> </span><span class="n">solid</span><span class="w"> </span><span class="n">rgba</span><span class="p">(</span><span class="mi">139</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">.</span><span class="mi">06</span><span class="p">);</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L1-L157">public/css/admin.css L1-L157</a></p>
+<h3 id="edit-profile-form-styles">Edit Profile Form Styles<a class="headerlink" href="#edit-profile-form-styles" title="Permanent link">&para;</a></h3>
+<p>The edit profile stylesheet provides form-focused styling with input states.</p>
+<h4 id="form-container">Form Container<a class="headerlink" href="#form-container" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L26-L41">public/css/edit.css L26-L41</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="p">.</span><span class="nc">mt-4</span><span class="p">.</span><span class="nc">w-50</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">460</span><span class="kt">px</span><span class="p">;</span><span class="w">       </span><span class="c">/* compact width */</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w">  </span><span class="c">/* center horizontally and add vertical spacing */</span>
+<span class="w">  </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding-right</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.12</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.98</span><span class="p">),</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The form card is constrained to 460px for a focused editing experience.</p>
+<h4 id="input-field-styling">Input Field Styling<a class="headerlink" href="#input-field-styling" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L66-L81">public/css/edit.css L66-L81</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">form-control</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mf">0.12</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#fff</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--platinum</span><span class="p">));</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">.15</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">border-color</span><span class="w"> </span><span class="mf">.12</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">.09</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">form-control</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">);</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-1</span><span class="kt">px</span><span class="p">);</span>
+<span class="w">  </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Form inputs have a subtle gradient background and lift slightly on focus with shadow and border color changes.</p>
+<h4 id="button-variants">Button Variants<a class="headerlink" href="#button-variants" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Button Class</th>
+<th>Styling</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.btn.btn-primary</code></td>
+<td>Gradient <code>lapis-lazuli</code> to <code>cerulean</code>, pill shape, <code>font-weight: 800</code></td>
+<td>Primary action (Guardar)</td>
+</tr>
+<tr>
+<td><code>.btn.btn-danger</code></td>
+<td>Transparent background, <code>lapis-lazuli</code> border, <code>font-weight: 700</code></td>
+<td>Secondary action (Cancelar)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L84-L128">public/css/edit.css L84-L128</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">.</span><span class="nc">btn</span><span class="p">.</span><span class="nc">btn-primary</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">.</span><span class="nc">btn</span><span class="p">.</span><span class="nc">btn-primary</span><span class="p">:</span><span class="nd">visited</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span>
+<span class="w">  </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">90</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">),</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--cerulean</span><span class="p">))</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--white</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">58</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="mf">0.14</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mf">.12</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mf">.12</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">opacity</span><span class="w"> </span><span class="mf">.12</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">.</span><span class="nc">btn</span><span class="p">.</span><span class="nc">btn-danger</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="kt">px</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--lapis-lazuli</span><span class="p">)</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">transparent</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">144</span><span class="p">,</span><span class="mf">0.12</span><span class="p">);</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">.12</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L1-L150">public/css/edit.css L1-L150</a></p>
+<hr />
+<h2 id="responsive-design-strategy">Responsive Design Strategy<a class="headerlink" href="#responsive-design-strategy" title="Permanent link">&para;</a></h2>
+<p>The styling system uses multiple breakpoint strategies for responsive behavior.</p>
+<h3 id="breakpoint-table">Breakpoint Table<a class="headerlink" href="#breakpoint-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Applies To</th>
+<th>Key Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max-width: 980px</code></td>
+<td>Global layout</td>
+<td>Column layouts become single-column, reduced hero title size</td>
+</tr>
+<tr>
+<td><code>max-width: 780px</code></td>
+<td>Navigation</td>
+<td>Hamburger menu activation, mobile nav dropdown</td>
+</tr>
+<tr>
+<td><code>max-width: 768px</code></td>
+<td>Map section</td>
+<td>Map height reduced to 350px</td>
+</tr>
+<tr>
+<td><code>max-width: 680px</code></td>
+<td>Gallery, banner</td>
+<td>Gallery images reduced to 200px, banner height to 55vh</td>
+</tr>
+<tr>
+<td><code>max-width: 576px</code></td>
+<td>Forms, admin</td>
+<td>Compact card sizing, reduced padding</td>
+</tr>
+<tr>
+<td><code>max-width: 560px</code></td>
+<td>Footer</td>
+<td>Single-column footer grid</td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation-mobile-transformation">Navigation Mobile Transformation<a class="headerlink" href="#navigation-mobile-transformation" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L150-L167">public/css/style.css L150-L167</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">780px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">menu-btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">nav-links</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.7</span><span class="p">);</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">.</span><span class="nc">nav-links</span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">.</span><span class="nc">nav-links</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.65</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.95</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="admin-panel-responsive-adjustments">Admin Panel Responsive Adjustments<a class="headerlink" href="#admin-panel-responsive-adjustments" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L146-L156">public/css/admin.css L146-L156</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">992px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">login-container</span><span class="p">.</span><span class="nc">admin-card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">720</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">small-table</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-height</span><span class="p">:</span><span class="w"> </span><span class="mi">360</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">576px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">auth-wrapper</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="nb">calc</span><span class="p">(</span><span class="mi">100</span><span class="kt">vh</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">120</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">login-container</span><span class="p">.</span><span class="nc">admin-card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">360</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">table</span><span class="w"> </span><span class="nt">th</span><span class="o">,</span><span class="w"> </span><span class="p">.</span><span class="nc">table</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.78</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.32</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.36</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">small-table</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">cta-btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.85</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The admin table progressively reduces: 720px wide at medium screens, 360px at mobile, with smaller font sizes and padding.</p>
+<h3 id="footer-responsive-grid">Footer Responsive Grid<a class="headerlink" href="#footer-responsive-grid" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L709-L720">public/css/style.css L709-L720</a></p>
+<div class="highlight"><pre><span></span><code>@media (max-width: 980px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-legal { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .newsletter { width: 100%; }
+  .footer-legal { align-items: center; text-align: center; }
+  .social-icon { width: 48px; height: 48px; }
+  .social-icon svg { width: 22px; height: 22px; }
+  .footer-sponsors img { height: 44px; }
+}
+</code></pre></div>
+<p>The footer transforms from three columns → two columns (980px) → single column (560px).</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L150-L167">public/css/style.css L150-L167</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L451-L508">public/css/style.css L451-L508</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L709-L720">public/css/style.css L709-L720</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L146-L156">public/css/admin.css L146-L156</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L136-L144">public/css/edit.css L136-L144</a></p>
+<hr />
+<h2 id="accessibility-features">Accessibility Features<a class="headerlink" href="#accessibility-features" title="Permanent link">&para;</a></h2>
+<p>The styling system incorporates multiple accessibility considerations.</p>
+<h3 id="focus-visibility">Focus Visibility<a class="headerlink" href="#focus-visibility" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L170-L177">public/css/style.css L170-L177</a></p>
+<div class="highlight"><pre><span></span><code>.menu-btn:focus,
+.nav-links a:focus,
+.nav-links a:focus-visible {
+  outline: 3px solid rgba(129, 195, 215, 0.18);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+</code></pre></div>
+<p>All interactive elements receive a 3px outline with offset on focus, using the <code>--sky-blue</code> color at 18% opacity.</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L495-L495">public/css/style.css L495</a></p>
+<div class="highlight"><pre><span></span><code>a:focus, button:focus, input:focus { outline: 3px solid rgba(129,195,215,0.16); outline-offset: 3px; border-radius: 8px; }
+</code></pre></div>
+<h3 id="reduced-motion-support">Reduced Motion Support<a class="headerlink" href="#reduced-motion-support" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L511-L513">public/css/style.css L511-L513</a></p>
+<div class="highlight"><pre><span></span><code>@media (prefers-reduced-motion: reduce){
+  * { transition: none !important; animation: none !important; transform: none !important; }
+}
+</code></pre></div>
+<p>Users with <code>prefers-reduced-motion</code> settings have all transitions, animations, and transforms disabled.</p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L147-L149">public/css/edit.css L147-L149</a></p>
+<div class="highlight"><pre><span></span><code>@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</code></pre></div>
+<p>This pattern is consistently applied across page-specific stylesheets.</p>
+<h3 id="screen-reader-utilities">Screen Reader Utilities<a class="headerlink" href="#screen-reader-utilities" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L702-L706">public/css/style.css L702-L706</a></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sr-only</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span><span class="w"> </span><span class="k">clip</span><span class="p">:</span><span class="w"> </span><span class="nb">rect</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="k">white-space</span><span class="p">:</span><span class="w"> </span><span class="kc">nowrap</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>.sr-only</code> class provides content that is accessible to screen readers but visually hidden.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L170-L177">public/css/style.css L170-L177</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L495-L495">public/css/style.css L495</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L511-L513">public/css/style.css L511-L513</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L702-L706">public/css/style.css L702-L706</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L147-L149">public/css/edit.css L147-L149</a></p>
+<hr />
+<h2 id="gradient-system">Gradient System<a class="headerlink" href="#gradient-system" title="Permanent link">&para;</a></h2>
+<p>Gradients are a defining visual characteristic of the design system, used consistently across buttons, backgrounds, and overlays.</p>
+<h3 id="gradient-pattern-table">Gradient Pattern Table<a class="headerlink" href="#gradient-pattern-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Gradient Type</th>
+<th>CSS Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary Navigation</strong></td>
+<td><code>linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean))</code></td>
+<td>Navigation bar, table headers, badges</td>
+</tr>
+<tr>
+<td><strong>CTA Accent</strong></td>
+<td><code>linear-gradient(180deg, #ff5f6d, #ffc371)</code></td>
+<td>Registration button, hero CTAs</td>
+</tr>
+<tr>
+<td><strong>Button Primary</strong></td>
+<td><code>linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean))</code></td>
+<td>Primary action buttons</td>
+</tr>
+<tr>
+<td><strong>Dark Card</strong></td>
+<td><code>linear-gradient(180deg, rgba(6,24,36,0.92), rgba(14,34,48,0.94))</code></td>
+<td>Emphasized content cards</td>
+</tr>
+<tr>
+<td><strong>Light Card</strong></td>
+<td><code>linear-gradient(180deg, rgba(255,255,255,0.98), #fbfdff)</code></td>
+<td>Default card backgrounds</td>
+</tr>
+<tr>
+<td><strong>Body Background</strong></td>
+<td><code>linear-gradient(180deg, var(--platinum) 0%, #f4fbff 100%)</code></td>
+<td>Page background</td>
+</tr>
+<tr>
+<td><strong>Banner Overlay</strong></td>
+<td><code>linear-gradient(180deg, rgba(6,24,36,0.72), rgba(17,46,66,0.45))</code></td>
+<td>Hero banner text contrast</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gradient-direction-conventions">Gradient Direction Conventions<a class="headerlink" href="#gradient-direction-conventions" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Horizontal["Horizontal 90deg&lt;br&gt;Used for: nav, badges,&lt;br&gt;prominent UI elements"]
+Vertical["Vertical 180deg&lt;br&gt;Used for: cards, backgrounds,&lt;br&gt;subtle depth"]
+PrimaryGrad["lapis-lazuli → cerulean"]
+AccentGrad["#ff5f6d → #ffc371"]
+LightCard["white → fbfdff"]
+DarkCard["rgba6,24,36 → rgba14,34,48"]
+Overlay["Dark overlays for text contrast"]
+
+Horizontal --&gt; PrimaryGrad
+Horizontal --&gt; AccentGrad
+Vertical --&gt; LightCard
+Vertical --&gt; DarkCard
+Vertical --&gt; Overlay</code></pre>
+<p><strong>Horizontal gradients (90deg)</strong> are used for prominent UI elements like navigation, badges, and primary buttons to create left-to-right color flow.</p>
+<p><strong>Vertical gradients (180deg)</strong> are used for backgrounds and cards to create subtle top-to-bottom depth.</p>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L51-L51">public/css/style.css L51</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L114-L114">public/css/style.css L114</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L259-L259">public/css/style.css L259</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L329-L329">public/css/style.css L329</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L66-L66">public/css/admin.css L66</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L86-L86">public/css/admin.css L86</a></p>
+<hr />
+<h2 id="animation-and-transition-patterns">Animation and Transition Patterns<a class="headerlink" href="#animation-and-transition-patterns" title="Permanent link">&para;</a></h2>
+<p>The design system uses consistent timing functions and durations for smooth interactions.</p>
+<h3 id="transition-duration-standards">Transition Duration Standards<a class="headerlink" href="#transition-duration-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Duration</th>
+<th>Timing Function</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.12s</code></td>
+<td><code>ease</code></td>
+<td>Fast interactions (button hover, input focus)</td>
+</tr>
+<tr>
+<td><code>.15s</code></td>
+<td><code>ease</code></td>
+<td>Input state changes</td>
+</tr>
+<tr>
+<td><code>.18s</code></td>
+<td><code>ease</code> / <code>cubic-bezier(.2,.9,.3,1)</code></td>
+<td>Card hover, transforms</td>
+</tr>
+<tr>
+<td><code>.22s</code></td>
+<td><code>ease</code></td>
+<td>Gallery shadow changes</td>
+</tr>
+<tr>
+<td><code>.25s</code></td>
+<td><code>ease</code></td>
+<td>Navigation link hover</td>
+</tr>
+<tr>
+<td><code>.28s</code></td>
+<td><code>cubic-bezier(.2,.9,.3,1)</code></td>
+<td>Category card emphasis</td>
+</tr>
+<tr>
+<td><code>.36s</code></td>
+<td><code>ease</code></td>
+<td>Gallery figure transforms</td>
+</tr>
+<tr>
+<td><code>.5s</code></td>
+<td><code>ease</code></td>
+<td>Gallery image zoom</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transform-patterns">Transform Patterns<a class="headerlink" href="#transform-patterns" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+Hover["Hover/Focus State"]
+LiftSmall["translateY-2px&lt;br&gt;Nav links"]
+LiftMedium["translateY-3px&lt;br&gt;Primary buttons"]
+LiftLarge["translateY-6px&lt;br&gt;Share buttons, social icons"]
+LiftXL["translateY-10px&lt;br&gt;Cards, gallery figures"]
+Scale["scale1.01-1.05&lt;br&gt;Buttons, cards"]
+Zoom["img scale1.05&lt;br&gt;Gallery images"]
+
+Hover --&gt; LiftSmall
+Hover --&gt; LiftMedium
+Hover --&gt; LiftLarge
+Hover --&gt; LiftXL
+Hover --&gt; Scale
+Hover --&gt; Zoom</code></pre>
+<p>Common transform combinations:</p>
+<ul>
+<li><strong>Small lift</strong>: <code>translateY(-2px)</code> for subtle feedback (nav links)</li>
+<li><strong>Medium lift + scale</strong>: <code>translateY(-3px) scale(1.01)</code> for buttons</li>
+<li><strong>Large lift</strong>: <code>translateY(-6px)</code> for prominent elements (social icons)</li>
+<li><strong>Extra large lift</strong>: <code>translateY(-10px)</code> for cards and gallery items</li>
+</ul>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L364-L364">public/css/style.css L364</a></p>
+<div class="highlight"><pre><span></span><code>.cat:hover { transform: translateY(-10px); box-shadow: var(--shadow-strong); }
+</code></pre></div>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L104-L106">public/css/style.css L104-L106</a></p>
+<div class="highlight"><pre><span></span><code>.container .card .btn.btn-primary:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(58,124,165,0.18);
+  opacity: 0.98;
+}
+</code></pre></div>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L93-L125">public/css/style.css L93-L125</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L362-L365">public/css/style.css L362-L365</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L381-L383">public/css/style.css L381-L383</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L72-L80">public/css/edit.css L72-L80</a></p>
+<hr />
+<h2 id="css-custom-property-inheritance">CSS Custom Property Inheritance<a class="headerlink" href="#css-custom-property-inheritance" title="Permanent link">&para;</a></h2>
+<p>All page-specific stylesheets inherit from the same base design tokens, ensuring visual consistency.</p>
+<h3 id="token-reuse-diagram">Token Reuse Diagram<a class="headerlink" href="#token-reuse-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+RootTokens[":root CSS Custom Properties&lt;br&gt;Defined in multiple files"]
+StyleCSS["style.css defines:&lt;br&gt;--lapis-lazuli, --cerulean,&lt;br&gt;--platinum, --indigo-dye,&lt;br&gt;--sky-blue, --white, --accent"]
+AdminCSS["admin.css redefines:&lt;br&gt;Same tokens + --muted-shadow,&lt;br&gt;--card-max-width"]
+EditCSS["edit.css redefines:&lt;br&gt;Core tokens only&lt;br&gt;no page-specific additions"]
+GlobalUsage["Global components:&lt;br&gt;nav, banner, footer,&lt;br&gt;cards, buttons"]
+AdminUsage["Admin-specific:&lt;br&gt;tables, action buttons,&lt;br&gt;compact layouts"]
+FormUsage["Form-specific:&lt;br&gt;inputs, labels,&lt;br&gt;button variants"]
+
+RootTokens --&gt; StyleCSS
+RootTokens --&gt; AdminCSS
+RootTokens --&gt; EditCSS
+StyleCSS --&gt; GlobalUsage
+AdminCSS --&gt; AdminUsage
+EditCSS --&gt; FormUsage</code></pre>
+<p>Each stylesheet defines its own <code>:root</code> block with the core color tokens, allowing page-specific stylesheets to work independently without requiring <code>style.css</code> to be loaded (though in practice, <code>style.css</code> is loaded globally via <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/partials/head.ejs">views/partials/head.ejs</a></p>
+<p>).</p>
+<p><strong>Token Consistency:</strong></p>
+<ul>
+<li>✅ <code>--lapis-lazuli</code>, <code>--cerulean</code>, <code>--platinum</code>, <code>--indigo-dye</code>, <code>--sky-blue</code>, <code>--white</code> defined identically across all files</li>
+<li>⚠️ <code>--accent</code> only defined in <code>style.css</code></li>
+<li>⚠️ <code>--muted-shadow</code> and <code>--card-max-width</code> only in <code>admin.css</code></li>
+</ul>
+<p><strong>Sources:</strong> <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/style.css#L3-L27">public/css/style.css L3-L27</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/admin.css#L1-L11">public/css/admin.css L1-L11</a></p>
+<p><a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css#L2-L9">public/css/edit.css L2-L9</a></p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The styling system is built on these core principles:</p>
+<ol>
+<li><strong>Design Token Foundation</strong>: CSS custom properties provide a single source of truth for colors, spacing, and typography</li>
+<li><strong>Modular Architecture</strong>: Base stylesheet (<code>style.css</code>) defines global patterns; page-specific stylesheets add component-level customization</li>
+<li><strong>Consistent Gradient System</strong>: Horizontal gradients for UI elements, vertical gradients for backgrounds</li>
+<li><strong>Progressive Enhancement</strong>: Responsive breakpoints adapt layouts from desktop → tablet → mobile</li>
+<li><strong>Accessibility First</strong>: Focus visibility, reduced motion support, and screen reader utilities built-in</li>
+<li><strong>Smooth Interactions</strong>: Consistent transition timings and transform patterns create cohesive user experience</li>
+</ol>
+<p>The system achieves visual coherence through reusable patterns while allowing page-specific customization through dedicated stylesheets.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

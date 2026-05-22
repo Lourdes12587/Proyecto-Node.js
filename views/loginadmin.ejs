@@ -3,8 +3,9 @@
   <%- include('partials/header') %>
 
   <link rel="stylesheet" href="/resources/css/login.css">
+  <link rel="stylesheet" href="/resources/css/editorial-running.css">
 
-<main class="auth-wrapper">
+<main class="auth-wrapper editorial-auth login-admin-page">
     <form class="login-container" action="/authadmin" method="POST">
       <h2>ADMINISTRADORES</h2>
       <label for="user">Ingrese su usuario:</label>
@@ -24,25 +25,22 @@
       title: '<%= alertTitle %>',
       text: '<%= alertMessage %>',
       icon: '<%= alertIcon %>',
-      background: 'linear-gradient(135deg, #2f6690ff, #3a7ca5ff)', // lapis-lazuli a cerulean
-      color: '#ffffff', // texto blanco para buen contraste
-      iconColor: '#81c3d7ff', // sky-blue para iconos
+      background: '#f4f1e8',
+      color: '#050505',
+      iconColor: '#ff4f18',
       confirmButtonText: 'Aceptar',
-      confirmButtonColor: '#16425bff', // indigo-dye
+      confirmButtonColor: '#ff4f18',
       showCloseButton: true,
       showCancelButton: false,
       showConfirmButton: <%= showConfirmButton %>,
       timer: <%= timer %>,
-      backdrop: `
-      rgba(0,0,0,0.25)
-      url("/resources/img/runner-bg.gif")
-      left top
-      no-repeat
-    `,
+      backdrop: 'rgba(5,5,5,0.78)',
       customClass: {
-        popup: 'swal2-border-rounded',
-        title: 'swal2-title-custom',
-        content: 'swal2-content-custom'
+        popup: 'run-alert-popup',
+        title: 'run-alert-title',
+        htmlContainer: 'run-alert-content',
+        confirmButton: 'run-alert-confirm',
+        closeButton: 'run-alert-close'
       }
       }).then(() => {
       window.location = '/<%= ruta %>';

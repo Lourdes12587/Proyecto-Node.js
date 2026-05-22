@@ -4,29 +4,52 @@
 
 <link rel="stylesheet" href="/resources/css/perfil.css">
 
-<div class="perfil-wrapper">
-  <div class="perfil-card">
-    <h1>Mi Perfil</h1>
+<main class="perfil-wrapper profile-editorial-page">
+  <section class="profile-shell" aria-label="Perfil del participante">
+    <aside class="profile-visual-panel" aria-hidden="true">
+      <span class="profile-kicker">Runner profile</span>
+      <strong class="profile-dorsal"><%= user.id %></strong>
+      <div class="profile-motion-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>City pace / race data / official runner</p>
+    </aside>
 
-    <div class="perfil-foto-wrap">
-      <% if (user.foto) { %>
-        <img src="/uploads/participantes/<%= user.foto %>" alt="Foto de <%= user.nombre %>" class="perfil-foto">
-      <% } else { %>
-        <div class="perfil-foto-placeholder"><i class="bx bxs-user"></i></div>
-      <% } %>
-    </div>
+    <article class="perfil-card">
+      <div class="profile-heading">
+        <span class="profile-kicker">Mi cuenta</span>
+        <h1>Mi Perfil</h1>
+      </div>
 
-    <h3>Bienvenido/a: <%= user.nombre %> <%= user.apellido %></h3>
+      <div class="profile-main">
+        <div class="perfil-foto-wrap">
+          <% if (user.foto) { %>
+            <img src="/uploads/participantes/<%= user.foto %>" alt="Foto de <%= user.nombre %>" class="perfil-foto">
+          <% } else { %>
+            <div class="perfil-foto-placeholder"><i class="bx bxs-user"></i></div>
+          <% } %>
+        </div>
 
-    <div class="perfil-row"><strong>Número Dorsal:</strong> <span><%= user.id %></span></div>
-    <div class="perfil-row"><strong>DNI:</strong> <span><%= user.dni %></span></div>
-    <div class="perfil-row"><strong>Teléfono:</strong> <span><%= user.telefono %></span></div>
-    <div class="perfil-row"><strong>Dirección:</strong> <span><%= user.calle %> <%= user.numero %></span></div>
-    <div class="perfil-row"><strong>Población:</strong> <span><%= user.poblacion %></span></div>
-    <div class="perfil-row"><strong>Código Postal:</strong> <span><%= user.codigo_postal %></span></div>
+        <div class="profile-name-block">
+          <span>Bienvenido/a</span>
+          <h2><%= user.nombre %> <%= user.apellido %></h2>
+        </div>
+      </div>
 
-    <a href="/edit/<%= user.id %>" class="btn-edit-profile"><i class="bx bxs-edit"></i> Editar mi perfil</a>
-  </div>
-</div>
+      <div class="profile-grid">
+        <div class="perfil-row"><strong>Numero Dorsal</strong> <span><%= user.id %></span></div>
+        <div class="perfil-row"><strong>DNI</strong> <span><%= user.dni %></span></div>
+        <div class="perfil-row"><strong>Telefono</strong> <span><%= user.telefono %></span></div>
+        <div class="perfil-row"><strong>Direccion</strong> <span><%= user.calle %> <%= user.numero %></span></div>
+        <div class="perfil-row"><strong>Poblacion</strong> <span><%= user.poblacion %></span></div>
+        <div class="perfil-row"><strong>Codigo Postal</strong> <span><%= user.codigo_postal %></span></div>
+      </div>
+
+      <a href="/edit/<%= user.id %>" class="btn-edit-profile"><i class="bx bxs-edit" aria-hidden="true"></i> Editar mi perfil</a>
+    </article>
+  </section>
+</main>
 
 <%- include('partials/footer') %>

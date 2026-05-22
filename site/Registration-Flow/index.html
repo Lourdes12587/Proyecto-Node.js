@@ -1,0 +1,2044 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Lourdes12587">
+      
+      
+      
+        <link rel="prev" href="../Landing-Page/">
+      
+      
+        <link rel="next" href="../Profile-Management/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Registration Flow - Proyecto Node.js</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#registration-flow" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto Node.js" class="md-header__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Node.js
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Registration Flow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Application-Server/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Login-System/" class="md-tabs__link">
+          
+  
+  
+  Authentication & Authorization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Participant-Interfaces/" class="md-tabs__link">
+          
+  
+  
+  User Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Admin-Panel/" class="md-tabs__link">
+          
+  
+  
+  Admin Interfaces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Shared-Components/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Shared Components
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Design-System/" class="md-tabs__link">
+          
+  
+  
+  Styling System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Participant-Data/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Appendix
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto Node.js" class="md-nav__button md-logo" aria-label="Proyecto Node.js" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Node.js
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://deepwiki.com/Lourdes12587/Proyecto-Node.js/1-overview" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Deepwiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application-Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Middleware-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Middleware Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Database-Layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Authentication & Authorization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Login System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Role-Based-Access-Control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Access Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Session-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Session Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Interfaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Landing-Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Landing Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Registration Flow
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-endpoint-and-route-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Endpoint and Route Handler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-structure-and-data-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Structure and Data Fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Form Structure and Data Fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-form-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Form Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Request Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#photo-upload-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Photo Upload Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Photo Upload Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multer-configuration-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multer Configuration Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form-layout-and-ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Layout and UI Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-display-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Display Mechanism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-feedback-with-sweetalert2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success Feedback with SweetAlert2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weather-widget-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weather Widget Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Weather Widget Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weather-data-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weather Data Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching Indicator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-design-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Design Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Design Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motivational-banner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivational Banner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-input-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Form Input Styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submit-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submit Button
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoint-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakpoint Adjustments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-composition-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Composition Diagram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Profile-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Profile Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Admin Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Admin-Panel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admin Panel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Winner-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Winner Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizer-Registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organizer Registration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shared-Components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Styling System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Styling System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Design-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component-Styles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Styles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Participant-Data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Participant Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../File-Upload-System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Upload System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Appendix
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="registration-flow">Registration Flow<a class="headerlink" href="#registration-flow" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Relevant source files</strong>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js">middlewares/multer.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyAdmin.js">middlewares/verifyAdmin.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/verifyToken.js">middlewares/verifyToken.js</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/edit.css">public/css/edit.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css">public/css/inscripcion.css</a>
+* <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs">views/inscripcion.ejs</a></p>
+</blockquote>
+<h2 id="purpose-and-scope">Purpose and Scope<a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>This document describes the participant registration flow in the HAPPY RUNNER 42K application, covering form submission, photo upload, validation feedback, and weather widget integration. The registration interface allows new participants to create accounts by providing personal information and uploading a profile photo.</p>
+<p>For information about post-registration authentication, see <a href="/Lourdes12587/Proyecto-Node.js/3.1-login-system">Login System</a>. For details on profile editing after registration, see <a href="/Lourdes12587/Proyecto-Node.js/4.1.3-profile-management">Profile Management</a>. For technical details on the file upload infrastructure, see <a href="/Lourdes12587/Proyecto-Node.js/6.2-file-upload-system">File Upload System</a>.</p>
+<hr />
+<h2 id="registration-endpoint-and-route-handler">Registration Endpoint and Route Handler<a class="headerlink" href="#registration-endpoint-and-route-handler" title="Permanent link">&para;</a></h2>
+<p>The registration flow begins when users access the registration form at <code>/inscripcion</code>. The route accepts both GET (to display the form) and POST (to process submissions) requests. The POST route includes the multer middleware for handling multipart form data with file uploads.</p>
+<p><strong>Route Configuration:</strong></p>
+<ul>
+<li><strong>GET</strong> <code>/inscripcion</code> - Renders the registration form with weather data</li>
+<li><strong>POST</strong> <code>/inscripcion</code> - Processes form submission with <code>upload.single('foto')</code> middleware</li>
+</ul>
+<p>The multer middleware is configured in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L1-L15">middlewares/multer.js L1-L15</a></p>
+<p>with disk storage, saving uploaded photos to <code>public/uploads/participantes/</code> with the naming pattern <code>participante-{timestamp}{extension}</code>.</p>
+<p><strong>Sources:</strong> views/inscripcion.ejs:22, middlewares/multer.js:1-15</p>
+<hr />
+<h2 id="form-structure-and-data-fields">Form Structure and Data Fields<a class="headerlink" href="#form-structure-and-data-fields" title="Permanent link">&para;</a></h2>
+<p>The registration form collects participant information across multiple categories: identification, contact details, address components, authentication credentials, and a profile photo.</p>
+<h3 id="required-form-fields">Required Form Fields<a class="headerlink" href="#required-form-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Input Type</th>
+<th>Purpose</th>
+<th>Database Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>foto</code></td>
+<td>file</td>
+<td>Profile/dorsal photo</td>
+<td><code>foto</code></td>
+</tr>
+<tr>
+<td><code>nombre</code></td>
+<td>text</td>
+<td>First name</td>
+<td><code>nombre</code></td>
+</tr>
+<tr>
+<td><code>apellido</code></td>
+<td>text</td>
+<td>Last name</td>
+<td><code>apellido</code></td>
+</tr>
+<tr>
+<td><code>dni</code></td>
+<td>text</td>
+<td>National ID (unique identifier)</td>
+<td><code>dni</code></td>
+</tr>
+<tr>
+<td><code>telefono</code></td>
+<td>text</td>
+<td>Phone number</td>
+<td><code>telefono</code></td>
+</tr>
+<tr>
+<td><code>calle</code></td>
+<td>text</td>
+<td>Street name</td>
+<td>Part of <code>direccion</code></td>
+</tr>
+<tr>
+<td><code>numero</code></td>
+<td>text</td>
+<td>Street number</td>
+<td>Part of <code>direccion</code></td>
+</tr>
+<tr>
+<td><code>poblacion</code></td>
+<td>text</td>
+<td>City/town</td>
+<td>Part of <code>direccion</code></td>
+</tr>
+<tr>
+<td><code>codigo_postal</code></td>
+<td>text</td>
+<td>Postal code</td>
+<td>Part of <code>direccion</code></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>password</td>
+<td>Account password (hashed)</td>
+<td><code>password</code></td>
+</tr>
+</tbody>
+</table>
+<p>The form at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L24-L81">views/inscripcion.ejs L24-L81</a></p>
+<p>uses a two-column grid layout implemented in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L79-L92">public/css/inscripcion.css L79-L92</a></p>
+<p>The left column contains the form fields, while the right column displays a weather widget.</p>
+<p><strong>Sources:</strong> views/inscripcion.ejs:22-86, public/css/inscripcion.css:79-92</p>
+<hr />
+<h2 id="registration-request-flow">Registration Request Flow<a class="headerlink" href="#registration-request-flow" title="Permanent link">&para;</a></h2>
+<p>The following diagram illustrates the complete request lifecycle from form submission to database persistence and user feedback.</p>
+<pre class="mermaid"><code>sequenceDiagram
+  participant Browser
+  participant /inscripcion Route
+  participant multer.single('foto')
+  participant express-validator
+  participant public/uploads/participantes/
+  participant bcrypt
+  participant MySQL participantes
+  participant OpenWeatherMap API
+
+  Browser-&gt;&gt;/inscripcion Route: "POST /inscripcion"
+  /inscripcion Route-&gt;&gt;multer.single('foto'): "multipart/form-data"
+  multer.single('foto')-&gt;&gt;multer.single('foto'): "Process upload"
+  multer.single('foto')-&gt;&gt;public/uploads/participantes/: "Parse file field: foto"
+  public/uploads/participantes/--&gt;&gt;multer.single('foto'): "Save as participante-{timestamp}.ext"
+  multer.single('foto')-&gt;&gt;express-validator: "File path returned"
+  express-validator-&gt;&gt;express-validator: "req.file populated"
+  loop ["Validation Errors"]
+    express-validator-&gt;&gt;OpenWeatherMap API: "Validate all fields"
+    OpenWeatherMap API--&gt;&gt;express-validator: "(nombre, apellido, dni, etc.)"
+    express-validator--&gt;&gt;Browser: "Fetch weather for re-render"
+    express-validator-&gt;&gt;bcrypt: "Weather data"
+    bcrypt--&gt;&gt;express-validator: "Re-render inscripcion.ejs"
+    express-validator-&gt;&gt;MySQL participantes: "with validaciones array"
+    MySQL participantes--&gt;&gt;express-validator: "and preserved valores"
+    express-validator--&gt;&gt;Browser: "Hash password"
+  end</code></pre>
+<p><strong>Sources:</strong> views/inscripcion.ejs:22, middlewares/multer.js:5-12, views/inscripcion.ejs:87-96, views/inscripcion.ejs:131-154</p>
+<hr />
+<h2 id="photo-upload-process">Photo Upload Process<a class="headerlink" href="#photo-upload-process" title="Permanent link">&para;</a></h2>
+<p>The registration form requires participants to upload a profile photo, which is used for their race dorsal and profile display. The upload mechanism uses multer middleware with disk storage configuration.</p>
+<h3 id="multer-configuration-details">Multer Configuration Details<a class="headerlink" href="#multer-configuration-details" title="Permanent link">&para;</a></h3>
+<p>The storage configuration at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/middlewares/multer.js#L5-L13">middlewares/multer.js L5-L13</a></p>
+<p>defines:</p>
+<ol>
+<li><strong>Destination:</strong> <code>public/uploads/participantes</code> directory</li>
+<li><strong>Filename Generation:</strong> <code>participante-</code> prefix + <code>Date.now()</code> timestamp + original file extension</li>
+<li><strong>File Field:</strong> <code>foto</code> (accepts <code>image/*</code> MIME types)</li>
+</ol>
+<p>The filename generation strategy ensures unique filenames by using millisecond timestamps, preventing filename collisions when multiple users register simultaneously.</p>
+<p><strong>Example Generated Filename:</strong></p>
+<div class="highlight"><pre><span></span><code>participante-1703251234567.jpg
+</code></pre></div>
+<p>The uploaded file path is stored in the database's <code>foto</code> column as a relative path (e.g., <code>/uploads/participantes/participante-1703251234567.jpg</code>).</p>
+<p><strong>Sources:</strong> middlewares/multer.js:1-15, views/inscripcion.ejs:25-26</p>
+<hr />
+<h2 id="form-layout-and-ui-components">Form Layout and UI Components<a class="headerlink" href="#form-layout-and-ui-components" title="Permanent link">&para;</a></h2>
+<p>The registration interface consists of three primary visual components: a motivational banner, the form grid, and a weather widget.</p>
+<pre class="mermaid"><code>flowchart TD
+
+InscripcionContainer["inscripcion-container&lt;br&gt;(max-width: 980px)"]
+MotivationalBanner["motivational-banner&lt;br&gt;Background: jovenes-amigos-corriendo.jpg&lt;br&gt;Height: 220px"]
+BannerOverlay["banner-overlay&lt;br&gt;rgba overlay with text"]
+FormElement["form element&lt;br&gt;grid-template-columns: 1fr 360px"]
+FormLeft["form-left&lt;br&gt;2-column grid&lt;br&gt;Contains all input fields"]
+WeatherWidget["weather-widget&lt;br&gt;360px width&lt;br&gt;OpenWeatherMap data"]
+PhotoInput["foto input[type=file]"]
+PersonalFields["nombre, apellido inputs"]
+ContactFields["dni, telefono inputs"]
+AddressFields["calle, numero, poblacion,&lt;br&gt;codigo_postal inputs"]
+PasswordField["password input[type=password]"]
+SubmitButton["btn-registrarse button"]
+ValidationAlerts["alert-danger divs&lt;br&gt;(if validaciones array present)"]
+WeatherIcon["Weather icon from OpenWeatherMap"]
+WeatherStats["Temperature, humidity, wind data"]
+
+InscripcionContainer --&gt; MotivationalBanner
+MotivationalBanner --&gt; BannerOverlay
+InscripcionContainer --&gt; FormElement
+FormElement --&gt; FormLeft
+FormElement --&gt; WeatherWidget
+FormLeft --&gt; PhotoInput
+FormLeft --&gt; PersonalFields
+FormLeft --&gt; ContactFields
+FormLeft --&gt; AddressFields
+FormLeft --&gt; PasswordField
+FormLeft --&gt; SubmitButton
+FormLeft --&gt; ValidationAlerts
+WeatherWidget --&gt; WeatherIcon
+WeatherWidget --&gt; WeatherStats</code></pre>
+<p>The form uses a responsive grid layout defined at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L79-L85">public/css/inscripcion.css L79-L85</a></p>
+<p>On screens wider than 980px, the form displays in two columns: form fields on the left (spanning 2 sub-columns) and the weather widget on the right (fixed 360px width). On mobile devices (≤980px), the layout collapses to a single column with the weather widget repositioned above the form fields.</p>
+<p><strong>Sources:</strong> views/inscripcion.ejs:10-127, public/css/inscripcion.css:52-64, public/css/inscripcion.css:79-92, public/css/inscripcion.css:161-179, public/css/inscripcion.css:251-263</p>
+<hr />
+<h2 id="validation-and-error-handling">Validation and Error Handling<a class="headerlink" href="#validation-and-error-handling" title="Permanent link">&para;</a></h2>
+<p>The registration form implements server-side validation using express-validator. When validation fails, the form is re-rendered with error messages and preserved field values.</p>
+<h3 id="validation-flow">Validation Flow<a class="headerlink" href="#validation-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+
+FormSubmit["Form submission&lt;br&gt;POST /inscripcion"]
+ValidatorMiddleware["express-validator&lt;br&gt;middleware chain"]
+CheckErrors["validationResult(req)"]
+HasErrors["Errors present?"]
+PopulateValores["Preserve form data&lt;br&gt;in valores object"]
+FetchWeather["Fetch weather data&lt;br&gt;for re-render"]
+RenderWithErrors["Render inscripcion.ejs&lt;br&gt;with validaciones array"]
+DisplayAlerts["Display alert-danger&lt;br&gt;Bootstrap alerts&lt;br&gt;(lines 87-96)"]
+RepopulateFields["Repopulate input values&lt;br&gt;from valores object"]
+ProcessRegistration["Hash password&lt;br&gt;Insert to database"]
+ShowSuccess["Render with SweetAlert2&lt;br&gt;success alert&lt;br&gt;(lines 131-154)"]
+RedirectLogin["Redirect to /login"]
+
+FormSubmit --&gt; ValidatorMiddleware
+ValidatorMiddleware --&gt; CheckErrors
+CheckErrors --&gt; HasErrors
+HasErrors --&gt; PopulateValores
+PopulateValores --&gt; FetchWeather
+FetchWeather --&gt; RenderWithErrors
+RenderWithErrors --&gt; DisplayAlerts
+RenderWithErrors --&gt; RepopulateFields
+HasErrors --&gt; ProcessRegistration
+ProcessRegistration --&gt; ShowSuccess
+ShowSuccess --&gt; RedirectLogin</code></pre>
+<h3 id="error-display-mechanism">Error Display Mechanism<a class="headerlink" href="#error-display-mechanism" title="Permanent link">&para;</a></h3>
+<p>When validation errors occur, the server passes two objects to the EJS template:</p>
+<ol>
+<li><strong><code>validaciones</code> array:</strong> Contains validation error objects with <code>msg</code> property</li>
+<li><strong><code>valores</code> object:</strong> Contains submitted form values for field repopulation</li>
+</ol>
+<p>The template iterates over the <code>validaciones</code> array at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L87-L96">views/inscripcion.ejs L87-L96</a></p>
+<p>to display Bootstrap alert components. Each input field checks for a corresponding value in the <code>valores</code> object to preserve user input, as seen in the pattern: <code>value="&lt;%= (typeof valores !== 'undefined' &amp;&amp; valores.nombre) ? valores.nombre : '' %&gt;"</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L32-L32">views/inscripcion.ejs L32</a></p>
+<p><strong>Sources:</strong> views/inscripcion.ejs:87-96, views/inscripcion.ejs:31-80</p>
+<hr />
+<h2 id="success-feedback-with-sweetalert2">Success Feedback with SweetAlert2<a class="headerlink" href="#success-feedback-with-sweetalert2" title="Permanent link">&para;</a></h2>
+<p>Upon successful registration, the system displays a styled success modal using SweetAlert2 library and automatically redirects to the login page.</p>
+<p>The alert configuration at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L131-L154">views/inscripcion.ejs L131-L154</a></p>
+<p>receives the following variables from the server:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alert</code></td>
+<td>Boolean flag to trigger alert</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>alertMessage</code></td>
+<td>Message text</td>
+<td>"Registro exitoso"</td>
+</tr>
+<tr>
+<td><code>alertIcon</code></td>
+<td>Icon type</td>
+<td>"success"</td>
+</tr>
+<tr>
+<td><code>showConfirmButton</code></td>
+<td>Display confirm button</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>timer</code></td>
+<td>Auto-close timer (ms)</td>
+<td><code>2000</code></td>
+</tr>
+<tr>
+<td><code>ruta</code></td>
+<td>Redirect destination</td>
+<td>"login"</td>
+</tr>
+</tbody>
+</table>
+<p>The alert uses a custom gradient background (<code>linear-gradient(135deg, #2f6690ff, #3a7ca5ff)</code>) matching the application's color scheme defined in <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L4-L26">public/css/inscripcion.css L4-L26</a></p>
+<p>After the timer expires or the user confirms, the <code>.then()</code> callback executes the redirect to <code>/&lt;%= ruta %&gt;</code>.</p>
+<p><strong>Sources:</strong> views/inscripcion.ejs:131-154, public/css/inscripcion.css:4-26</p>
+<hr />
+<h2 id="weather-widget-integration">Weather Widget Integration<a class="headerlink" href="#weather-widget-integration" title="Permanent link">&para;</a></h2>
+<p>The registration page includes a real-time weather widget that displays current conditions for the marathon location. This feature helps participants understand race-day weather conditions during registration.</p>
+<h3 id="weather-data-structure">Weather Data Structure<a class="headerlink" href="#weather-data-structure" title="Permanent link">&para;</a></h3>
+<p>The server injects a <code>clima</code> object into the template with the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Source</th>
+<th>Display Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>city</code></td>
+<td>OpenWeatherMap city name</td>
+<td>Widget title (line 103)</td>
+</tr>
+<tr>
+<td><code>icon</code></td>
+<td>Weather icon code</td>
+<td>Icon image (lines 105-109)</td>
+</tr>
+<tr>
+<td><code>temp</code></td>
+<td>Current temperature (°C)</td>
+<td>Temperature stat (line 111)</td>
+</tr>
+<tr>
+<td><code>feels_like</code></td>
+<td>Feels-like temperature (°C)</td>
+<td>Sensation stat (line 112)</td>
+</tr>
+<tr>
+<td><code>humidity</code></td>
+<td>Humidity percentage</td>
+<td>Humidity stat (line 113)</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Weather description</td>
+<td>Description text (line 114)</td>
+</tr>
+<tr>
+<td><code>wind_speed</code></td>
+<td>Wind speed (m/s)</td>
+<td>Wind stat (line 115)</td>
+</tr>
+<tr>
+<td><code>clouds</code></td>
+<td>Cloud coverage percentage</td>
+<td>Cloud stat (line 116)</td>
+</tr>
+</tbody>
+</table>
+<p>The weather icon is fetched from OpenWeatherMap's CDN using the pattern <code>https://openweathermap.org/img/wn/{icon}@2x.png</code> at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L107-L107">views/inscripcion.ejs L107</a></p>
+<h3 id="caching-indicator">Caching Indicator<a class="headerlink" href="#caching-indicator" title="Permanent link">&para;</a></h3>
+<p>The widget displays a "(Datos en cache)" message when weather data is served from cache rather than fresh API calls, indicated by the <code>cached</code> variable at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L118-L120">views/inscripcion.ejs L118-L120</a></p>
+<p><strong>Widget Styling:</strong></p>
+<ul>
+<li>Gradient background: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L175-L175">public/css/inscripcion.css L175</a></li>
+<li>Hover transformation: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L181-L184">public/css/inscripcion.css L181-L184</a></li>
+<li>Floating icon animation: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L202-L205">public/css/inscripcion.css L202-L205</a></li>
+<li>Stat grid layout: <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L207-L212">public/css/inscripcion.css L207-L212</a></li>
+</ul>
+<p><strong>Sources:</strong> views/inscripcion.ejs:101-125, public/css/inscripcion.css:161-239</p>
+<hr />
+<h2 id="visual-design-elements">Visual Design Elements<a class="headerlink" href="#visual-design-elements" title="Permanent link">&para;</a></h2>
+<h3 id="motivational-banner">Motivational Banner<a class="headerlink" href="#motivational-banner" title="Permanent link">&para;</a></h3>
+<p>The registration page features a full-width motivational banner with background imagery to encourage registration. The banner component at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L13-L18">views/inscripcion.ejs L13-L18</a></p>
+<p>displays:</p>
+<ul>
+<li><strong>Background Image:</strong> <code>jovenes-amigos-corriendo-durante-una-maraton.jpg</code> (marathon runners)</li>
+<li><strong>Overlay:</strong> Semi-transparent dark overlay (<code>rgba(22,66,91,0.48)</code>)</li>
+<li><strong>Headline:</strong> "¡Prepárate para la gran carrera!"</li>
+<li><strong>Subtext:</strong> "Visualiza la meta, siente la emoción y anima a inscribirte hoy."</li>
+</ul>
+<p>Styling is defined at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L251-L293">public/css/inscripcion.css L251-L293</a></p>
+<p>with responsive height adjustments for mobile devices.</p>
+<h3 id="form-input-styling">Form Input Styling<a class="headerlink" href="#form-input-styling" title="Permanent link">&para;</a></h3>
+<p>All form inputs follow a consistent visual design:</p>
+<ul>
+<li><strong>Background:</strong> Subtle gradient <code>linear-gradient(180deg,#ffffff,#f7fbff)</code> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L115-L115">public/css/inscripcion.css L115</a> )</li>
+<li><strong>Border:</strong> Light border <code>rgba(22,66,91,0.12)</code> with rounded corners (12px radius)</li>
+<li><strong>Focus State:</strong> Elevated with <code>translateY(-3px)</code> and stronger shadow (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L122-L128">public/css/inscripcion.css L122-L128</a> )</li>
+<li><strong>Transition:</strong> Smooth transforms on interaction</li>
+</ul>
+<h3 id="submit-button">Submit Button<a class="headerlink" href="#submit-button" title="Permanent link">&para;</a></h3>
+<p>The "INSCRIBIRSE" button at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/views/inscripcion.ejs#L84-L84">views/inscripcion.ejs L84</a></p>
+<p>features:</p>
+<ul>
+<li>Pill-shaped design (<code>border-radius: 999px</code>)</li>
+<li>Gradient background matching the application theme</li>
+<li>Hover elevation effect (<code>translateY(-5px)</code>)</li>
+<li>Styling defined at <a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L133-L148">public/css/inscripcion.css L133-L148</a></li>
+</ul>
+<p><strong>Sources:</strong> views/inscripcion.ejs:13-18, public/css/inscripcion.css:133-148, public/css/inscripcion.css:251-293</p>
+<hr />
+<h2 id="responsive-behavior">Responsive Behavior<a class="headerlink" href="#responsive-behavior" title="Permanent link">&para;</a></h2>
+<p>The registration interface adapts to different screen sizes through media queries defined in the stylesheet.</p>
+<h3 id="breakpoint-adjustments">Breakpoint Adjustments<a class="headerlink" href="#breakpoint-adjustments" title="Permanent link">&para;</a></h3>
+<p><strong>At 980px and below</strong> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L302-L306">public/css/inscripcion.css L302-L306</a></p>
+<p>):</p>
+<ul>
+<li>Form grid collapses from two columns to single column</li>
+<li>Weather widget reordered above form fields (<code>order: -1</code>)</li>
+<li>Form fields stack vertically</li>
+</ul>
+<p><strong>At 768px and below</strong> (<a href="https://github.com/Lourdes12587/Proyecto-Node.js/blob/3a172be7/public/css/inscripcion.css#L308-L312">public/css/inscripcion.css L308-L312</a></p>
+<p>):</p>
+<ul>
+<li>Motivational banner height reduces from 220px to 160px</li>
+<li>Banner headline font size reduces to 1.5rem</li>
+<li>Banner text size reduces to 1rem</li>
+</ul>
+<p>The responsive strategy ensures usability across desktop, tablet, and mobile devices while maintaining visual hierarchy and component readability.</p>
+<p><strong>Sources:</strong> public/css/inscripcion.css:302-312</p>
+<hr />
+<h2 id="component-composition-diagram">Component Composition Diagram<a class="headerlink" href="#component-composition-diagram" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+PartialHead["partials/head.ejs&lt;br&gt;Bootstrap 5.3.7&lt;br&gt;SweetAlert2"]
+PartialHeader["partials/header.ejs&lt;br&gt;Navigation bar"]
+InscripcionCSS["css/inscripcion.css&lt;br&gt;Page-specific styles"]
+InscripcionTemplate["inscripcion.ejs&lt;br&gt;Main template"]
+MotivBanner["Motivational banner&lt;br&gt;lines 13-18"]
+FormBlock["Form element&lt;br&gt;lines 22-127"]
+SweetAlertBlock["SweetAlert2 script&lt;br&gt;lines 131-154"]
+PartialFooter["partials/footer.ejs"]
+FormLeftColumn["Left column&lt;br&gt;Input fields&lt;br&gt;lines 23-98"]
+WeatherColumn["Right column&lt;br&gt;Weather widget&lt;br&gt;lines 101-125"]
+PhotoField["File input: foto"]
+PersonalInfo["Text inputs:&lt;br&gt;nombre, apellido"]
+ContactInfo["Text inputs:&lt;br&gt;dni, telefono"]
+Address["Text inputs:&lt;br&gt;calle, numero,&lt;br&gt;poblacion, codigo_postal"]
+Auth["Password input"]
+Submit["Submit button"]
+Errors["Validation alerts&lt;br&gt;lines 87-96"]
+
+PartialHead --&gt; InscripcionTemplate
+PartialHeader --&gt; InscripcionTemplate
+InscripcionCSS --&gt; InscripcionTemplate
+InscripcionTemplate --&gt; MotivBanner
+InscripcionTemplate --&gt; FormBlock
+InscripcionTemplate --&gt; SweetAlertBlock
+InscripcionTemplate --&gt; PartialFooter
+FormBlock --&gt; FormLeftColumn
+FormBlock --&gt; WeatherColumn
+FormLeftColumn --&gt; PhotoField
+FormLeftColumn --&gt; PersonalInfo
+FormLeftColumn --&gt; ContactInfo
+FormLeftColumn --&gt; Address
+FormLeftColumn --&gt; Auth
+FormLeftColumn --&gt; Submit
+FormLeftColumn --&gt; Errors</code></pre>
+<p><strong>Sources:</strong> views/inscripcion.ejs:1-161, public/css/inscripcion.css:1-313</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "toc.integrate", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

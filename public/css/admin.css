@@ -1,156 +1,243 @@
-:root{
-  --lapis-lazuli: #2f6690ff;
-  --cerulean:     #3a7ca5ff;
-  --platinum:     #d9dcd6ff;
-  --indigo-dye:   #16425bff;
-  --sky-blue:     #81c3d7ff;
-  --white: #ffffff;
-  --muted-shadow: rgba(22,66,91,0.08);
-
-  --card-max-width: 980px; /* ajustable */
+:root {
+  --admin-black: #050505;
+  --admin-ink: #111513;
+  --admin-paper: #f4f1e8;
+  --admin-cream: #e8e6dc;
+  --admin-orange: #ff4f18;
+  --admin-line: rgba(17, 21, 19, 0.18);
+  --admin-muted: rgba(17, 21, 19, 0.58);
 }
 
-/* ----- Base (mantener coherencia con tu login) ----- */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
 body {
-  margin: 0;
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, var(--platinum), var(--white));
-  color: var(--indigo-dye);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(5, 5, 5, 0.045) 1px, transparent 1px),
+    var(--admin-paper) !important;
+  background-size: 8.333% 100%, 100% 96px, auto !important;
+  color: var(--admin-ink);
 }
 
-/* wrapper centrado (reutiliza auth-wrapper) */
-.auth-wrapper, .admin-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 36px 16px;
-  min-height: calc(100vh - 150px);
-}
-
-/* la caja (estilo similar al login pero orientada a admin) */
-.login-container.admin-card {
+.admin-wrapper {
   width: 100%;
-  max-width: 900px; /* ancho total de la tarjeta con tabla */
-  background: linear-gradient(180deg, #ffffff, var(--platinum));
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 10px 30px var(--muted-shadow);
-  border: 1px solid rgba(22,66,91,0.06);
+  min-height: calc(100vh - 88px);
+  display: block !important;
+  padding: clamp(22px, 4vw, 54px) clamp(14px, 3vw, 34px) !important;
 }
 
-/* título (igual estilo que login) */
-.login-container h2 {
-  margin: 0 0 8px 0;
-  color: var(--lapis-lazuli);
-  font-size: 1.25rem;
+.login-container.admin-card {
+  width: min(100%, 1380px) !important;
+  max-width: 1380px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 1px solid var(--admin-line) !important;
+  border-radius: 0 !important;
+  background: var(--admin-cream) !important;
+  box-shadow: 18px 18px 0 var(--admin-black) !important;
+  color: var(--admin-black) !important;
+  overflow: hidden;
+}
+
+.admin-card::before {
+  content: "ADMIN / RACE CONTROL";
+  display: block;
+  padding: 12px clamp(18px, 3vw, 34px);
+  background: var(--admin-orange);
+  color: var(--admin-black);
+  border-bottom: 1px solid var(--admin-black);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-card h2 {
+  margin: 0 !important;
+  padding: clamp(22px, 3.4vw, 42px) clamp(18px, 3vw, 34px) 8px !important;
+  color: var(--admin-black) !important;
+  font-family: "Happy Condensed", Impact, sans-serif !important;
+  font-size: clamp(1.95rem, 3.8vw, 3.65rem) !important;
+  line-height: 0.94 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase;
+}
+
+.admin-card .helper {
+  margin: 0 !important;
+  padding: 0 clamp(18px, 3vw, 34px) clamp(18px, 2.4vw, 30px) !important;
+  color: var(--admin-muted) !important;
+  font-size: 0.82rem !important;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.admin-card .d-flex {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 !important;
+  margin: 0 clamp(18px, 3vw, 34px) clamp(18px, 2.4vw, 30px) !important;
+  border: 1px solid var(--admin-black);
+  background: var(--admin-paper);
+}
+
+#searchInput {
+  min-height: 58px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--admin-paper) !important;
+  color: var(--admin-black) !important;
+  padding: 0 18px !important;
+  font-size: 0.95rem !important;
   font-weight: 800;
-  letter-spacing: 0.4px;
-  text-align: left;
+  box-shadow: none !important;
 }
 
-/* helper text bajo el título */
-.login-container .helper {
-  margin-top: 6px;
-  font-size: 0.92rem;
-  color: rgba(22,66,91,0.75);
-  text-align: left;
+#searchInput::placeholder {
+  color: rgba(5, 5, 5, 0.42);
+  text-transform: uppercase;
 }
 
-/* búsqueda y badge */
+#searchInput:focus {
+  outline: 3px solid var(--admin-orange) !important;
+  outline-offset: -3px;
+}
+
 .participantes-count {
-  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
-  color: var(--white);
-  padding: 0.28rem 0.6rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.82rem;
-}
-
-/* tabla compacta para que el cuadro siga siendo pequeño */
-.small-table {
-  max-height: 420px;
-  overflow: auto;
-  border-radius: 8px;
-  background: #fff;
-  padding: 6px;
-  margin-top: 6px;
-}
-
-/* cabecera personalizada (tonos del login) */
-.table-head-custom th {
-  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.85rem;
-  border: none;
-}
-
-/* celdas compactas */
-.table th, .table td {
-  padding: 0.45rem 0.5rem;
-  vertical-align: middle;
-  font-size: 0.86rem;
-  border-color: rgba(22,66,91,0.06);
-}
-
-/* filas alternas sutiles */
-.table tbody tr:nth-child(even) {
-  background: rgba(24,86,121,0.03);
-}
-
-/* acciones: botones pequeños y pulidos */
-.btn-edit, .btn-delete {
-  width: 34px;
-  height: 34px;
-  display: inline-flex;
+  min-height: 58px;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+  align-self: stretch !important;
+  padding: 0 20px !important;
+  border-left: 1px solid var(--admin-black);
+  border-radius: 0 !important;
+  background: var(--admin-black) !important;
+  color: var(--admin-cream) !important;
+  font-size: 0.78rem !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-/* estilo edit (amarillo/contrast) */
-.btn-edit {
-  background: linear-gradient(180deg, rgba(255,239,186,0.95), rgba(255,249,230,0.95));
-  color: #7a5a00;
-  border: 1px solid rgba(122,90,0,0.08);
+.small-table {
+  max-height: min(62vh, 680px);
+  margin: 0 clamp(18px, 3vw, 34px) clamp(22px, 3vw, 38px) !important;
+  padding: 0 !important;
+  border: 1px solid var(--admin-black);
+  border-radius: 0 !important;
+  background: var(--admin-paper);
+  overflow: auto;
 }
 
-/* estilo delete (suave) */
-.btn-delete {
-  background: linear-gradient(180deg, rgba(255,232,232,0.95), rgba(255,245,245,0.95));
-  color: #8b1e1e;
-  border: 1px solid rgba(139,30,30,0.06);
+.table {
+  margin: 0 !important;
+  min-width: 1040px;
+  border-collapse: collapse !important;
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: rgba(255, 79, 24, 0.12);
 }
 
-/* CTA en footer */
-.cta-btn {
-  background: linear-gradient(90deg, var(--lapis-lazuli), var(--cerulean));
-  color: var(--white);
-  border-radius: 999px;
-  padding: 6px 12px;
+.table-head-custom th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 14px 12px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(232, 230, 220, 0.16) !important;
+  background: var(--admin-black) !important;
+  color: var(--admin-cream) !important;
+  font-size: 0.72rem !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 13px 12px !important;
+  border-color: var(--admin-line) !important;
+  color: var(--admin-black) !important;
+  font-size: 0.84rem !important;
+  font-weight: 750;
+  vertical-align: middle;
+  background: transparent !important;
+}
+
+.table tbody tr:nth-child(even) {
+  background: rgba(5, 5, 5, 0.035) !important;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 79, 24, 0.12) !important;
+}
+
+.table tbody td:first-child {
+  color: var(--admin-orange) !important;
+  font-family: "Happy Condensed", Impact, sans-serif;
+  font-size: 1.55rem !important;
+  line-height: 1;
   font-weight: 700;
-  border: none;
-  box-shadow: 0 10px 26px rgba(58,124,165,0.10);
-  text-decoration: none;
 }
 
-/* adaptar en pantallas pequeñas: hacemos la tarjeta más estrecha y reducida */
-@media (max-width: 992px) {
-  .login-container.admin-card { max-width: 720px; padding: 14px; }
-  .small-table { max-height: 360px; }
+.actions-col {
+  min-width: 96px;
+  white-space: nowrap;
 }
-@media (max-width: 576px) {
-  .auth-wrapper { padding: 20px 10px; min-height: calc(100vh - 120px); }
-  .login-container.admin-card { max-width: 360px; padding: 12px; }
-  .table th, .table td { font-size: 0.78rem; padding: 0.32rem 0.36rem; }
-  .small-table { max-height: 300px; }
-  .cta-btn { padding: 6px 8px; font-size: 0.85rem; }
+
+.btn-edit,
+.btn-delete {
+  width: 38px;
+  height: 38px;
+  display: inline-grid !important;
+  place-items: center;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  border: 1px solid var(--admin-black) !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.btn-edit {
+  background: var(--admin-orange) !important;
+  color: var(--admin-black) !important;
+}
+
+.btn-delete {
+  background: var(--admin-black) !important;
+  color: var(--admin-cream) !important;
+}
+
+.btn-edit i,
+.btn-delete i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.btn-edit:hover,
+.btn-delete:hover,
+.btn-edit:focus-visible,
+.btn-delete:focus-visible {
+  transform: translateY(-2px);
+  outline: 3px solid rgba(255, 79, 24, 0.28);
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .login-container.admin-card {
+    box-shadow: 10px 10px 0 var(--admin-black) !important;
+  }
+
+  .admin-card .d-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .participantes-count {
+    border-left: 0;
+    border-top: 1px solid var(--admin-black);
+  }
+
+  .small-table {
+    max-height: 520px;
+  }
 }

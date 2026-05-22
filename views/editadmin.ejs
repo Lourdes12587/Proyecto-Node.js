@@ -4,51 +4,80 @@
 
 <%- include('partials/header') %>
 
-<main class="auth-wrapper">
-  <div class="login-container" style="max-width:420px;">
-    <h2>Editar participante</h2>
-    <p class="helper small mb-2">Modifica los datos y pulsa Guardar</p>
-
-    <% if (participante) { %>
-      <form action="/updateAdmin" method="post" class="mt-2">
-        <!-- Cambiado a hidden para que no se muestre editable el id -->
-        <input type="hidden" name="id" id="id" value="<%= participante.id %>" />
-
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" value="<%= participante.nombre %>" required />
-
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" value="<%= participante.apellido %>" required />
-
-        <label for="dni">DNI</label>
-        <input type="text" id="dni" name="dni" value="<%= participante.dni %>" required />
-
-        <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" name="telefono" value="<%= participante.telefono %>" />
-
-        <label for="calle">Calle</label>
-        <input type="text" id="calle" name="calle" value="<%= participante.calle %>" />
-
-        <label for="numero">Número</label>
-        <input type="text" id="numero" name="numero" value="<%= participante.numero %>" />
-
-        <label for="poblacion">Población</label>
-        <input type="text" id="poblacion" name="poblacion" value="<%= participante.poblacion %>" />
-
-        <label for="codigo_postal">Código Postal</label>
-        <input type="text" id="codigo_postal" name="codigo_postal" value="<%= participante.codigo_postal %>" />
-
-        <div style="display:flex;gap:10px;margin-top:14px;">
-          <button type="submit" class="cta-btn" style="flex:1">Guardar</button>
-          <a href="/admin" class="btn" style="flex:1; background:transparent; border:1px solid rgba(22,66,91,0.06); color:var(--indigo-dye); border-radius:999px; padding:8px 12px; text-align:center; display:inline-flex; align-items:center; justify-content:center;">Cancelar</a>
-        </div>
-      </form>
-    <% } else { %>
-      <div class="form-alert" style="margin-top:12px;">
-        Participante no encontrado.
+<main class="auth-wrapper edit-admin-page">
+  <section class="edit-admin-shell" aria-label="Editar participante">
+    <aside class="edit-admin-panel" aria-hidden="true">
+      <span class="edit-panel-kicker">Admin edit</span>
+      <strong class="edit-panel-number"><%= participante ? participante.id : '00' %></strong>
+      <div class="edit-panel-lines">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    <% } %>
-  </div>
+      <p>Runner profile / race data / city pace</p>
+    </aside>
+
+    <div class="login-container edit-admin-card">
+      <span class="edit-kicker">Control de participante</span>
+      <h2>Editar participante</h2>
+      <p class="helper small mb-2">Modifica los datos y pulsa Guardar</p>
+
+      <% if (participante) { %>
+        <form action="/updateAdmin" method="post" class="mt-2 edit-admin-form">
+          <input type="hidden" name="id" id="id" value="<%= participante.id %>" />
+
+          <div class="field-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" value="<%= participante.nombre %>" required />
+          </div>
+
+          <div class="field-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" value="<%= participante.apellido %>" required />
+          </div>
+
+          <div class="field-group">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" value="<%= participante.dni %>" required />
+          </div>
+
+          <div class="field-group">
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" name="telefono" value="<%= participante.telefono %>" />
+          </div>
+
+          <div class="field-group field-wide">
+            <label for="calle">Calle</label>
+            <input type="text" id="calle" name="calle" value="<%= participante.calle %>" />
+          </div>
+
+          <div class="field-group">
+            <label for="numero">Numero</label>
+            <input type="text" id="numero" name="numero" value="<%= participante.numero %>" />
+          </div>
+
+          <div class="field-group">
+            <label for="poblacion">Poblacion</label>
+            <input type="text" id="poblacion" name="poblacion" value="<%= participante.poblacion %>" />
+          </div>
+
+          <div class="field-group">
+            <label for="codigo_postal">Codigo Postal</label>
+            <input type="text" id="codigo_postal" name="codigo_postal" value="<%= participante.codigo_postal %>" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="cta-btn">Guardar <i class="bx bx-check-circle" aria-hidden="true"></i></button>
+            <a href="/admin" class="btn-neutral">Cancelar</a>
+          </div>
+        </form>
+      <% } else { %>
+        <div class="form-alert">
+          Participante no encontrado.
+        </div>
+      <% } %>
+    </div>
+  </section>
 </main>
 
 <%- include('partials/footer') %>

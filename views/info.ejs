@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="/resources/css/info.css">
 
+<main class="info-page-redesign">
 <div class="info-hero">
   <div class="info-hero-inner">
     <h1>42K <span class="accent">BARCELONA RUNNING</span></h1>
@@ -84,56 +85,54 @@
   <% } %>
 </div>
 
-  <!-- SECCIÓN MAPA INTERACTIVO -->
-  <section class="card race-map">
-    <h2 class="section-title">Recorrido de la Carrera</h2>
-    <div id="map" style="height: 400px; width: 100%; border: 2px solid #ccc;"></div>
-  </section>
+<section class="card race-map">
+  <h2 class="section-title">Recorrido de la Carrera</h2>
+  <div id="map"></div>
+</section>
 
-  <section class="card winners-section">
-    <h2 class="section-title">GANADORES</h2>
+<section class="card winners-section">
+  <h2 class="section-title">GANADORES</h2>
 
-    <% if (ganadores && ganadores.length > 0) { %>
-      <div class="winners-grid">
-        <% ganadores.forEach(g => { %>
-          <article class="winner-card">
-            <div class="winner-photo-wrap">
-              <% if (g.foto) { %>
-                <img class="winner-photo" src="/uploads/participantes/<%= g.foto %>" alt="Foto ganador <%= g.nombre %>">
-              <% } else { %>
-                <div class="winner-placeholder">
-                  <i class="bx bxs-user"></i>
-                </div>
-              <% } %>
-            </div>
-            <div class="winner-info">
-              <div class="winner-place">#<%= g.posicion %></div>
-              <div class="winner-name"><%= g.nombre %> <%= g.apellido %></div>
-              <div class="winner-dorsal">Dorsal <span class="dorsal-badge"><%= g.dorsal %></span></div>
-            </div>
-          </article>
-        <% }) %>
-      </div>
-    <% } else { %>
-      <p class="text-muted">Aún no se han registrado ganadores.</p>
-    <% } %>
-  </section>
+  <% if (ganadores && ganadores.length > 0) { %>
+    <div class="winners-grid">
+      <% ganadores.forEach(g => { %>
+        <article class="winner-card">
+          <div class="winner-photo-wrap">
+            <% if (g.foto) { %>
+              <img class="winner-photo" src="/uploads/participantes/<%= g.foto %>" alt="Foto ganador <%= g.nombre %>">
+            <% } else { %>
+              <div class="winner-placeholder">
+                <i class="bx bxs-user"></i>
+              </div>
+            <% } %>
+          </div>
+          <div class="winner-info">
+            <div class="winner-place">#<%= g.posicion %></div>
+            <div class="winner-name"><%= g.nombre %> <%= g.apellido %></div>
+            <div class="winner-dorsal">Dorsal <span class="dorsal-badge"><%= g.dorsal %></span></div>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <p class="text-muted">Aún no se han registrado ganadores.</p>
+  <% } %>
+</section>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-
-  var map = L.map('map').setView([41.4145, 2.1527], 14); // Park Güell, Barcelona
+  var map = L.map('map').setView([41.4145, 2.1527], 14);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
   var racePath = [
-      [41.4145, 2.1527], // Inicio
+      [41.4145, 2.1527],
       [41.4150, 2.1535],
       [41.4155, 2.1545],
-      [41.4160, 2.1555]  // Meta
+      [41.4160, 2.1555]
   ];
 
   var polyline = L.polyline(racePath, {color: 'red', weight: 5, opacity: 0.8}).addTo(map);
@@ -143,5 +142,7 @@
   L.marker(racePath[0]).addTo(map).bindPopup("<b>Inicio</b>").openPopup();
   L.marker(racePath[racePath.length - 1]).addTo(map).bindPopup("<b>Meta</b>");
 </script>
+
+</main>
 
 <%- include('partials/footer') %>
